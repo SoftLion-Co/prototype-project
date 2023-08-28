@@ -31,7 +31,17 @@ a {
 
 button {
   cursor: pointer;
-  font-family: "Roboto";
+  font-family: "Helvetica";
+  border-radius: 5px;
+  padding: 18px 40px 18px 40px;
+  background: none;
+  font-size: 16px;
+  @include for-size(tablet) {
+    font-size: 20px;
+  }
+  @include for-size(desktop) {
+    font-size: 22px;
+  }
 }
 
 h1,
@@ -39,9 +49,48 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  margin: 0;
+  text-wrap: balance;
+}
+
 p {
   margin: 0;
+}
+
+h1 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 32px;
+  @include for-size(tablet) {
+    font-size: 42px;
+  }
+  @include for-size(desktop) {
+    font-size: 48px;
+  }
+}
+
+h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 24px;
+  @include for-size(tablet) {
+    font-size: 32px;
+  }
+  @include for-size(desktop) {
+    font-size: 36px;
+  }
+}
+
+p {
+  color: $default-red;
+  font-size: 16px;
+  @include for-size(tablet) {
+    font-size: 20px;
+  }
+  @include for-size(desktop) {
+    font-size: 22px;
+  }
 }
 
 ul,
