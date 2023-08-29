@@ -1,0 +1,194 @@
+@import "@/style/colors";
+@import "@/style/viewports";
+
+.FindLocation {
+  margin-top: 46px;
+
+  & button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+
+    font-size: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 1000px;
+    background-color: $default-red;
+    color: #fff;
+
+    &:hover,
+    &:focus-visible {
+      background-color: #cd3232;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__myLocationWrap {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+    & span {
+      font-size: 16px;
+    }
+  }
+
+  &__myLocationBtn {
+    width: 111px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 111px;
+    margin-bottom: 20px;
+
+    & input {
+      height: 25px;
+      padding-left: 30px;
+      padding-right: 10px;
+
+      font-size: 10px;
+      border: 1px solid #5e7045;
+      border-radius: 1000px;
+    }
+
+    & button {
+      width: 85px;
+    }
+
+    &__inputContainer {
+      position: relative;
+    }
+
+    &__searchIcon {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      left: 8px;
+      top: 50%;
+
+      transform: translate(0, -50%);
+    }
+  }
+
+  &__mapImg {
+    width: 100%;
+    height: auto;
+  }
+
+  @include for-size(tablet) {
+    position: relative;
+    margin-top: 88px;
+
+    & button {
+      height: 58px;
+      font-size: 20px;
+    }
+
+    &__title {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+
+    &__myLocationWrap {
+      margin-bottom: 30px;
+
+      & span {
+        font-size: 25px;
+      }
+    }
+
+    &__myLocationBtn {
+      width: 180px;
+    }
+
+    &__form {
+      position: relative;
+      z-index: 1;
+      width: 300px;
+      margin-bottom: 20px;
+      gap: 30px;
+
+      & input {
+        height: 40px;
+        font-size: 20px;
+        padding-left: 50px;
+      }
+
+      & button {
+        width: 180px;
+      }
+
+      &__searchIcon {
+        width: 20px;
+        height: 20px;
+        left: 15px;
+        top: 50%;
+
+        transform: translate(0, -50%);
+      }
+    }
+
+    &__mapImg {
+      position: absolute;
+      top: 50px;
+      right: 0;
+      z-index: 0;
+      width: 480px;
+      height: 308px;
+    }
+  }
+
+  @include for-size(desktop) {
+    padding-top: 94px;
+    height: 512px;
+    margin-top: 208px;
+
+    & button {
+      height: 58px;
+      font-size: 20px;
+    }
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__myLocationWrap {
+      margin-bottom: 11px;
+    }
+
+    &__myLocationBtn {
+      width: 211px;
+    }
+
+    &__form {
+      width: 334px;
+      gap: 11px;
+
+      & input {
+        height: 58px;
+        padding-left: 50px;
+      }
+
+      & button {
+        width: 211px;
+      }
+    }
+
+    &__mapImg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 943px;
+      height: 512px;
+    }
+  }
+}

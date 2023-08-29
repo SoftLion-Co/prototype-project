@@ -1,0 +1,116 @@
+@import "@/style/viewports";
+
+.DealerSection {
+  padding: 46px 23px;
+  margin: 0 auto;
+  max-width: 320px;
+
+  background-color: #eee7dd;
+  color: #000;
+
+  & p {
+    color: #000;
+  }
+
+  &__titleYear {
+    margin-bottom: 20px;
+  }
+
+  &__textYear {
+    margin-bottom: 20px;
+  }
+
+  &__newspaperImg {
+    margin-bottom: 46px;
+    width: 100%;
+    height: auto;
+  }
+
+  &__titleBecause {
+    margin-bottom: 20px;
+  }
+
+  &__textBecause {
+    margin-bottom: 20px;
+  }
+
+  &__stumpjumperImg {
+    width: 100%;
+    height: auto;
+  }
+
+  @include for-size(tablet) {
+    position: relative;
+    max-width: 768px;
+    padding: 88px 26px;
+
+    &__titleYear {
+      font-size: 70px;
+    }
+
+    &__textYear {
+      width: 330px;
+      margin-bottom: 100px;
+    }
+
+    &__newspaperImg {
+      position: absolute;
+      right: 26px;
+      top: 130px;
+      margin-bottom: 0;
+      width: 342px;
+    }
+
+    &__titleBecause {
+      font-size: 40px;
+    }
+
+    &__textBecause {
+      margin-bottom: 50px;
+      font-size: 25px;
+    }
+
+    &__stumpjumperImg {
+      margin: 0 auto;
+      width: 519px;
+      height: 468px;
+    }
+  }
+
+  @include for-size(desktop) {
+    max-width: 1388px;
+    padding: 95px 48px;
+
+    &__textYear {
+      width: 434px;
+      margin-bottom: 160px;
+      font-size: 25px;
+    }
+
+    &__newspaperImg {
+      right: 48px;
+      top: 134px;
+      width: 561px;
+      height: 603px;
+    }
+
+    &__titleBecause {
+      margin-left: 769px;
+      width: 502px;
+    }
+
+    &__textBecause {
+      margin-left: 769px;
+      width: 502px;
+    }
+
+    &__stumpjumperImg {
+      position: absolute;
+      top: 769px;
+      left: 48px;
+
+      width: 539px;
+      height: 662px;
+    }
+  }
+}
