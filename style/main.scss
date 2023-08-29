@@ -54,10 +54,6 @@ h6 {
   text-wrap: balance;
 }
 
-p {
-  margin: 0;
-}
-
 h1 {
   font-weight: 400;
   text-transform: uppercase;
@@ -83,7 +79,7 @@ h2 {
 }
 
 p {
-  color: $default-red;
+  margin: 0;
   font-size: 16px;
   @include for-size(tablet) {
     font-size: 20px;
