@@ -21,28 +21,28 @@ export const FindLocation: FC = () => {
     <div className={s.FindLocation}>
       <h2 className={s.FindLocation__title}>Location</h2>
 
-      <div className={s.FindLocation__myLocationWrap}>
-        <button className={s.FindLocation__myLocationBtn} type="button">
+      <div className={s.FindLocation__my_location_wrap}>
+        <button className={s.FindLocation__my_location_btn} type="button">
           Use my location
         </button>
         <span>Or</span>
       </div>
 
       <form onSubmit={handleSubmit} className={s.FindLocation__form}>
-        <div className={s.FindLocation__form__inputContainer}>
+        <div className={s.FindLocation__form__input_container}>
           <input
             onChange={handleInput}
             value={locationInput}
             placeholder="Enter address"
             type="text"
           />
-          <AiOutlineSearch className={s.FindLocation__form__searchIcon} />
+          <AiOutlineSearch className={s.FindLocation__form__search_icon} />
         </div>
 
         <button type="submit">Search</button>
       </form>
 
-      <Image className={s.FindLocation__mapImg} src={map} width={270} height={366} alt="Map" />
+      <Image className={s.FindLocation__map_img} src={map} width={270} height={366} alt="Map" />
     </div>
   );
 };

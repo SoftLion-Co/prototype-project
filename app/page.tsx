@@ -1,4 +1,4 @@
-import { Dealer } from "@/sections/Dealer";
+import { Dealer } from "@/sections/home_page/Dealer";
 
 const Home = () => {
   return (

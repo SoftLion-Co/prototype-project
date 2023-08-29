@@ -2,8 +2,6 @@
 @import "@/style/viewports";
 
 .FindLocation {
-  margin-top: 46px;
-
   & button {
     display: flex;
     justify-content: center;
@@ -27,7 +25,7 @@
     margin-bottom: 20px;
   }
 
-  &__myLocationWrap {
+  &__my_location_wrap {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -39,7 +37,7 @@
     }
   }
 
-  &__myLocationBtn {
+  &__my_location_btn {
     width: 111px;
   }
 
@@ -64,11 +62,11 @@
       width: 85px;
     }
 
-    &__inputContainer {
+    &__input_container {
       position: relative;
     }
 
-    &__searchIcon {
+    &__search_icon {
       position: absolute;
       width: 14px;
       height: 14px;
@@ -79,14 +77,13 @@
     }
   }
 
-  &__mapImg {
+  &__map_img {
     width: 100%;
     height: auto;
   }
 
   @include for-size(tablet) {
     position: relative;
-    margin-top: 88px;
 
     & button {
       height: 58px;
@@ -98,7 +95,7 @@
       margin-bottom: 30px;
     }
 
-    &__myLocationWrap {
+    &__my_location_wrap {
       margin-bottom: 30px;
 
       & span {
@@ -106,7 +103,7 @@
       }
     }
 
-    &__myLocationBtn {
+    &__my_location_btn {
       width: 180px;
     }
 
@@ -127,7 +124,7 @@
         width: 180px;
       }
 
-      &__searchIcon {
+      &__search_icon {
         width: 20px;
         height: 20px;
         left: 15px;
@@ -137,7 +134,7 @@
       }
     }
 
-    &__mapImg {
+    &__map_img {
       position: absolute;
       top: 50px;
       right: 0;
@@ -150,7 +147,6 @@
   @include for-size(desktop) {
     padding-top: 94px;
     height: 512px;
-    margin-top: 208px;
 
     & button {
       height: 58px;
@@ -161,11 +157,11 @@
       margin-bottom: 50px;
     }
 
-    &__myLocationWrap {
+    &__my_location_wrap {
       margin-bottom: 11px;
     }
 
-    &__myLocationBtn {
+    &__my_location_btn {
       width: 211px;
     }
 
@@ -183,7 +179,7 @@
       }
     }
 
-    &__mapImg {
+    &__map_img {
       position: absolute;
       top: 0;
       right: 0;
