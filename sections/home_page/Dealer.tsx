@@ -9,7 +9,7 @@ import { FindLocation } from "@/components/FindLocation";
 export const Dealer: FC = () => {
   return (
     <section className={classNames(s.container, s.DealerSection)}>
-      <div className={s.DealerSection__wrap_container}>
+      <div className={s.DealerSection__first_container}>
         <div>
           <h2 className={s.DealerSection__title}>1974</h2>
           <p>
@@ -32,7 +32,7 @@ export const Dealer: FC = () => {
         />
       </div>
 
-      <div className={s.DealerSection__wrap_container}>
+      <div className={s.DealerSection__second_container}>
         <div>
           <h2 className={s.DealerSection__title}>BECAUSE MOUNTAIN BIKES NEED TRAILS</h2>
           <p>

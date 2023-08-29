@@ -83,7 +83,8 @@
   }
 
   @include for-size(tablet) {
-    position: relative;
+    display: flex;
+    align-items: center;
 
     & button {
       height: 58px;
@@ -108,8 +109,6 @@
     }
 
     &__form {
-      position: relative;
-      z-index: 1;
       width: 300px;
       margin-bottom: 20px;
       gap: 30px;
@@ -135,56 +134,47 @@
     }
 
     &__map_img {
-      position: absolute;
-      top: 50px;
-      right: 0;
-      z-index: 0;
-      width: 480px;
-      height: 308px;
-    }
-  }
-
-  @include for-size(desktop) {
-    padding-top: 94px;
-    height: 512px;
-
-    & button {
-      height: 58px;
-      font-size: 20px;
+      height: 210px;
     }
 
-    &__title {
-      margin-bottom: 50px;
-    }
-
-    &__my_location_wrap {
-      margin-bottom: 11px;
-    }
-
-    &__my_location_btn {
-      width: 211px;
-    }
-
-    &__form {
-      width: 334px;
-      gap: 11px;
-
-      & input {
-        height: 58px;
-        padding-left: 50px;
-      }
+    @include for-size(desktop) {
+      height: 512px;
 
       & button {
+        height: 58px;
+        font-size: 20px;
+      }
+
+      &__title {
+        margin-bottom: 50px;
+      }
+
+      &__my_location_wrap {
+        margin-bottom: 11px;
+      }
+
+      &__my_location_btn {
         width: 211px;
       }
-    }
 
-    &__map_img {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 943px;
-      height: 512px;
+      &__form {
+        width: 334px;
+        gap: 11px;
+
+        & input {
+          height: 58px;
+          padding-left: 50px;
+        }
+
+        & button {
+          width: 211px;
+        }
+      }
+
+      &__map_img {
+        width: 943px;
+        height: 512px;
+      }
     }
   }
 }
