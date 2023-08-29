@@ -1,0 +1,137 @@
+@import "../style/container";
+@import "../style/colors";
+@import "../style/viewports";
+
+.header_container {
+  height: 87px;
+  background: #32492f;
+
+  @include for-size(tablet) {
+    height: 86px;
+  }
+  @include for-size(desktop) {
+    height: 100px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include for-size(tablet) {
+    padding: 12px 0;
+    gap: 104px;
+  }
+  @include for-size(desktop) {
+    padding: 19px 0;
+    gap: 500px;
+  }
+
+  &__items_container {
+    @include for-size(tablet) {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+    @include for-size(desktop) {
+      gap: 34px;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 19px;
+    }
+
+    &__title {
+      color: #fff;
+    }
+  }
+
+  &__logo {
+    width: 126px;
+    height: 39px;
+    @include for-size(tablet) {
+      width: 191px;
+      height: 62px;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 28px;
+    color: #fff;
+    position: relative;
+  }
+
+  &__search {
+    display: none;
+
+    @include for-size(tablet) {
+      height: 44px;
+      width: 334px;
+      padding: 0 15px;
+      border-radius: 50px;
+      border: 1px solid #5e7045;
+      background: #fff;
+      display: flex;
+      align-items: center;
+    }
+
+    &__icon {
+      width: 23px;
+      height: 24px;
+      color: #000;
+    }
+
+    &__input {
+      border: none;
+      width: 100%;
+      font-size: 18px;
+      background-color: transparent;
+      height: 100%;
+      outline: none;
+    }
+  }
+}
+
+.navigation {
+  display: none;
+  @include for-size(tablet) {
+    display: block;
+    background: linear-gradient(100deg, #48422b45, 0%, #675d3a 100%);
+  }
+  &__container {
+    @include for-size(tablet) {
+      padding: 19px 0;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+    }
+    @include for-size(desktop) {
+      padding-left: 30px;
+    }
+  }
+
+  &__list {
+    @include for-size(tablet) {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    @include for-size(desktop) {
+      gap: 105px;
+    }
+  }
+
+  &__title {
+    @include for-size(tablet) {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    @include for-size(desktop) {
+      font-size: 16px;
+    }
+  }
+}
