@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import s from "./HeaderComponent.module.scss";
 import Logo from "../images/logo.png";
@@ -52,7 +52,11 @@ const HeaderComponent = () => {
             <ul className={s.navigation__list}>
               {data.map((item) => (
                 <li>
-                  <Link className={s.navigation__title} key={item} href={`/${item}`}>
+                  <Link
+                    className={s.navigation__title}
+                    key={item}
+                    href={`/catalog/${item}`}
+                  >
                     {item}
                   </Link>
                 </li>
