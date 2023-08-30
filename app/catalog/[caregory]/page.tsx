@@ -6,8 +6,8 @@ import data from "@/data/categories.json";
 const Category = () => {
   const category = usePathname().split("/").reverse()[0];
 
-  if (!data.includes(category)) {
-    redirect(`/catalog/${data[0]}`);
+  if (!Object.keys(data).includes(category)) {
+    redirect(`/catalog/${Object.keys(data)[0]}`);
   }
   return (
     <div>
