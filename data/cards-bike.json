@@ -1,0 +1,65 @@
+{
+  "1": {
+    "name": "S-Works Shiv Disc",
+    "image": "https://i.ibb.co/SRDYwLh/bike-Electric.png",
+    "category": "Electric",
+    "price": "500$",
+    "basket": false,
+    "like": false,
+    "discount": ""
+  },
+  "2": {
+    "name": "S-Works Turbo Levo",
+    "image": "https://i.ibb.co/wL741Kz/bikeKids.png",
+    "category": "Kids",
+    "price": "500$",
+    "basket": false,
+    "like": false,
+    "discount": ""
+  },
+  "3": {
+    "name": "S-Works Turbo Levo",
+    "image": "https://i.ibb.co/3C3V97y/bike-Active.png",
+    "category": "Active",
+    "price": "500$",
+    "basket": false,
+    "like": false,
+    "discount": ""
+  },
+  "4": {
+    "name": "S-Works Shiv Disc",
+    "image": "https://i.ibb.co/tztQLtT/bikeRoad.png",
+    "category": "Road",
+    "price": "500$",
+    "basket": false,
+    "like": false,
+    "discount": ""
+  },
+  "5": {
+    "name": "S-Works Tarmac SL7 - Speed of Light Collection",
+    "image": "https://i.ibb.co/MfQvdS2/bike-Mountain.png",
+    "category": "Mountain",
+    "price": "500$",
+    "basket": false,
+    "like": false,
+    "discount": "-30%"
+  },
+  "6": {
+    "name": "S-Works Tarmac SL7 - Speed of Light Collection",
+    "image": "https://i.ibb.co/MfQvdS2/bike-Mountain.png",
+    "category": "Mountain",
+    "price": "500$",
+    "basket": false,
+    "like": false,
+    "discount": "-30%"
+  },
+  "7": {
+    "name": "S-Works Tarmac SL7 - Speed of Light Collection",
+    "image": "https://i.ibb.co/wL741Kz/bikeKids.png",
+    "category": "Active",
+    "price": "500$",
+    "basket": false,
+    "like": false,
+    "discount": "-30%"
+  }
+}

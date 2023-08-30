@@ -1,0 +1,125 @@
+@import "../style/colors";
+@import "../style/container";
+@import "../style/viewports";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+
+  padding: 35px 40px;
+
+  width: 388px;
+  height: 476px;
+
+  @include for-size(tablet) {
+  }
+
+  @include for-size(desktop) {
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    gap: 21px;
+
+    &_color {
+      display: flex;
+
+      gap: 8px;
+    }
+
+    &_icon {
+      display: flex;
+
+      gap: 19px;
+    }
+  }
+
+  &__photo {
+    width: 221px;
+    height: 161px;
+
+    @include for-size(desktop) {
+      width: 308px;
+      height: 214px;
+    }
+  }
+
+  &__color {
+    &_dark {
+      width: 20px;
+      height: 20px;
+
+      border-radius: 100px;
+      border: 3px solid rgba(255, 255, 255, 0.55);
+      background: linear-gradient(150deg, #d24545 0%, #4b48e7 100%);
+    }
+
+    &_light {
+      width: 20px;
+      height: 20px;
+
+      border-radius: 100px;
+      background: linear-gradient(151deg, #ed942b 0%, #bd48e7 100%);
+    }
+  }
+
+  &__price {
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.6px;
+
+    color: #4c5225;
+  }
+
+  &__icon:hover > &__icon_cart {
+    fill: #d44848;
+  }
+
+  &__icon_cart {
+    width: 20px;
+    height: 20px;
+
+    opacity: 0.5;
+
+    // :hover {
+    //   fill: #d44848;
+    // }
+  }
+
+  &__icon_heard {
+    width: 20px;
+    height: 20px;
+
+    opacity: 0.5;
+
+    :hover {
+      fill: #d44848;
+    }
+  }
+
+  &__discount {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    border-radius: 0px 5px 0px 3px;
+    background: var(--ta, #d44848);
+
+    &_text {
+      color: #fff;
+
+      font-family: Helvetica;
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: 0.6px;
+
+      padding: 8px 16px;
+    }
+  }
+}
