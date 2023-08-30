@@ -1,10 +1,9 @@
-import HeroSection from "@/sections/HeroSection";
+import { Dealer } from "@/sections/home_page/Dealer";
 
 const Home = () => {
   return (
     <div>
-      <HeroSection />
-
+      <Dealer />
     </div>
   );
 };
