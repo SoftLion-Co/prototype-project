@@ -1,6 +1,10 @@
 @import "@/style/viewports";
 @import "@/style/container";
 
+.container {
+  padding: 0;
+}
+
 .dealer_section {
   padding: 46px 16px;
   background-color: #eee7dd;
