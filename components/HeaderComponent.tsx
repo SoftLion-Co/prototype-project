@@ -1,48 +1,63 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import s from "./HeaderComponent.module.scss";
 import Logo from "../images/logo.png";
 import Link from "next/link";
 import Image from "next/image";
-import { AiOutlineUser, AiOutlineSearch, AiOutlineHeart } from "react-icons/ai";
+import { MdOutlineClose } from "react-icons/md";
+import { AiOutlineMenu, AiOutlineSearch, AiOutlineHeart } from "react-icons/ai";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { PiBagSimple } from "react-icons/pi";
 import data from "@/data/categories.json";
+import classNames from "classnames";
 
 const HeaderComponent = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <header>
-      <div className={s.header_container}>
-        <div className={s.container}>
-          <div className={s.header}>
-            <div className={s.header__items_container}>
-              <Link href="/">
-                <Image
-                  className={s.header__logo}
-                  src={Logo}
-                  alt="Specialized"
-                />
-              </Link>
-              <div className={s.header__search}>
-                <AiOutlineSearch className={s.header__search__icon} />
-                <input className={s.header__search__input} />
-              </div>
+    <header className={s.header_container}>
+      <div className={s.container}>
+        <div className={s.header}>
+          <div className={s.header__items_container}>
+            <Link href="/">
+              <Image className={s.header__logo} src={Logo} alt="Specialized" />
+            </Link>
+            <div className={s.header__input}>
+              <AiOutlineSearch className={s.header__input__icon} />
+              <input className={s.header__input__search} />
             </div>
-            <div className={s.header__items_container}>
-              <div className={s.header__items_container__item}>
-                <HiOutlineLocationMarker className={s.header__icon} />
-                <p className={s.header__items_container__title}>Kyiv</p>
-              </div>
-              <Link href="/heart" className={s.header__items_container__item}>
-                <AiOutlineHeart className={s.header__icon} />
-              </Link>
-              <Link href="/basket" className={s.header__items_container__item}>
-                <PiBagSimple className={s.header__icon} />
-              </Link>
-              <Link href="/login" className={s.header__items_container__item}>
-                <AiOutlineUser className={s.header__icon} />
-              </Link>
+          </div>
+          <div className={s.header__items_container}>
+            <div className={s.header__items_container__item}>
+              <HiOutlineLocationMarker className={s.header__icon_menu} />
+              <p className={s.header__items_container__link}>Kyiv</p>
             </div>
+            <Link
+              href="/cart"
+              className={classNames(s.header__items_container__mobile)}
+            >
+              <AiOutlineHeart className={s.header__icon_menu} />
+            </Link>
+            <Link
+              href="/wishlist"
+              className={classNames(s.header__items_container__mobile)}
+            >
+              <PiBagSimple className={s.header__icon_menu} />
+            </Link>
+            <button
+              className={s.header__btn_burger}
+              onClick={handleButtonClick}
+            >
+              {menuOpen ? (
+                <MdOutlineClose className={s.header__icon_menu} />
+              ) : (
+                <AiOutlineMenu className={s.header__icon_menu} />
+              )}
+            </button>
           </div>
         </div>
       </div>
@@ -50,21 +65,50 @@ const HeaderComponent = () => {
         <div className={s.container}>
           <div className={s.navigation__container}>
             <ul className={s.navigation__list}>
-              {data.map((item) => (
-                <li>
+              {Object.keys(data).map((item) => (
+                <li key={item}>
                   <Link
-                    className={s.navigation__title}
-                    key={item}
                     href={`/catalog/${item}`}
+                    className={s.navigation__link}
                   >
                     {item}
                   </Link>
                 </li>
               ))}
             </ul>
+            <div className={s.navigation__items}>
+              <Link
+                href="/cart"
+                className={classNames(s.header__items_container__item)}
+              >
+                <AiOutlineHeart className={s.header__icon_menu} />
+              </Link>
+              <Link
+                href="/wishlist"
+                className={classNames(s.header__items_container__item)}
+              >
+                <PiBagSimple className={s.header__icon_menu} />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
+      {menuOpen && (
+        <div className={s.navigation_mobile}>
+          <ul className={s.navigation_mobile__items}>
+            {Object.keys(data).map((item) => (
+              <li key={item}>
+                <Link
+                  href={`/catalog/${item}`}
+                  className={s.navigation_mobile__link}
+                >
+                  {item}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 };
