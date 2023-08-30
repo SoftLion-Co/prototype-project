@@ -3,7 +3,7 @@ import { Dealer } from "@/sections/home_page/Dealer";
 
 const Home = () => {
   return (
-    <div>
+    <div className={s.container}>
       <h1>Home</h1>
       <HeroSection />  
       <Dealer />
