@@ -1,7 +1,7 @@
 @import "@/style/colors";
 @import "@/style/viewports";
 
-.FindLocation {
+.find_location {
   & button {
     display: flex;
     justify-content: center;
@@ -92,7 +92,6 @@
     }
 
     &__title {
-      font-size: 48px;
       margin-bottom: 30px;
     }
 

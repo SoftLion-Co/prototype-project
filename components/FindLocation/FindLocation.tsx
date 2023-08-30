@@ -18,33 +18,33 @@ export const FindLocation: FC = () => {
   };
 
   return (
-    <div className={s.FindLocation}>
-      <div className={s.FindLocation__wrap}>
-        <h2 className={s.FindLocation__title}>Location</h2>
+    <div className={s.find_location}>
+      <div className={s.find_location__wrap}>
+        <h2 className={s.find_location__title}>location</h2>
 
-        <div className={s.FindLocation__my_location_wrap}>
-          <button className={s.FindLocation__my_location_btn} type="button">
+        <div className={s.find_location__my_location_wrap}>
+          <button className={s.find_location__my_location_btn} type="button">
             Use my location
           </button>
           <span>Or</span>
         </div>
 
-        <form onSubmit={handleSubmit} className={s.FindLocation__form}>
-          <div className={s.FindLocation__form__input_container}>
+        <form onSubmit={handleSubmit} className={s.find_location__form}>
+          <div className={s.find_location__form__input_container}>
             <input
               onChange={handleInput}
               value={locationInput}
               placeholder="Enter address"
               type="text"
             />
-            <AiOutlineSearch className={s.FindLocation__form__search_icon} />
+            <AiOutlineSearch className={s.find_location__form__search_icon} />
           </div>
 
           <button type="submit">Search</button>
         </form>
       </div>
 
-      <Image className={s.FindLocation__map_img} src={map} width={270} height={366} alt="Map" />
+      <Image className={s.find_location__map_img} src={map} width={270} height={366} alt="Map" />
     </div>
   );
 };
