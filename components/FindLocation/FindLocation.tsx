@@ -1,0 +1,50 @@
+"use client";
+
+import { ChangeEvent, FC, FormEvent, useState } from "react";
+import s from "./FindLocation.module.scss";
+import Image from "next/image";
+import map from "@/images/map.png";
+import { AiOutlineSearch } from "react-icons/ai";
+
+export const FindLocation: FC = () => {
+  const [locationInput, setLocationInput] = useState("");
+
+  const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
+    setLocationInput(e.target.value);
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
+
+  return (
+    <div className={s.find_location}>
+      <div className={s.find_location__wrap}>
+        <h2 className={s.find_location__title}>location</h2>
+
+        <div className={s.find_location__my_location_wrap}>
+          <button className={s.find_location__my_location_btn} type="button">
+            Use my location
+          </button>
+          <span>Or</span>
+        </div>
+
+        <form onSubmit={handleSubmit} className={s.find_location__form}>
+          <div className={s.find_location__form__input_container}>
+            <input
+              onChange={handleInput}
+              value={locationInput}
+              placeholder="Enter address"
+              type="text"
+            />
+            <AiOutlineSearch className={s.find_location__form__search_icon} />
+          </div>
+
+          <button type="submit">Search</button>
+        </form>
+      </div>
+
+      <Image className={s.find_location__map_img} src={map} width={270} height={366} alt="Map" />
+    </div>
+  );
+};
