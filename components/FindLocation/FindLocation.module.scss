@@ -132,10 +132,6 @@
       }
     }
 
-    &__map_img {
-      height: 210px;
-    }
-
     @include for-size(desktop) {
       height: 512px;
 
@@ -168,11 +164,6 @@
         & button {
           width: 211px;
         }
-      }
-
-      &__map_img {
-        width: 943px;
-        height: 512px;
       }
     }
   }

@@ -1,22 +1,10 @@
 @import "@/style/viewports";
 @import "@/style/container";
 
-.container {
-  padding-top: 46px;
-  padding-bottom: 46px;
+.dealer_section {
+  padding: 46px 16px;
   background-color: #eee7dd;
 
-  @include for-size(tablet) {
-    padding: 88px 25px;
-  }
-
-  @include for-size(desktop) {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-}
-
-.dealer_section {
   &__first_container,
   &__second_container {
     display: flex;
@@ -42,6 +30,8 @@
   }
 
   @include for-size(tablet) {
+    padding: 88px 25px;
+
     &__first_container,
     &__second_container {
       gap: 44px;
@@ -63,6 +53,9 @@
   }
 
   @include for-size(desktop) {
+    padding-left: 60px;
+    padding-right: 60px;
+
     &__first_container,
     &__second_container {
       justify-content: space-between;
