@@ -93,6 +93,13 @@ ul,
 ol {
   margin: 0;
   padding: 0;
+  font-size: 16px;
+  @include for-size(tablet) {
+    font-size: 20px;
+  }
+  @include for-size(desktop) {
+    font-size: 22px;
+  }
 }
 
 img {
