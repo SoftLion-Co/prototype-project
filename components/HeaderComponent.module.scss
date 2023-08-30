@@ -144,7 +144,7 @@
     @include for-size(tablet) {
       display: flex;
       align-items: center;
-      gap: 75px;
+      gap: 60px;
     }
     @include for-size(desktop) {
       gap: 105px;
