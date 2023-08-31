@@ -1,65 +1,85 @@
 {
   "1": {
-    "name": "S-Works Shiv Disc",
-    "image": "https://i.ibb.co/SRDYwLh/bike-Electric.png",
+    "name": "Shiv Disc",
+    "colors": {
+      "red": "",
+      "black": "https://i.ibb.co/SRDYwLh/bike-Electric.png"
+    },
+    "series": ["S-Works", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["1e", "2e", "3e", "4e"],
     "category": "electric",
     "price": "500$",
-    "basket": false,
-    "like": false,
     "discount": ""
   },
   "2": {
-    "name": "S-Works Turbo Levo",
-    "image": "https://i.ibb.co/wL741Kz/bikeKids.png",
+    "name": "Turbo Levo",
+    "colors": { "red": "", "black": "https://i.ibb.co/wL741Kz/bikeKids.png" },
+    "series": ["S-Works", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["1e", "2e", "3e", "4e"],
     "category": "kids",
     "price": "500$",
-    "basket": false,
-    "like": false,
     "discount": ""
   },
   "3": {
-    "name": "S-Works Turbo Levo",
-    "image": "https://i.ibb.co/3C3V97y/bike-Active.png",
+    "name": "Turbo Levo",
+    "colors": {
+      "red": "",
+      "black": "https://i.ibb.co/3C3V97y/bike-Active.png"
+    },
+    "series": ["S-Works", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["1e", "2e", "3e", "4e"],
     "category": "active",
     "price": "500$",
-    "basket": false,
-    "like": false,
     "discount": ""
   },
   "4": {
-    "name": "S-Works Shiv Disc",
-    "image": "https://i.ibb.co/tztQLtT/bikeRoad.png",
+    "name": "Shiv Disc",
+    "colors": { "red": "", "black": "https://i.ibb.co/tztQLtT/bikeRoad.png" },
+    "series": ["S-Works", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["1e", "2e", "3e", "4e"],
     "category": "road",
     "price": "500$",
-    "basket": false,
-    "like": false,
     "discount": ""
   },
   "5": {
-    "name": "S-Works Tarmac SL7 - Speed of Light Collection",
-    "image": "https://i.ibb.co/MfQvdS2/bike-Mountain.png",
+    "name": "Tarmac SL7",
+    "colors": {
+      "red": "",
+      "black": "https://i.ibb.co/MfQvdS2/bike-Mountain.png"
+    },
+    "series": ["S-Works", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["1e", "2e", "3e", "4e"],
     "category": "mountain",
     "price": "500$",
-    "basket": false,
-    "like": false,
     "discount": "-30%"
   },
   "6": {
-    "name": "S-Works Tarmac SL7 - Speed of Light Collection",
-    "image": "https://i.ibb.co/MfQvdS2/bike-Mountain.png",
+    "name": "Tarmac SL7",
+    "colors": {
+      "red": "",
+      "black": "https://i.ibb.co/MfQvdS2/bike-Mountain.png"
+    },
+    "series": ["S-Works", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["1e", "2e", "3e", "4e"],
     "category": "mountain",
     "price": "500$",
-    "basket": false,
-    "like": false,
     "discount": "-30%"
   },
   "7": {
-    "name": "S-Works Tarmac SL7 - Speed of Light Collection",
-    "image": "https://i.ibb.co/wL741Kz/bikeKids.png",
+    "name": "Tarmac SL7",
+    "colors": { "red": "", "black": "https://i.ibb.co/wL741Kz/bikeKids.png" },
+    "series": ["S-Works", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["1e", "2e", "3e", "4e"],
     "category": "active",
     "price": "500$",
-    "basket": false,
-    "like": false,
     "discount": "-30%"
-  }
+  },
+  "1e": {}
 }
