@@ -46,6 +46,7 @@ const CardBikeComponent: React.FC<{ id: number }> = ({ id }) => {
       <Link href={`/catalog/${category}/${id}`}>
         <Image src={infoCard.image} alt="Bike" width={390} height={314} />
       </Link>
+
       <div className={s.card__wrapper}>
         <div className={s.card__wrapper_color}>
           <div className={s.card__color_dark}></div>
