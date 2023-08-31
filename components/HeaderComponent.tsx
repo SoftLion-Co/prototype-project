@@ -37,13 +37,13 @@ const HeaderComponent = () => {
               <p className={s.header__items_container__link}>Kyiv</p>
             </div>
             <Link
-              href="/cart"
+              href="/wishlist"
               className={classNames(s.header__items_container__mobile)}
             >
               <AiOutlineHeart className={s.header__icon_menu} />
             </Link>
             <Link
-              href="/wishlist"
+              href="/cart"
               className={classNames(s.header__items_container__mobile)}
             >
               <PiBagSimple className={s.header__icon_menu} />

@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 10px;
     @include for-size(tablet) {
       display: flex;
       align-items: center;
@@ -166,7 +166,10 @@
   &__items {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 10px;
+    @include for-size(desktop) {
+      gap: 15px;
+    }
   }
 }
 
