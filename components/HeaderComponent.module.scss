@@ -1,6 +1,5 @@
-@import "../style/container";
-@import "../style/colors";
-@import "../style/viewports";
+@import "@/style/container";
+@import "@/style/viewports";
 
 .header_container {
   background: #32492f;
@@ -38,7 +37,7 @@
       @include for-size(tablet) {
         display: flex;
         align-items: center;
-        gap: 19px;
+        gap: 5px;
       }
     }
 
