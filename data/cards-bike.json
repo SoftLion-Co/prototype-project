@@ -81,5 +81,5 @@
     "price": "500$",
     "discount": "-30%"
   },
-  "1e": {}
+  "1e": { "category": "active" }
 }
