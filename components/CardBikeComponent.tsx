@@ -1,4 +1,4 @@
-"use client";
+/* "use client";
 
 import s from "./CardBikeComponent.module.scss";
 
@@ -75,3 +75,4 @@ const CardBikeComponent: React.FC<{ id: number }> = ({ id }) => {
 };
 
 export default CardBikeComponent;
+ */
