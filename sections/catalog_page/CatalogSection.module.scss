@@ -1,0 +1,130 @@
+@import "@/style/viewports";
+@import "@/style/container";
+
+.catalog_section__bg {
+  position: relative;
+  z-index: 1;
+  background-color: #617163;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+
+    background-image: url("https://s3-alpha-sig.figma.com/img/443a/6c22/1df6c85b7a71bc060ecabc07810a3916?Expires=1694390400&Signature=SBbT5BRYXuj8399C8A8WcN-haIocEhEVmBCsx9QgkEKRyYKkDVNgMpTbD0AXyNoztYftmYgbQomp~nsUq3ySs2ycMHIFtfAwTRNlHb9cF1GdUIt95Mn9BvktLUML-3sk2ne5UO0twWpZXt4ZEwONGcyVcS2XN-NNogNPVBbyncf5C2SWcaCm~YonRnTx4AvX22pI7AuOQhQz5E33uZ~Ne0ITHo0zxlVyJAYaHxpV9fzov88Vsu11HmTVYkhtfvy1qN27liqjyoj3zGaJg9uhSz5zqkHliGaV2kuLJVA6X8Xp1c0pg-jdbtn4zy77tH8-Nw98xSjwgKNahrrHLlEo1w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.catalog_section__breadcrumbs_container {
+  display: flex;
+  width: 100%;
+
+  & > div {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+
+  & > div a {
+    color: #fff;
+  }
+}
+
+.catalog_section {
+  padding-bottom: 20px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  &__link {
+    max-width: 320px;
+    width: 100%;
+  }
+
+  &__item {
+    padding: 15px;
+    width: 100%;
+    background-color: #fff;
+
+    &__image {
+      margin: 0 auto;
+      margin-bottom: 15px;
+    }
+
+    &__title {
+      margin-bottom: 5px;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    &__text {
+      font-size: 14px;
+      color: #4c5225;
+    }
+  }
+
+  @include for-size(tablet) {
+    padding-bottom: 45px;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__list {
+      justify-content: start;
+    }
+
+    &__link {
+      max-width: calc((708px - 20px) / 2);
+    }
+
+    &__item {
+      padding: 25px;
+
+      &__text {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @include for-size(desktop) {
+    padding-bottom: 75px;
+
+    &__title {
+      margin-bottom: 75px;
+    }
+
+    &__link {
+      max-width: calc((1200px - 40px) / 3);
+    }
+
+    &__item {
+      padding: 35px;
+
+      &__text {
+        font-size: 18px;
+      }
+    }
+  }
+}
