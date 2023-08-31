@@ -1,0 +1,136 @@
+@import "../style/colors";
+@import "../style/container";
+@import "../style/viewports";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 29px;
+
+  &:hover {
+    box-shadow: 0px 8px 60px 0px rgba(0, 0, 0, 0.11);
+  }
+  border-radius: 5px;
+
+  position: relative;
+
+  max-width: 100%;
+
+  padding: 30px 25px;
+  @include for-size(tablet) {
+    padding: 35px 40px;
+    max-width: 375px;
+  }
+
+  @include for-size(desktop) {
+    max-width: 388px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    gap: 21px;
+
+    &_color {
+      display: flex;
+
+      gap: 8px;
+    }
+
+    &_icon {
+      display: flex;
+
+      gap: 19px;
+    }
+  }
+
+  &__color {
+    &_dark {
+      width: 20px;
+      height: 20px;
+
+      border-radius: 100px;
+      border: 3px solid rgba(255, 255, 255, 0.55);
+      background: linear-gradient(150deg, #d24545 0%, #4b48e7 100%);
+    }
+
+    &_light {
+      width: 20px;
+      height: 20px;
+
+      border-radius: 100px;
+      background: linear-gradient(151deg, #ed942b 0%, #bd48e7 100%);
+    }
+  }
+
+  &__price {
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.6px;
+
+    color: #4c5225;
+  }
+
+  &__wrapper_heard {
+    display: flex;
+    align-items: center;
+  }
+
+  &__wrapper_heard:hover > &__icon_heard {
+    fill: #d44848;
+  }
+
+  &__wrapper_cart:hover > &__icon_cart,
+  &__wrapper_cart:hover > &__text_cart {
+    fill: #d44848;
+    color: #d44848;
+    display: block;
+  }
+
+  &__wrapper_cart {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+  }
+
+  &__text_cart {
+    font-family: Helvetica;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.6px;
+
+    display: none;
+  }
+
+  &__icon_cart,
+  &__icon_heard {
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+  }
+
+  &__discount {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    border-radius: 0px 5px 0px 3px;
+    background: var(--ta, #d44848);
+
+    &_text {
+      color: #fff;
+
+      font-family: Helvetica;
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: 0.6px;
+
+      padding: 8px 16px;
+    }
+  }
+}
