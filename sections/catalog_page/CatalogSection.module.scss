@@ -45,6 +45,10 @@
     text-align: center;
     margin-bottom: 20px;
     color: #fff;
+
+    @include for-size(tablet) {
+      text-align: left;
+    }
   }
 
   &__list {
@@ -72,10 +76,7 @@
 
     &__title {
       margin-bottom: 5px;
-
-      &::first-letter {
-        text-transform: uppercase;
-      }
+      text-transform: capitalize;
     }
 
     &__text {
