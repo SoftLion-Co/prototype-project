@@ -1,0 +1,13 @@
+@import "../style/viewports";
+
+.arrow {
+  width: auto;
+  height: 38px;
+}
+
+.slider {
+  display: none;
+  @include for-size(desktop) {
+    display: block;
+  }
+}

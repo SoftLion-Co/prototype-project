@@ -1,7 +1,12 @@
+"use client";
+
+import useWishlist from "@/hooks/useWishlist";
+
 const Wishlist = () => {
+  const { likedItems, toggleLike } = useWishlist();
   return (
     <div>
-      <h1>Wishlist</h1>
+      <h1>{likedItems}</h1>
     </div>
   );
 };

@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 
-function useWishlist(initialValue: string[] = []) {
-  const [likedItems, setLikedItems] = useState<string[]>(initialValue);
+function useWishlist() {
+  const [likedItems, setLikedItems] = useState<string[]>(
+    JSON.parse(localStorage.getItem("likedItems") || "[]")
+  );
 
   useEffect(() => {
     const savedLikedItems = localStorage.getItem("likedItems");
@@ -15,9 +17,14 @@ function useWishlist(initialValue: string[] = []) {
   }, [likedItems]);
 
   const toggleLike = (itemId: string) => {
-    const updatedLikedItems = likedItems.includes(itemId)
-      ? likedItems.filter((id) => id !== itemId)
-      : [...likedItems, itemId];
+    let savedLikedItems = localStorage.getItem("likedItems");
+    let likeIds = [];
+    if (savedLikedItems) {
+      likeIds = JSON.parse(savedLikedItems);
+    }
+    const updatedLikedItems = likeIds.includes(itemId)
+      ? likeIds.filter((id: string) => id !== itemId)
+      : [...likeIds, itemId];
 
     setLikedItems(updatedLikedItems);
   };
