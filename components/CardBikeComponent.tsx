@@ -36,13 +36,14 @@ const CardBikeComponent: React.FC<{ id: string }> = ({ id }) => {
           height={314}
         />
       </Link>
+
       <div className={s.card__wrapper}>
         <div className={s.card__wrapper_color}>
           <div className={s.card__color_dark}></div>
           <div className={s.card__color_light}></div>
         </div>
         <Link href={`/catalog/${item.category}/${id}`}>
-          <h4>{item.name}</h4>
+          <h4 className={s.card__name>{item.name}</h4>
         </Link>
         <p className={s.card__price}>{item.price}</p>
         <div className={s.card__wrapper_icon}>

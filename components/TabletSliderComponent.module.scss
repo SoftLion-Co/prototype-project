@@ -1,0 +1,16 @@
+@import "../style/viewports";
+
+.arrow {
+  width: auto;
+  height: 30px;
+}
+
+.slider {
+  display: none;
+  @include for-size(tablet) {
+    display: block;
+  }
+  @include for-size(desktop) {
+    display: none;
+  }
+}

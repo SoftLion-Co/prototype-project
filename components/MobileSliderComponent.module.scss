@@ -1,0 +1,7 @@
+@import "../style/viewports";
+
+.slider {
+  @include for-size(tablet) {
+    display: none;
+  }
+}
