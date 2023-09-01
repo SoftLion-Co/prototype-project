@@ -43,7 +43,7 @@ const CardBikeComponent: React.FC<{ id: string }> = ({ id }) => {
           <div className={s.card__color_light}></div>
         </div>
         <Link href={`/catalog/${item.category}/${id}`}>
-          <h4 className={s.card__name>{item.name}</h4>
+          <h4 className={s.card__name}>{item.name}</h4>
         </Link>
         <p className={s.card__price}>{item.price}</p>
         <div className={s.card__wrapper_icon}>
