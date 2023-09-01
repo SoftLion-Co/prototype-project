@@ -49,11 +49,11 @@ const CardBikeComponent: React.FC<{ id: string }> = ({ id }) => {
           <div
             onClick={() => {
               toggleLike(id);
-              console.log(likedItems);
             }}
             className={s.card__wrapper_heard}
           >
             <PiHeartBold className={s.card__icon_heard} />
+            <p>{likedItems.includes(id) ? "y" : "n"}</p>
           </div>
           <div className={s.card__wrapper_cart} onClick={() => {}}>
             <PiShoppingCartSimpleBold className={s.card__icon_cart} />
