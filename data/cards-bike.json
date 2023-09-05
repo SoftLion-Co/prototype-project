@@ -9,8 +9,8 @@
     "sizes": [12, 14, 16],
     "equipment": ["1e", "2e", "3e", "4e"],
     "category": "electric",
-    "price": "500$",
-    "discount": ""
+    "price": 500,
+    "discount": 0
   },
   "2": {
     "name": "Turbo Levo",
@@ -19,8 +19,8 @@
     "sizes": [12, 14, 16],
     "equipment": ["1e", "2e", "3e", "4e"],
     "category": "kids",
-    "price": "500$",
-    "discount": ""
+    "price": 500,
+    "discount": 0
   },
   "3": {
     "name": "Turbo Levo",
@@ -32,8 +32,8 @@
     "sizes": [12, 14, 16],
     "equipment": ["1e", "2e", "3e", "4e"],
     "category": "active",
-    "price": "500$",
-    "discount": ""
+    "price": 500,
+    "discount": 0
   },
   "4": {
     "name": "Shiv Disc",
@@ -42,8 +42,8 @@
     "sizes": [12, 14, 16],
     "equipment": ["1e", "2e", "3e", "4e"],
     "category": "road",
-    "price": "500$",
-    "discount": ""
+    "price": 500,
+    "discount": 0
   },
   "5": {
     "name": "Tarmac SL7",
@@ -55,8 +55,8 @@
     "sizes": [12, 14, 16],
     "equipment": ["1e", "2e", "3e", "4e"],
     "category": "mountain",
-    "price": "500$",
-    "discount": "-30%"
+    "price": 500,
+    "discount": -30
   },
   "6": {
     "name": "Tarmac SL7",
@@ -68,8 +68,8 @@
     "sizes": [12, 14, 16],
     "equipment": ["1e", "2e", "3e", "4e"],
     "category": "mountain",
-    "price": "500$",
-    "discount": "-30%"
+    "price": 500,
+    "discount": -30
   },
   "7": {
     "name": "Tarmac SL7",
@@ -78,7 +78,7 @@
     "sizes": [12, 14, 16],
     "equipment": ["1e", "2e", "3e", "4e"],
     "category": "active",
-    "price": "500$",
-    "discount": "-30%"
+    "price": 500,
+    "discount": -30
   }
 }
