@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, FC, use } from "react";
+import React, { useState, useEffect } from "react";
 import s from "./WishlistSection.module.scss";
 import useWishlist from "@/hooks/useWishlist";
 import BreadcrumbsComponent from "@/components/BreadcrumbsComponent";
@@ -16,35 +16,33 @@ interface BikeProps {
   };
   series: string[];
   category: string;
-  price: string;
-  discount: string;
+  price: number;
+  discount: number;
 }
 
-const WishlistSection: FC = () => {
+const WishlistSection: React.FC = () => {
   const { likedItems, toggleLike } = useWishlist();
-  // const [items, setItems] = useState<string[]>();
+  const [itemsToDisplay, setItemsToDisplay] = useState<string[]>([]);
   const [currentCategory, setCurrentCategory] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
   const links = [{ title: "Wishlist", href: "" }];
-  const initialCards: { [key: string]: BikeProps } = data;
+  const cards: { [key: string]: BikeProps } = data;
+
   const itemsPerPage: number = 6;
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
-  // const handleClick = () => {
-  //   setItems(!likedItems);
-  // };
-  // useEffect(() => {
-  //   handleClick();
-  // }, [likedItems]);
+  useEffect(() => {
+    const updatedItemsToDisplay = likedItems
+      .filter((id) => {
+        const item = cards[id];
+        return currentCategory === "" || currentCategory === item.category;
+      })
+      .slice(startIndex, endIndex);
 
-  const itemsToDisplay = likedItems
-    .filter((id) => {
-      const item = initialCards[id];
-      return currentCategory === "" || currentCategory === item.category;
-    })
-    .slice(startIndex, endIndex);
+    setItemsToDisplay(updatedItemsToDisplay);
+  }, [likedItems, currentCategory, startIndex, endIndex]);
 
   const handleCategoryFilter = (category: string) => {
     setCurrentCategory(category);
@@ -67,18 +65,19 @@ const WishlistSection: FC = () => {
                 key={index}
                 className={classNames(
                   s.wishlist_container__btn,
-                  s.wishlist_container__btn__title
+                  s.wishlist_container__btn__title,
+                  currentCategory === index && s.wishlist_container__btn__active
                 )}
                 onClick={() => handleCategoryFilter(index)}
               >
                 {index}
               </button>
-            ))}
+            ))}   
           </div>
           <ul className={s.wishlist_container__list}>
             {itemsToDisplay.map((item) => (
               <li className={s.wishlist_container__items}>
-                <CardBikeComponent id={item} />
+                <CardBikeComponent id={item} handleToggle={toggleLike} />
               </li>
             ))}
           </ul>
