@@ -11,7 +11,7 @@ const DesktopSliderComponent: React.FC<{ id: string[] }> = ({ id }) => {
     <Carousel
       slideSize="33.333333%"
       slideGap="lg"
-      align="center"
+      align="start"
       slidesToScroll={3}
       previousControlIcon={<SlArrowLeft className={s.arrow} alt="<" />}
       nextControlIcon={<SlArrowRight className={s.arrow} alt=">" />}
