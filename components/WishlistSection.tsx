@@ -22,14 +22,22 @@ interface BikeProps {
 
 const WishlistSection: FC = () => {
   const { likedItems, toggleLike } = useWishlist();
+  // const [items, setItems] = useState<string[]>();
   const [currentCategory, setCurrentCategory] = useState("");
-  // const [updateData, setUpdateData] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
+  const links = [{ title: "Wishlist", href: "" }];
   const initialCards: { [key: string]: BikeProps } = data;
   const itemsPerPage: number = 6;
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
+
+  // const handleClick = () => {
+  //   setItems(!likedItems);
+  // };
+  // useEffect(() => {
+  //   handleClick();
+  // }, [likedItems]);
 
   const itemsToDisplay = likedItems
     .filter((id) => {
@@ -47,15 +55,6 @@ const WishlistSection: FC = () => {
     setCurrentPage(page);
   };
 
-  // useEffect(() => {
-  //   const updateDataCard = () => {
-  //     const updatedDataCard = likedItems;
-  //     setUpdateData(updatedDataCard);
-  //   };
-
-  // }, []);
-
-  const links = [{ title: "Wishlist", href: "" }];
   return (
     <section>
       <BreadcrumbsComponent links={links} />
