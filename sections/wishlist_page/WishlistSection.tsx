@@ -28,7 +28,6 @@ const WishlistSection: React.FC = () => {
 
   const links = [{ title: "Wishlist", href: "" }];
   const cards: { [key: string]: BikeProps } = data;
-
   const itemsPerPage: number = 6;
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -58,7 +57,6 @@ const WishlistSection: React.FC = () => {
       <BreadcrumbsComponent links={links} />
       <div className={s.container}>
         <div className={s.wishlist_container}>
-          <div className={s.wishlist_container__title}>Wish List</div>
           <div className={s.wishlist_container__filter_container}>
             {Object.keys(categories).map((index) => (
               <button
@@ -72,7 +70,7 @@ const WishlistSection: React.FC = () => {
               >
                 {index}
               </button>
-            ))}   
+            ))}
           </div>
           <ul className={s.wishlist_container__list}>
             {itemsToDisplay.map((item) => (
@@ -81,29 +79,31 @@ const WishlistSection: React.FC = () => {
               </li>
             ))}
           </ul>
-          <Pagination.Root
-            total={likedItems.length}
-            value={currentPage}
-            onChange={handlePageChange}
-            styles={(theme) => ({
-              control: {
-                "&[data-active]": {
-                  backgroundImage: theme.fn.gradient({
-                    from: "#6D6B4A",
-                    to: "#6D6B4A",
-                  }),
-                  border: 0,
+          {likedItems.length > 6 && (
+            <Pagination.Root
+              total={Math.ceil(likedItems.length / 6)}
+              value={currentPage}
+              onChange={handlePageChange}
+              styles={(theme) => ({
+                control: {
+                  "&[data-active]": {
+                    backgroundImage: theme.fn.gradient({
+                      from: "#6D6B4A",
+                      to: "#6D6B4A",
+                    }),
+                    border: 0,
+                  },
                 },
-              },
-            })}
-            size="lg"
-          >
-            <Group spacing={10} position="center">
-              <Pagination.Previous />
-              <Pagination.Items />
-              <Pagination.Next />
-            </Group>
-          </Pagination.Root>
+              })}
+              size="lg"
+            >
+              <Group spacing={10} position="center">
+                <Pagination.Previous />
+                <Pagination.Items />
+                <Pagination.Next />
+              </Group>
+            </Pagination.Root>
+          )}
         </div>
       </div>
     </section>
