@@ -1,7 +1,13 @@
+import Breadcrumbs from "@/components/BreadcrumbsComponent";
+import CartMain from "@/components/cartpage/CartMainComponent";
+
 const Cart = () => {
+  const links = [{ title: "Basket", href: "" }];
+
   return (
     <div>
-      <h1>Cart</h1>
+      <Breadcrumbs links={links} />
+      <CartMain />
     </div>
   );
 };
