@@ -6,6 +6,7 @@ import React from "react";
 import useWishlist from "@/hooks/useWishlist";
 import { PiHeartBold } from "react-icons/pi";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
+import { FaRegTrashAlt } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import data from "../data/cards-bike.json";
@@ -21,7 +22,10 @@ interface CardBikeProps {
   discount: number;
 }
 
-const CardBikeComponent: React.FC<{ id: string }> = ({ id }) => {
+const CardBikeComponent: React.FC<{
+  id: string;
+  handleToggle?: (id: string) => void;
+}> = ({ id, handleToggle }) => {
   const { likedItems, toggleLike } = useWishlist();
   const initialCards: { [key: string]: CardBikeProps } = data;
   const item = initialCards[id];
@@ -51,16 +55,26 @@ const CardBikeComponent: React.FC<{ id: string }> = ({ id }) => {
       <p className={s.card__price}>{item.price}$</p>
       <div className={s.card__wrapper_icon}>
         <div
-          onClick={() => {
-            toggleLike(id);
-          }}
+          onClick={
+            handleToggle
+              ? () => {
+                  handleToggle(id);
+                }
+              : () => {
+                  toggleLike(id);
+                }
+          }
           className={s.card__wrapper_heard}
         >
-          <PiHeartBold
-            className={`${s.card__icon_heard} ${
-              likedItems.includes(id) ? s.card__icon_liked : ""
-            }`}
-          />
+          {handleToggle ? (
+            <FaRegTrashAlt className={s.card__icon_heard} />
+          ) : (
+            <PiHeartBold
+              className={`${s.card__icon_heard} ${
+                likedItems.includes(id) ? s.card__icon_liked : ""
+              }`}
+            />
+          )}
         </div>
         <div className={s.card__wrapper_cart} onClick={() => {}}>
           <PiShoppingCartSimpleBold className={s.card__icon_cart} />
