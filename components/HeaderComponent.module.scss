@@ -1,0 +1,208 @@
+@import "@/style/container";
+@import "@/style/viewports";
+
+.header_container {
+  background: #32492f;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  @include for-size(tablet) {
+    padding: 12px 0;
+  }
+  @include for-size(desktop) {
+    padding: 19px 0;
+  }
+
+  &__items_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    @include for-size(tablet) {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+    @include for-size(desktop) {
+      gap: 34px;
+    }
+
+    &__item {
+      display: none;
+      @include for-size(tablet) {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+
+    &__mobile {
+      display: block;
+      @include for-size(tablet) {
+        display: none;
+      }
+    }
+
+    &__link {
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+
+  &__logo {
+    width: 126px;
+    height: auto;
+    @include for-size(tablet) {
+      width: 191px;
+      height: auto;
+    }
+  }
+
+  &__icon_menu {
+    width: 29px;
+    height: 29px;
+    color: #fff;
+    position: relative;
+  }
+
+  &__input {
+    display: none;
+
+    @include for-size(tablet) {
+      height: 34px;
+      width: 234px;
+      padding: 0 15px;
+      border-radius: 50px;
+      border: 1px solid #5e7045;
+      background: #fff;
+      display: flex;
+      align-items: center;
+    }
+    @include for-size(desktop) {
+      height: 44px;
+      width: 334px;
+    }
+
+    &__icon {
+      width: 23px;
+      height: 24px;
+      color: #000;
+    }
+
+    &__search {
+      border: none;
+      width: 100%;
+      font-size: 18px;
+      background-color: transparent;
+      height: 100%;
+      outline: none;
+    }
+  }
+
+  &__btn_burger {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-left: auto;
+    color: #fff;
+    @include for-size(tablet) {
+      display: none;
+    }
+  }
+}
+
+.navigation {
+  display: none;
+  @include for-size(tablet) {
+    display: block;
+    background: linear-gradient(
+      90deg,
+      rgba(50, 73, 47, 1) 35%,
+      rgba(103, 93, 58, 1) 100%
+    );
+  }
+
+  &__container {
+    @include for-size(tablet) {
+      padding: 19px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @include for-size(desktop) {
+      padding-left: 30px;
+    }
+  }
+
+  &__list {
+    @include for-size(tablet) {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+    @include for-size(desktop) {
+      gap: 105px;
+    }
+  }
+
+  &__link {
+    @include for-size(tablet) {
+      color: #fff;
+      font-size: 14px;
+      font-family: Oxanium;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    @include for-size(desktop) {
+      font-size: 16px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include for-size(desktop) {
+      gap: 15px;
+    }
+  }
+}
+
+// MOBILE
+.navigation_mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(50, 73, 47, 1) 35%,
+    rgba(103, 93, 58, 1) 100%
+  );
+  padding: 19px;
+  @include for-size(tablet) {
+    display: none;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    text-align: center;
+  }
+
+  &__link {
+    font-size: 16px;
+    color: #fff;
+    font-family: Oxanium;
+    text-transform: uppercase;
+  }
+
+  &__link:hover {
+    opacity: 75%;
+  }
+}

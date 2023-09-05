@@ -1,6 +1,6 @@
 @import-normalize;
 
-@import url("https://fonts.googleapis.com/css2?family=Besley&family=Open+Sans&family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Besley&family=Open+Sans&family=Roboto:wght@300;400;500&family=Oxanium&display=swap");
 
 @import "./colors";
 @import "./container";
@@ -10,8 +10,8 @@ html {
   scroll-behavior: smooth;
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -27,10 +27,28 @@ code {
 
 a {
   text-decoration: none;
+  color: black;
+  :hover {
+    color: rgb(120, 120, 120);
+  }
+  :active {
+    color: rgb(200, 200, 200);
+  }
 }
 
 button {
   cursor: pointer;
+  font-family: "Helvetica";
+  border-radius: 5px;
+  padding: 18px 40px 18px 40px;
+  background: none;
+  font-size: 16px;
+  @include for-size(tablet) {
+    font-size: 20px;
+  }
+  @include for-size(desktop) {
+    font-size: 22px;
+  }
 }
 
 h1,
@@ -38,9 +56,55 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  margin: 0;
+  text-wrap: balance;
+}
+
+h1 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 32px;
+  @include for-size(tablet) {
+    font-size: 42px;
+  }
+  @include for-size(desktop) {
+    font-size: 48px;
+  }
+}
+
+h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 24px;
+  @include for-size(tablet) {
+    font-size: 32px;
+  }
+  @include for-size(desktop) {
+    font-size: 36px;
+  }
+}
+
+h4 {
+  font-family: Helvetica;
+  font-size: 16px;
+  letter-spacing: 0.6px;
+  @include for-size(tablet) {
+    font-size: 18px;
+  }
+  @include for-size(desktop) {
+    font-size: 20px;
+  }
+}
 p {
   margin: 0;
+  font-size: 16px;
+  @include for-size(tablet) {
+    font-size: 20px;
+  }
+  @include for-size(desktop) {
+    font-size: 22px;
+  }
 }
 
 ul,
