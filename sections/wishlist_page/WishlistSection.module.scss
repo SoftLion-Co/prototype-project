@@ -34,8 +34,13 @@
     background-color: #e5e8d8;
     border: 0;
     @include for-size(tablet) {
-      width: 128px;
+      width: 155px;
     }
+    @include for-size(desktop) {
+      width: 179px;
+      height: 56px;
+    }
+
     &__title {
       text-transform: uppercase;
       font-size: 13px;
