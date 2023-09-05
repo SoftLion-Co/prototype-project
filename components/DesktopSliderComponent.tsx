@@ -6,7 +6,7 @@ import CardBikeComponent from "./CardBikeComponent";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import React from "react";
 
-const DesktopSliderComponent: React.FC<{ id: number[] }> = ({ id }) => {
+const DesktopSliderComponent: React.FC<{ id: string[] }> = ({ id }) => {
   return (
     <Carousel
       slideSize="33.333333%"
@@ -16,6 +16,9 @@ const DesktopSliderComponent: React.FC<{ id: number[] }> = ({ id }) => {
       previousControlIcon={<SlArrowLeft className={s.arrow} alt="<" />}
       nextControlIcon={<SlArrowRight className={s.arrow} alt=">" />}
       styles={{
+        viewport: {
+          padding: "19px",
+        },
         controls: {
           bottom: 0,
           top: 0,
