@@ -1,0 +1,81 @@
+@import "@/style/viewports";
+
+.container {
+  width: 100%;
+}
+
+.slider {
+  max-width: 440px;
+  width: 100%;
+  margin-bottom: 30px;
+
+  & button {
+    border: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  & svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+
+    &__img {
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
+@include for-size(tablet) {
+  .slider {
+    max-width: 357px;
+  }
+}
+
+@include for-size(desktop) {
+  .slider {
+    max-width: 725px;
+
+    &__item {
+      height: 340px;
+      cursor: pointer;
+
+      &__img {
+        width: auto;
+        height: 280px;
+      }
+    }
+  }
+}
+
+.bottom_slider {
+  margin-bottom: 30px;
+
+  &__item {
+    width: 230px;
+    cursor: pointer;
+
+    &__img {
+      width: 100%;
+      padding: 10px;
+      border-radius: 15px;
+
+      &__active {
+        border: 1px solid #cecece;
+      }
+    }
+  }
+}
+
+@include for-size(desktop) {
+  .bottom_slider {
+    gap: 30px;
+  }
+}

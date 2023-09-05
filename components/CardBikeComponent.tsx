@@ -17,8 +17,8 @@ interface CardBikeProps {
   };
   series: string[];
   category: string;
-  price: string;
-  discount: string;
+  price: number;
+  discount: number;
 }
 
 const CardBikeComponent: React.FC<{ id: string }> = ({ id }) => {
@@ -29,12 +29,7 @@ const CardBikeComponent: React.FC<{ id: string }> = ({ id }) => {
   return (
     <div className={s.card}>
       <Link href={`/catalog/${item.category}/${id}`}>
-        <Image
-          src={item.colors!["black"] || ""}
-          alt="Bike"
-          width={390}
-          height={314}
-        />
+        <Image src={item.colors!["black"] || ""} alt="Bike" width={390} height={314} />
       </Link>
 
       <div className={s.card__wrapper}>
@@ -45,7 +40,7 @@ const CardBikeComponent: React.FC<{ id: string }> = ({ id }) => {
         <Link href={`/catalog/${item.category}/${id}`}>
           <h4 className={s.card__name}>{item.name}</h4>
         </Link>
-        <p className={s.card__price}>{item.price}</p>
+        <p className={s.card__price}>{item.price}$</p>
         <div className={s.card__wrapper_icon}>
           <div
             onClick={() => {
@@ -64,7 +59,7 @@ const CardBikeComponent: React.FC<{ id: string }> = ({ id }) => {
       </div>
       {item.discount && (
         <div className={s.card__discount}>
-          <p className={s.card__discount_text}>{item.discount}</p>
+          <p className={s.card__discount_text}>-{item.discount}%</p>
         </div>
       )}
     </div>
