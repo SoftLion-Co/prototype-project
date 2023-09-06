@@ -6,14 +6,16 @@ import React from "react";
 import useWishlist from "@/hooks/useWishlist";
 import { PiHeartBold } from "react-icons/pi";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import data from "../data/cards-bike.json";
 
 interface CardBikeProps {
   name: string;
-  colors?: {
-    [color: string]: string;
+  colors: {
+    black: string;
+    red: string;
   };
   series: string[];
   category: string;
@@ -22,6 +24,7 @@ interface CardBikeProps {
 }
 
 const CardBikeComponent: React.FC<{ id: string }> = ({ id }) => {
+  const [colorPhoto, setColorPhoto] = useState(true);
   const { likedItems, toggleLike } = useWishlist();
   const initialCards: { [key: string]: CardBikeProps } = data;
   const item = initialCards[id];
@@ -33,15 +36,27 @@ const CardBikeComponent: React.FC<{ id: string }> = ({ id }) => {
         className={s.card__photo_bike}
       >
         <Image
-          src={item.colors!["black"] || ""}
+          src={colorPhoto ? item.colors?.black : item.colors?.red}
           alt="Bike"
           width={390}
-          height={314}
+          height={330}
         />
       </Link>
       <div className={s.card__wrapper_color}>
-        <div className={s.card__color_dark}></div>
-        <div className={s.card__color_light}></div>
+        <div
+          className={s.card__color_dark}
+          style={{
+            border: !colorPhoto ? "3px solid rgba(255, 255, 255, 0.55)" : "",
+          }}
+          onClick={() => setColorPhoto(true)}
+        ></div>
+        <div
+          className={s.card__color_light}
+          style={{
+            border: colorPhoto ? "3px solid rgba(255, 255, 255, 0.55)" : "",
+          }}
+          onClick={() => setColorPhoto(false)}
+        ></div>
       </div>
       <Link href={`/catalog/${item.category}/${id}`} className={s.card__name}>
         <h4>
@@ -62,7 +77,7 @@ const CardBikeComponent: React.FC<{ id: string }> = ({ id }) => {
             }`}
           />
         </div>
-        <div className={s.card__wrapper_cart} onClick={() => {}}>
+        <div className={s.card__wrapper_cart}>
           <PiShoppingCartSimpleBold className={s.card__icon_cart} />
           <p className={s.card__text_cart}>Add to cart</p>
         </div>

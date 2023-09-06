@@ -2,7 +2,7 @@
   "1": {
     "name": "Shiv Disc",
     "colors": {
-      "red": "",
+      "red": "https://i.ibb.co/wL741Kz/bikeKids.png",
       "black": "https://i.ibb.co/SRDYwLh/bike-Electric.png"
     },
     "series": ["S-Works", ""],
@@ -14,7 +14,10 @@
   },
   "2": {
     "name": "Turbo Levo",
-    "colors": { "red": "", "black": "https://i.ibb.co/wL741Kz/bikeKids.png" },
+    "colors": {
+      "red": "https://i.ibb.co/wL741Kz/bikeKids.png",
+      "black": "https://i.ibb.co/wL741Kz/bikeKids.png"
+    },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
     "equipment": ["1e", "2e", "3e", "4e"],
@@ -25,7 +28,7 @@
   "3": {
     "name": "Turbo Levo",
     "colors": {
-      "red": "",
+      "red": "https://i.ibb.co/wL741Kz/bikeKids.png",
       "black": "https://i.ibb.co/3C3V97y/bike-Active.png"
     },
     "series": ["S-Works", ""],
@@ -37,7 +40,10 @@
   },
   "4": {
     "name": "Shiv Disc",
-    "colors": { "red": "", "black": "https://i.ibb.co/tztQLtT/bikeRoad.png" },
+    "colors": {
+      "red": "https://i.ibb.co/wL741Kz/bikeKids.png",
+      "black": "https://i.ibb.co/tztQLtT/bikeRoad.png"
+    },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
     "equipment": ["1e", "2e", "3e", "4e"],
@@ -48,7 +54,7 @@
   "5": {
     "name": "Tarmac SL7",
     "colors": {
-      "red": "",
+      "red": "https://i.ibb.co/wL741Kz/bikeKids.png",
       "black": "https://i.ibb.co/MfQvdS2/bike-Mountain.png"
     },
     "series": ["S-Works", ""],
@@ -61,7 +67,7 @@
   "6": {
     "name": "Tarmac SL7",
     "colors": {
-      "red": "",
+      "red": "https://i.ibb.co/wL741Kz/bikeKids.png",
       "black": "https://i.ibb.co/MfQvdS2/bike-Mountain.png"
     },
     "series": ["S-Works", ""],
@@ -73,7 +79,10 @@
   },
   "7": {
     "name": "Tarmac SL7",
-    "colors": { "red": "", "black": "https://i.ibb.co/wL741Kz/bikeKids.png" },
+    "colors": {
+      "red": "https://i.ibb.co/MfQvdS2/bike-Mountain.png",
+      "black": "https://i.ibb.co/wL741Kz/bikeKids.png"
+    },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
     "equipment": ["1e", "2e", "3e", "4e"],
