@@ -1,7 +1,9 @@
+import DeliverySection from "@/sections/delivery_page/DeliverySection";
+
 const Cart = () => {
   return (
     <div>
-      <h1>Cart</h1>
+      <DeliverySection />
     </div>
   );
 };
