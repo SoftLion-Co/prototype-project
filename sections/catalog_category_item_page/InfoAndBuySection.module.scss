@@ -63,16 +63,12 @@
     gap: 8px;
     margin-bottom: 30px;
 
-    & button {
+    & li {
       padding: 0;
       border: none;
       width: 34px;
       height: 34px;
       border-radius: 1000px;
-
-      &.active {
-        border: 5px solid rgba(255, 255, 255, 0.5);
-      }
     }
   }
 

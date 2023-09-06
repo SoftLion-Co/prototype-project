@@ -8,7 +8,7 @@ import CardBikeComponent from "@/components/CardBikeComponent";
 interface BikeI {
   name: string;
   colors: {
-    [color: string]: string[];
+    [color: string]: string;
   };
   series: string[];
   sizes: number[];
@@ -22,15 +22,8 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
   const bike: { [key: string]: BikeI } = data;
   const item = bike[id];
 
-  const [color, setColor] = useState(Object.keys(item.colors)[0]);
   const [size, setSize] = useState(item.sizes[0]);
   const [description, setDescription] = useState("description");
-  const [pictures, setPictures] = useState(Object.values(item.colors)[0]);
-
-  const handleColorBtn = (e: MouseEvent) => {
-    setColor(e.currentTarget.id);
-    setPictures(item.colors[e.currentTarget.id]);
-  };
 
   const handleSizeBtn = (e: MouseEvent) => {
     setSize(Number(e.currentTarget.id));
@@ -48,7 +41,7 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
             <h2>
               {item.series[0]} {item.name}
             </h2>
-            <Slider pictures={pictures} />
+            <Slider pictures={Object.values(item.colors)} />
           </div>
 
           <div className={s.info_and_buy_container}>
@@ -60,16 +53,7 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
               <h4 className={s.info_and_buy_container__title}>Color</h4>
               <ul className={s.info_and_buy_container__colors_list}>
                 {Object.keys(item.colors).map(el => {
-                  return (
-                    <li>
-                      <button
-                        onClick={handleColorBtn}
-                        className={color === `${el}` ? s.active : ""}
-                        id={el}
-                        style={{ backgroundColor: el }}
-                      ></button>
-                    </li>
-                  );
+                  return <li style={{ backgroundColor: el }}></li>;
                 })}
               </ul>
 

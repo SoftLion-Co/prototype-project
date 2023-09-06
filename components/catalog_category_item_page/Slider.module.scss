@@ -25,10 +25,12 @@
     align-items: center;
     justify-content: center;
     height: 200px;
+    width: 100%;
+    cursor: pointer;
 
     &__img {
       width: auto;
-      height: auto;
+      height: 200px;
     }
   }
 }
@@ -36,6 +38,13 @@
 @include for-size(tablet) {
   .slider {
     max-width: 357px;
+
+    &__item {
+      &__img {
+        width: auto;
+        height: 200px;
+      }
+    }
   }
 }
 
@@ -45,10 +54,8 @@
 
     &__item {
       height: 340px;
-      cursor: pointer;
 
       &__img {
-        width: auto;
         height: 280px;
       }
     }
@@ -63,7 +70,9 @@
     cursor: pointer;
 
     &__img {
-      width: 100%;
+      width: auto;
+      max-height: 150px;
+      height: 100%;
       padding: 10px;
       border-radius: 15px;
 
