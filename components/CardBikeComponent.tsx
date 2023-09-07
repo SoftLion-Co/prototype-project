@@ -7,6 +7,7 @@ import useWishlist from "@/hooks/useWishlist";
 import { PiHeartBold } from "react-icons/pi";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
 import { useState } from "react";
+import { FaRegTrashAlt } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import data from "../data/cards-bike.json";
@@ -23,23 +24,22 @@ interface CardBikeProps {
   discount: number;
 }
 
-const CardBikeComponent: React.FC<{ id: string }> = ({ id }) => {
-  const [colorPhoto, setColorPhoto] = useState(true);
+const CardBikeComponent: React.FC<{
+  id: string;
+  handleToggle?: (id: string) => void;
+}> = ({ id, handleToggle }) => {
   const { likedItems, toggleLike } = useWishlist();
   const initialCards: { [key: string]: CardBikeProps } = data;
   const item = initialCards[id];
-
+  const [colorPhoto, setColorPhoto] = useState(false);
   return (
     <div className={s.card}>
-      <Link
-        href={`/catalog/${item.category}/${id}`}
-        className={s.card__photo_bike}
-      >
+      <Link href={`/catalog/${item.category}/${id}`}>
         <Image
-          src={colorPhoto ? item.colors?.black : item.colors?.red}
+          src={item.colors!["black"] || ""}
           alt="Bike"
           width={390}
-          height={330}
+          height={314}
         />
       </Link>
       <div className={s.card__wrapper_color}>
@@ -66,16 +66,26 @@ const CardBikeComponent: React.FC<{ id: string }> = ({ id }) => {
       <p className={s.card__price}>{item.price}$</p>
       <div className={s.card__wrapper_icon}>
         <div
-          onClick={() => {
-            toggleLike(id);
-          }}
+          onClick={
+            handleToggle
+              ? () => {
+                  handleToggle(id);
+                }
+              : () => {
+                  toggleLike(id);
+                }
+          }
           className={s.card__wrapper_heard}
         >
-          <PiHeartBold
-            className={`${s.card__icon_heard} ${
-              likedItems.includes(id) ? s.card__icon_liked : ""
-            }`}
-          />
+          {handleToggle ? (
+            <FaRegTrashAlt className={s.card__icon_heard} />
+          ) : (
+            <PiHeartBold
+              className={`${s.card__icon_heard} ${
+                likedItems.includes(id) ? s.card__icon_liked : ""
+              }`}
+            />
+          )}
         </div>
         <div className={s.card__wrapper_cart}>
           <PiShoppingCartSimpleBold className={s.card__icon_cart} />
@@ -84,7 +94,7 @@ const CardBikeComponent: React.FC<{ id: string }> = ({ id }) => {
       </div>
       {item.discount !== 0 && (
         <div className={s.card__discount}>
-          <p className={s.card__discount_text}>{item.discount}%</p>
+          <p className={s.card__discount_text}>-{item.discount}%</p>
         </div>
       )}
     </div>
