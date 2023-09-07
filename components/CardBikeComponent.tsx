@@ -32,16 +32,8 @@ const CardBikeComponent: React.FC<{
 
   return (
     <div className={s.card}>
-      <Link
-        href={`/catalog/${item.category}/${id}`}
-        className={s.card__photo_bike}
-      >
-        <Image
-          src={item.colors!["black"] || ""}
-          alt="Bike"
-          width={390}
-          height={314}
-        />
+      <Link href={`/catalog/${item.category}/${id}`}>
+        <Image src={item.colors!["black"] || ""} alt="Bike" width={390} height={314} />
       </Link>
       <div className={s.card__wrapper_color}>
         <div className={s.card__color_dark}></div>
@@ -83,7 +75,7 @@ const CardBikeComponent: React.FC<{
       </div>
       {item.discount !== 0 && (
         <div className={s.card__discount}>
-          <p className={s.card__discount_text}>{item.discount}%</p>
+          <p className={s.card__discount_text}>-{item.discount}%</p>
         </div>
       )}
     </div>
