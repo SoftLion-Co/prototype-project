@@ -6,17 +6,20 @@ import CardBikeComponent from "./CardBikeComponent";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import React from "react";
 
-const TabletSliderComponent: React.FC<{ id: number[] }> = ({ id }) => {
+const TabletSliderComponent: React.FC<{ id: string[] }> = ({ id }) => {
   return (
     <Carousel
       slideSize="50%"
       slideGap="lg"
-      align="center"
+      align="start"
       slidesToScroll={2}
       previousControlIcon={<SlArrowLeft className={s.arrow} alt="<" />}
       nextControlIcon={<SlArrowRight className={s.arrow} alt=">" />}
       className={s.slider}
       styles={{
+        viewport: {
+          padding: "19px",
+        },
         controls: {
           bottom: 0,
           top: 0,
