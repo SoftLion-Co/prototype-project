@@ -4,6 +4,7 @@ import { Slider } from "@/components/catalog_category_item_page/Slider";
 import data from "@/data/cards-bike.json";
 import { AiOutlineHeart } from "react-icons/ai";
 import CardBikeComponent from "@/components/CardBikeComponent";
+import SliderComponent from "@/components/SliderComponent";
 
 interface BikeI {
   name: string;
@@ -16,6 +17,8 @@ interface BikeI {
   price: number;
   discount: number;
   equipment: string[];
+  description: string;
+  characteristics: string;
 }
 
 export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
@@ -24,6 +27,26 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
 
   const [size, setSize] = useState(item.sizes[0]);
   const [description, setDescription] = useState("description");
+  const [color, setColor] = useState(item.colors[0]);
+
+  const changeColor = (id: number) => {
+    setColor(Object.keys(item.colors)[id]);
+  };
+
+  const getBikesFromTheSameSeries = () => {
+    const seria = item.series[0];
+    const matchingIds = [];
+
+    for (const id in data) {
+      const item = bike[id];
+
+      if (item.series.includes(seria)) {
+        matchingIds.push(Number(id));
+      }
+    }
+
+    return matchingIds;
+  };
 
   const handleSizeBtn = (e: MouseEvent) => {
     setSize(Number(e.currentTarget.id));
@@ -41,7 +64,7 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
             <h2>
               {item.series[0]} {item.name}
             </h2>
-            <Slider pictures={Object.values(item.colors)} />
+            <Slider pictures={Object.values(item.colors)} changeColor={changeColor} />
           </div>
 
           <div className={s.info_and_buy_container}>
@@ -53,7 +76,12 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
               <h4 className={s.info_and_buy_container__title}>Color</h4>
               <ul className={s.info_and_buy_container__colors_list}>
                 {Object.keys(item.colors).map(el => {
-                  return <li style={{ backgroundColor: el }}></li>;
+                  return (
+                    <li
+                      className={color === el ? s.active : ""}
+                      style={{ backgroundColor: el }}
+                    ></li>
+                  );
                 })}
               </ul>
 
@@ -112,31 +140,18 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
               Description
             </button>
             <button
-              className={description === "char-tics" ? s.active : ""}
+              className={description === "characteristics" ? s.active : ""}
               onClick={handleDescriptionBtn}
-              id="char-tics"
+              id="characteristics"
             >
-              Char-tics
-            </button>
-            <button
-              className={description === "reviews" ? s.active : ""}
-              onClick={handleDescriptionBtn}
-              id="reviews"
-            >
-              Reviews
+              Characteristics
             </button>
           </div>
 
           <p className={s.info_and_buy_description__text}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae
-            recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere
-            ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat,
-            adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem
-            possimus reiciendis?
+            {description === "description" && item.description}
+            {description === "characteristics" && item.characteristics}
           </p>
-
-          <button className={s.info_and_buy_description__button}>Read more</button>
         </div>
       </div>
 
@@ -152,6 +167,12 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
 
       <div className={s.picture_component}>
         <p>A new level of fit, ventilation and confidence</p>
+      </div>
+
+      <div className={s.bikes_from_this_series}>
+        <h2 className={s.bikes_from_this_series__title}>Bikes from this series</h2>
+
+        <SliderComponent id={getBikesFromTheSameSeries()} />
       </div>
     </section>
   );

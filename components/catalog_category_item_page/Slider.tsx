@@ -7,17 +7,20 @@ import classNames from "classnames";
 
 interface Props {
   pictures: string[];
+  changeColor: (id: number) => void;
 }
 
-export const Slider: FC<Props> = ({ pictures }) => {
+export const Slider: FC<Props> = ({ pictures, changeColor }) => {
   const [slide, setSlide] = useState(0);
 
   const handleSlideClick = (e: any) => {
     setSlide(Number(e.currentTarget.id));
+    changeColor(Number(e.currentTarget.id));
   };
 
   const handleSlideChange = (index: number) => {
     setSlide(index);
+    changeColor(index);
   };
 
   return (
@@ -29,6 +32,7 @@ export const Slider: FC<Props> = ({ pictures }) => {
         mx="auto"
         initialSlide={slide}
         onSlideChange={handleSlideChange}
+        loop={true}
       >
         {pictures.map(img => {
           return (
@@ -52,6 +56,7 @@ export const Slider: FC<Props> = ({ pictures }) => {
         withControls={false}
         slideGap={15}
         initialSlide={slide}
+        styles={{ container: { alignItems: "center" } }}
       >
         {pictures.map((img, i) => {
           return (

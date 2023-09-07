@@ -10,7 +10,7 @@
     flex-shrink: 0;
 
     & h2 {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
   }
 
@@ -50,12 +50,12 @@
   @include for-size(tablet) {
     & h2 {
       display: block;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
   }
 
   &__title {
-    margin-bottom: 17px;
+    margin-bottom: 12px;
   }
 
   &__colors_list {
@@ -69,6 +69,10 @@
       width: 34px;
       height: 34px;
       border-radius: 1000px;
+
+      &.active {
+        border: 5px solid rgba(255, 255, 255, 0.6);
+      }
     }
   }
 
@@ -150,7 +154,7 @@
 
     &__order_btn {
       padding: 0;
-      width: 195px;
+      width: calc(100% - 56px - 18px);
       height: 56px;
 
       border: 1px solid $default-red;
@@ -223,10 +227,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 70px;
+  padding: 40px 70px;
   margin-bottom: 60px;
   width: 100%;
-  height: 189px;
 
   position: relative;
   z-index: 1;
@@ -255,7 +258,8 @@
   }
 
   @include for-size(tablet) {
-    height: 300px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     & p {
       font-size: 35px;
@@ -263,10 +267,19 @@
   }
 
   @include for-size(desktop) {
-    height: 500px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 
     & p {
       font-size: 55px;
     }
+  }
+}
+
+.bikes_from_this_series {
+  padding-bottom: 30px;
+
+  &__title {
+    margin-bottom: 30px;
   }
 }

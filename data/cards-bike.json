@@ -10,7 +10,9 @@
     "equipment": ["1", "2", "3", "4"],
     "category": "electric",
     "price": 500,
-    "discount": 0
+    "discount": 0,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "2": {
     "name": "Turbo Levo",
@@ -23,7 +25,9 @@
     "equipment": ["1", "2", "3", "4"],
     "category": "kids",
     "price": 500,
-    "discount": 0
+    "discount": 0,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "3": {
     "name": "Turbo Levo",
@@ -36,7 +40,9 @@
     "equipment": ["1", "2", "3", "4"],
     "category": "active",
     "price": 500,
-    "discount": 0
+    "discount": 0,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "4": {
     "name": "Shiv Disc",
@@ -49,7 +55,9 @@
     "equipment": ["1", "2", "3", "4"],
     "category": "road",
     "price": 500,
-    "discount": 0
+    "discount": 0,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "5": {
     "name": "Tarmac SL7",
@@ -62,7 +70,9 @@
     "equipment": ["1", "2", "3", "4"],
     "category": "mountain",
     "price": 500,
-    "discount": 30
+    "discount": 30,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "6": {
     "name": "Tarmac SL7",
@@ -75,7 +85,9 @@
     "equipment": ["1", "2", "3", "4"],
     "category": "mountain",
     "price": 500,
-    "discount": 30
+    "discount": 30,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "7": {
     "name": "Tarmac SL7",
@@ -88,6 +100,8 @@
     "equipment": ["1", "2", "3", "4"],
     "category": "active",
     "price": 500,
-    "discount": 30
+    "discount": 30,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   }
 }
