@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/BreadcrumbsComponent";
 import CartMain from "@/components/cartpage/CartMainComponent";
 
 const Cart = () => {
-  const links = [{ title: "Basket", href: "" }];
+  const links = [{ title: "Cart", href: "" }];
 
   return (
     <div>
