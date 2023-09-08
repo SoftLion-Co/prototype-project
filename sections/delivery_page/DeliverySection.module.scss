@@ -17,6 +17,10 @@
     }
   }
 
+  &__title {
+    text-transform: none;
+  }
+
   &__white {
     color: #fff;
   }
@@ -40,7 +44,7 @@
     @include for-size(tablet) {
       flex-wrap: nowrap;
       align-items: start;
-      height: 324px;
+      height: 340px;
       width: 490px;
     }
     @include for-size(desktop) {
@@ -54,19 +58,6 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
-    }
-
-    &__title {
-      font-family: Helvetica;
-      font-size: 22px;
-      font-weight: 700;
-      color: #fff;
-      @include for-size(tablet) {
-        font-size: 16px;
-      }
-      @include for-size(desktop) {
-        font-size: 22px;
-      }
     }
   }
   &__box_second {
@@ -85,17 +76,8 @@
 
     &__title {
       display: flex;
-      gap: 5px;
       flex-wrap: wrap;
-      font-family: Helvetica;
-      font-size: 22px;
-      font-weight: 700;
-      @include for-size(tablet) {
-        font-size: 16px;
-      }
-      @include for-size(desktop) {
-        font-size: 22px;
-      }
+      gap: 8px;
     }
 
     &__red {

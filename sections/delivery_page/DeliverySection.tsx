@@ -13,9 +13,7 @@ const DeliverySection = () => {
         <div className={s.delivery_container}>
           <div className={s.delivery_container__box_container}>
             <div className={classNames(s.delivery_container__box)}>
-              <div className={s.delivery_container__box__title}>
-                What is important to know?
-              </div>
+              <h2 className={classNames(s.delivery_container__white, s.delivery_container__title) }>What is important to know?</h2>
               <span className={s.delivery_container__white}>
                 At Specialized, our guiding principle is “The Rider is the
                 Boss.” Our main goal is to provide riders with the most
@@ -34,11 +32,9 @@ const DeliverySection = () => {
           </div>
           <div className={s.delivery_container__box_second}>
             <div className={s.delivery_container__box_second__title}>
-              <div>Fast.</div>
-              <div className={s.delivery_container__box_second__red}>
-                Reliably.
-              </div>
-              <div>Professionally.</div>
+              <h2 className={s.delivery_container__title}>Fast.</h2>
+              <h2 className={classNames(s.delivery_container__title, s.delivery_container__box_second__red)}>Reliably.</h2>
+              <h2 className={s.delivery_container__title}>Professionally.</h2>
             </div>
             <span>
               A full description of our policy with all terms and conditions can
@@ -49,12 +45,8 @@ const DeliverySection = () => {
           </div>
           <div className={s.delivery_container__box_three}>
             <div className={s.delivery_container__box_three__container}>
-              <div className={s.delivery_container__box_second__title}>
-                Location doesn't matter.
-              </div>
-              <span> 
-                Only you add only your bike.
-              </span>
+              <h2 className={s.delivery_container__title}>Location doesn't matter.</h2>
+              <span>Only you add only your bike.</span>
             </div>
             <div
               className={classNames(
