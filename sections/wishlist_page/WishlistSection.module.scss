@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 145px;
+    width: 130px;
     height: 44px;
     border-radius: 5px;
     background-color: #e5e8d8;
@@ -44,7 +44,7 @@
     &__title {
       text-transform: uppercase;
       font-size: 13px;
-      @include for-size(tablet) {
+      @include for-size(desktop) {
         font-size: 16px;
       }
     }
