@@ -1,12 +1,10 @@
 "use client";
-
-import useWishlist from "@/hooks/useWishlist";
+import WishlistSection from "@/sections/wishlist_page/WishlistSection"
 
 const Wishlist = () => {
-  const { likedItems, toggleLike } = useWishlist();
   return (
     <div>
-      <h1>{likedItems}</h1>
+      <WishlistSection />
     </div>
   );
 };
