@@ -16,14 +16,14 @@ const DeliverySection = () => {
               <div className={s.delivery_container__box__title}>
                 What is important to know?
               </div>
-              <div className={s.delivery_container__box__describe}>
+              <span className={s.delivery_container__white}>
                 At Specialized, our guiding principle is “The Rider is the
                 Boss.” Our main goal is to provide riders with the most
                 innovative cycling products in the world and be responsible for
                 their quality. That's why we're excited to introduce one of the
                 most generous and rider-friendly warranty policies in the
                 industry. Plus, it's pretty simple:
-              </div>
+              </span>
             </div>
             <div
               className={classNames(
@@ -40,21 +40,21 @@ const DeliverySection = () => {
               </div>
               <div>Professionally.</div>
             </div>
-            <div className={s.delivery_container__box_second__describe}>
+            <span>
               A full description of our policy with all terms and conditions can
               be found below. Please read all points, the policy applies to all
               Specialized products sold after July 1, 2018. Compare for yourself
               - it is one of the best on the market
-            </div>
+            </span>
           </div>
           <div className={s.delivery_container__box_three}>
             <div className={s.delivery_container__box_three__container}>
               <div className={s.delivery_container__box_second__title}>
                 Location doesn't matter.
               </div>
-              <div className={s.delivery_container__box_second__describe}>
-                Only you and only your bike.
-              </div>
+              <span> 
+                Only you add only your bike.
+              </span>
             </div>
             <div
               className={classNames(
@@ -63,7 +63,15 @@ const DeliverySection = () => {
               )}
             ></div>
           </div>
-					<Link href="/catalog" className={classNames(s.delivery_container__btn, s.delivery_container__btn__title) } >Catalog</Link>
+          <Link
+            href="/catalog"
+            className={classNames(
+              s.delivery_container__btn,
+              s.delivery_container__btn__title
+            )}
+          >
+            Catalog
+          </Link>
         </div>
       </div>
     </section>
