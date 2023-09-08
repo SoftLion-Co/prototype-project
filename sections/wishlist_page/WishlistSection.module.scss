@@ -28,22 +28,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 145px;
+    width: 130px;
     height: 44px;
     border-radius: 5px;
     background-color: #e5e8d8;
     border: 0;
     @include for-size(tablet) {
-      width: 128px;
+      width: 155px;
     }
+    @include for-size(desktop) {
+      width: 179px;
+      height: 56px;
+    }
+
     &__title {
       text-transform: uppercase;
       font-size: 13px;
-      @include for-size(tablet) {
+      @include for-size(desktop) {
         font-size: 16px;
       }
     }
     &__active {
+      color: #fff;
       background-color: #5e7045;
     }
   }
