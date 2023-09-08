@@ -146,16 +146,25 @@
   }
 
   &__counter {
-    padding: 12px 17px;
+    padding: 10px 14px;
     border-radius: 5px;
     border: 1px solid #cecece;
 
-    font-family: Helvetica;
-    @include for-size(tablet) {
-      padding: 10px 14px;
+    outline: none;
 
-      font-size: 14px;
-    }
+    caret-color: transparent;
+
+    width: 38px;
+
+    font-family: Helvetica;
+
+    font-size: 14px;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
   }
 
   &__trash:hover > &__trash_item {
@@ -168,6 +177,7 @@
   }
 
   &__minus {
+    cursor: pointer;
     @include for-size(tablet) {
       width: 14px;
     }
@@ -177,6 +187,7 @@
   }
 
   &__plus {
+    cursor: pointer;
     @include for-size(tablet) {
       width: 14px;
     }
