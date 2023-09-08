@@ -44,7 +44,11 @@ const WishlistSection: React.FC = () => {
   }, [likedItems, currentCategory, startIndex, endIndex]);
 
   const handleCategoryFilter = (category: string) => {
-    setCurrentCategory(category);
+    if (currentCategory === category) {
+      setCurrentCategory("");
+    } else {
+      setCurrentCategory(category);
+    }
     setCurrentPage(1);
   };
 
