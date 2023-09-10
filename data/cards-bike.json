@@ -2,83 +2,92 @@
   "1": {
     "name": "Shiv Disc",
     "colors": {
-      "red": "",
+      "red": "https://velogo.com.ua/uploads/shop/products/large/bda5c4a80b32d3d9925d03e11bd15b5e.jpg",
       "black": "https://i.ibb.co/SRDYwLh/bike-Electric.png"
     },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["1e", "2e", "3e", "4e"],
+    "equipment": ["1", "2", "3", "4"],
     "category": "electric",
-    "price": "500$",
-    "discount": ""
+    "price": 500,
+    "discount": 0
   },
   "2": {
     "name": "Turbo Levo",
-    "colors": { "red": "", "black": "https://i.ibb.co/wL741Kz/bikeKids.png" },
+    "colors": {
+      "red": "https://i.ibb.co/wL741Kz/bikeKids.png",
+      "black": ""
+    },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["1e", "2e", "3e", "4e"],
+    "equipment": ["1", "2", "3", "4"],
     "category": "kids",
-    "price": "500$",
-    "discount": ""
+    "price": 500,
+    "discount": 0
   },
   "3": {
     "name": "Turbo Levo",
     "colors": {
-      "red": "",
+      "red": "https://velogo.com.ua/uploads/shop/products/large/bda5c4a80b32d3d9925d03e11bd15b5e.jpg",
       "black": "https://i.ibb.co/3C3V97y/bike-Active.png"
     },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["1e", "2e", "3e", "4e"],
+    "equipment": ["1", "2", "3", "4"],
     "category": "active",
-    "price": "500$",
-    "discount": ""
+    "price": 500,
+    "discount": 0
   },
   "4": {
     "name": "Shiv Disc",
-    "colors": { "red": "", "black": "https://i.ibb.co/tztQLtT/bikeRoad.png" },
+    "colors": {
+      "red": "https://velogo.com.ua/uploads/shop/products/large/bda5c4a80b32d3d9925d03e11bd15b5e.jpg",
+      "black": "https://i.ibb.co/tztQLtT/bikeRoad.png"
+    },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["1e", "2e", "3e", "4e"],
+    "equipment": ["1", "2", "3", "4"],
     "category": "road",
-    "price": "500$",
-    "discount": ""
+    "price": 500,
+    "discount": 0
   },
   "5": {
     "name": "Tarmac SL7",
     "colors": {
-      "red": "",
+      "red": "https://velogo.com.ua/uploads/shop/products/large/bda5c4a80b32d3d9925d03e11bd15b5e.jpg",
       "black": "https://i.ibb.co/MfQvdS2/bike-Mountain.png"
     },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["1e", "2e", "3e", "4e"],
+    "equipment": ["1", "2", "3", "4"],
     "category": "mountain",
-    "price": "500$",
-    "discount": "-30%"
+    "price": 500,
+    "discount": 30
   },
   "6": {
     "name": "Tarmac SL7",
     "colors": {
-      "red": "",
+      "red": "https://velogo.com.ua/uploads/shop/products/large/bda5c4a80b32d3d9925d03e11bd15b5e.jpg",
       "black": "https://i.ibb.co/MfQvdS2/bike-Mountain.png"
     },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["1e", "2e", "3e", "4e"],
+    "equipment": ["1", "2", "3", "4"],
     "category": "mountain",
-    "price": "500$",
-    "discount": "-30%"
+    "price": 500,
+    "discount": 30
   },
   "7": {
     "name": "Tarmac SL7",
-    "colors": { "red": "", "black": "https://i.ibb.co/wL741Kz/bikeKids.png" },
+    "colors": {
+      "red": "https://velogo.com.ua/uploads/shop/products/large/bda5c4a80b32d3d9925d03e11bd15b5e.jpg",
+      "black": "https://i.ibb.co/wL741Kz/bikeKids.png"
+    },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["1e", "2e", "3e", "4e"],
+    "equipment": ["1", "2", "3", "4"],
     "category": "active",
-    "price": "500$",
-    "discount": "-30%"
+    "price": 500,
+    "discount": 30
   }
 }

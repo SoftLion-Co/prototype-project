@@ -1,0 +1,162 @@
+@import "@/style/viewports";
+@import "@/style/container";
+
+.delivery_container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 60px;
+  &__box_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include for-size(tablet) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__title {
+    text-transform: none;
+  }
+
+  &__white {
+    color: #fff;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 280px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 50px;
+    gap: 30px;
+    background: linear-gradient(
+      90deg,
+      rgba(58, 48, 36, 1) 40%,
+      rgba(54, 57, 36, 1) 60%
+    );
+    box-shadow: 0px 4px 80px 0px rgba(0, 0, 0, 0.32);
+    @include for-size(tablet) {
+      flex-wrap: nowrap;
+      align-items: start;
+      height: 340px;
+      width: 490px;
+    }
+    @include for-size(desktop) {
+      height: 324px;
+      width: 590px;
+      padding: 60px;
+    }
+
+    &__image_second {
+      background-image: url("../../images/bacgroundForDeliveryFirst.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  &__box_second {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    @include for-size(tablet) {
+      width: 490px;
+    }
+    @include for-size(desktop) {
+      width: 587px;
+    }
+
+    &__title {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    &__red {
+      display: flex;
+      flex-wrap: wrap;
+      color: #d44848;
+    }
+  }
+
+  &__box_three {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    height: 300px;
+    border-radius: 50px;
+    gap: 10px;
+    background: rgba(196, 196, 196, 0.53);
+    box-shadow: 0px 4px 80px 0px rgba(0, 0, 0, 0.32);
+    padding: 20px 40px;
+    @include for-size(tablet) {
+      align-items: center;
+      height: auto;
+      justify-content: space-between;
+      flex-direction: row;
+      padding: 20px 60px;
+    }
+    @include for-size(desktop) {
+      padding: 40px 80px;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    &__background_container {
+      border-radius: 50px;
+      width: 95%;
+      height: 260px;
+
+      @include for-size(tablet) {
+        width: 450px;
+        height: 260px;
+      }
+      @include for-size(desktop) {
+        width: 663px;
+        height: 260px;
+      }
+    }
+    &__background {
+      background-image: url("../../images//bacgroundForDeliveryThree.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 5px;
+    width: 155px;
+    height: 56px;
+    border-radius: 5px;
+    color: #849339;
+    border: 1px solid #849339;
+    &__title {
+      font-family: Helvetica;
+      font-size: 13px;
+      font-weight: 400;
+      @include for-size(tablet) {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+}

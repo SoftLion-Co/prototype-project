@@ -5,31 +5,43 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
-  gap: 29px;
 
   &:hover {
-    box-shadow: 0px 8px 60px 0px rgba(0, 0, 0, 0.11);
+    box-shadow: 0px 8px 19px 0px rgba(0, 0, 0, 0.11);
   }
+
   border-radius: 5px;
 
   position: relative;
-
-  max-width: 100%;
 
   padding: 30px 25px;
   @include for-size(tablet) {
     padding: 35px 40px;
     max-width: 375px;
+    height: 430px;
   }
 
   @include for-size(desktop) {
+    height: 480px;
     max-width: 388px;
   }
 
+  &__photo_bike {
+    margin-bottom: 29px;
+
+    @include for-size(tablet) {
+      width: 245px;
+      height: 170px;
+    }
+
+    @include for-size(desktop) {
+      width: 294px;
+      height: 214px;
+    }
+  }
+
   &__name {
-    height: 40px;
+    margin-bottom: auto;
   }
 
   &__wrapper {
@@ -42,6 +54,7 @@
       display: flex;
 
       gap: 8px;
+      margin-bottom: 21px;
     }
 
     &_icon {
@@ -57,8 +70,8 @@
       height: 20px;
 
       border-radius: 100px;
-      border: 3px solid rgba(255, 255, 255, 0.55);
       background: linear-gradient(150deg, #d24545 0%, #4b48e7 100%);
+      cursor: pointer;
     }
 
     &_light {
@@ -67,6 +80,7 @@
 
       border-radius: 100px;
       background: linear-gradient(151deg, #ed942b 0%, #bd48e7 100%);
+      cursor: pointer;
     }
   }
 
@@ -76,11 +90,18 @@
     letter-spacing: 0.6px;
 
     color: #4c5225;
+
+    margin-bottom: 21px;
   }
 
   &__wrapper_heard {
     display: flex;
     align-items: center;
+    cursor: pointer;
+  }
+
+  &__icon_liked {
+    fill: #d44848;
   }
 
   &__wrapper_heard:hover > &__icon_heard {
@@ -89,6 +110,7 @@
 
   &__wrapper_cart:hover > &__icon_cart,
   &__wrapper_cart:hover > &__text_cart {
+    opacity: 0.5;
     fill: #d44848;
     color: #d44848;
     display: block;
@@ -97,6 +119,7 @@
   &__wrapper_cart {
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     gap: 7px;
   }
@@ -106,6 +129,7 @@
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 0.6px;
+    font-weight: 600;
 
     display: none;
   }

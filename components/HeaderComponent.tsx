@@ -78,13 +78,13 @@ const HeaderComponent = () => {
             </ul>
             <div className={s.navigation__items}>
               <Link
-                href="/cart"
+                href="/wishlist"
                 className={classNames(s.header__items_container__item)}
               >
                 <AiOutlineHeart className={s.header__icon_menu} />
               </Link>
               <Link
-                href="/wishlist"
+                href="/cart"
                 className={classNames(s.header__items_container__item)}
               >
                 <PiBagSimple className={s.header__icon_menu} />

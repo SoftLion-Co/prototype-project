@@ -4,7 +4,7 @@ import MobileSliderComponent from "./MobileSliderComponent";
 import s from "./SliderComponent.module.scss";
 import { FC } from "react";
 
-const SliderComponent: FC<{ id: number[] }> = ({ id }) => {
+const SliderComponent: FC<{ id: string[] }> = ({ id }) => {
   return (
     <div className={s.container}>
       <DesktopSliderComponent id={id} />

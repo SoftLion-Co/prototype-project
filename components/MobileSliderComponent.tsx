@@ -6,7 +6,7 @@ import { Carousel } from "@mantine/carousel";
 import CardBikeComponent from "./CardBikeComponent";
 import { useState } from "react";
 
-const MobileSliderComponent: React.FC<{ id: number[] }> = ({ id }) => {
+const MobileSliderComponent: React.FC<{ id: string[] }> = ({ id }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   return (
@@ -16,9 +16,13 @@ const MobileSliderComponent: React.FC<{ id: number[] }> = ({ id }) => {
       }}
       withIndicators
       withControls={false}
+      slideGap="lg"
       align="center"
       className={s.slider}
       styles={{
+        viewport: {
+          padding: "19px",
+        },
         indicators: {
           alignItems: "center",
           marginTop: "49px",
