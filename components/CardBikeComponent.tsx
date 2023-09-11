@@ -34,7 +34,10 @@ const CardBikeComponent: React.FC<{
   const [colorPhoto, setColorPhoto] = useState(false);
   return (
     <div className={s.card}>
-      <Link href={`/catalog/${item.category}/${id}`}>
+      <Link
+        href={`/catalog/${item.category}/${id}`}
+        className={s.card__photo_bike}
+      >
         <Image
           src={item.colors!["black"] || ""}
           alt="Bike"
