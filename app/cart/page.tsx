@@ -1,9 +1,9 @@
-import DeliverySection from "@/sections/delivery_page/DeliverySection";
+import OrderSection from "@/sections/order_section/OrderSection";
 
 const Cart = () => {
   return (
     <div>
-      <DeliverySection />
+      <OrderSection />
     </div>
   );
 };
