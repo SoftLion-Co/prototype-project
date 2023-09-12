@@ -1,0 +1,23 @@
+@import "../../style/colors";
+@import "../../style/container";
+@import "../../style/viewports";
+
+.page {
+  font-family: Helvetica;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 1.3px;
+
+  margin-bottom: 20px;
+  font-size: 22px;
+
+  @include for-size(tablet) {
+    font-size: 28px;
+
+    margin-bottom: 35px;
+  }
+  @include for-size(desktop) {
+    font-size: 32px;
+    margin-bottom: 57px;
+  }
+}
