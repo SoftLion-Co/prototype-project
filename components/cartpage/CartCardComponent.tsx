@@ -5,26 +5,31 @@ import Image from "next/image";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { GoTrash } from "react-icons/go";
 import { useState } from "react";
+import useCartlist from "@/hooks/useCartlist";
 
 import data from "../../data/cards-bike.json";
 
 interface CardBikeProps {
   name: string;
   colors: {
-    black: string;
-    red: string;
+    [color: string]: string;
   };
   series: string[];
+  sizes: number[];
+  equipment: string[];
   category: string;
-  price: string;
-  discount: string;
+  price: number;
+  discount: number;
 }
-
-const CartCard = () => {
+const CartCard = ({ id, delite }) => {
   const [counter, setCounter] = useState(1);
 
   const initialCards: { [key: string]: CardBikeProps } = data;
-  const item = initialCards["6"];
+  const { cartItems, setItems } = useCartlist();
+
+  setItems("1", counter);
+
+  const item = initialCards["1"];
 
   const handleDecrement = () => {
     if (counter > 1) {
@@ -41,12 +46,10 @@ const CartCard = () => {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     const keyCode = e.keyCode;
 
-    // Если нажата клавиша Backspace (код 8) и значение больше 1, уменьшаем на 1
     if (keyCode === 8 && counter > 1) {
       setCounter(counter - 1);
     }
 
-    // Если нажата клавиша с цифрами (коды 48-57), обновляем значение
     if (keyCode >= 48 && keyCode <= 57) {
       const newValue = parseInt(e.key);
 
@@ -56,9 +59,7 @@ const CartCard = () => {
     }
   };
 
-  const calculation =
-    parseFloat(item.price) +
-    (parseFloat(item.price) * parseFloat(item.discount)) / 100;
+  const calculation = item.price - (item.price * item.discount) / 100;
 
   return (
     <div className={s.card}>
@@ -85,10 +86,10 @@ const CartCard = () => {
                 }}
                 className={s.card__price}
               >
-                {item.price}
+                {item.price}$
               </p>
               {item.discount && (
-                <div className={s.card__discount}>{item.discount}</div>
+                <div className={s.card__discount}>{item.discount}%</div>
               )}
             </div>
           </div>
@@ -109,7 +110,7 @@ const CartCard = () => {
             />
             <AiOutlinePlus className={s.card__plus} onClick={handleIncrement} />
           </div>
-          <p className={s.card__price}>{parseInt(item.price) * counter}$</p>
+          <p className={s.card__price}>{item.price * counter}$</p>
           <div className={s.card__trash}>
             <GoTrash className={s.card__trash_item} />
           </div>

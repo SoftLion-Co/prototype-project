@@ -15,10 +15,11 @@ import data from "../data/cards-bike.json";
 interface CardBikeProps {
   name: string;
   colors: {
-    black: string;
-    red: string;
+    [color: string]: string;
   };
   series: string[];
+  sizes: number[];
+  equipment: string[];
   category: string;
   price: number;
   discount: number;
@@ -32,6 +33,7 @@ const CardBikeComponent: React.FC<{
   const initialCards: { [key: string]: CardBikeProps } = data;
   const item = initialCards[id];
   const [colorPhoto, setColorPhoto] = useState(false);
+
   return (
     <div className={s.card}>
       <Link href={`/catalog/${item.category}/${id}`}>
