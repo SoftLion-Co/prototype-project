@@ -11,6 +11,7 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import data from "../data/cards-bike.json";
+import classNames from "classnames";
 
 interface CardBikeProps {
   name: string;
@@ -86,9 +87,10 @@ const CardBikeComponent: React.FC<{
           className={s.card__wrapper_heard}
         >
           <PiHeartBold
-            className={`${s.card__icon_heard} ${
+            className={classNames(
+              s.card__icon_heard,
               likedItems.includes(id) ? s.card__icon_liked : ""
-            }`}
+            )}
           />
         </div>
         <div className={s.card__wrapper_cart}>
