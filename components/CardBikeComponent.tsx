@@ -8,6 +8,7 @@ import { PiHeartBold } from "react-icons/pi";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
 import { useState } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
+import useCartlist from "@/hooks/useCartlist";
 import Link from "next/link";
 import Image from "next/image";
 import data from "../data/cards-bike.json";
@@ -32,11 +33,16 @@ const CardBikeComponent: React.FC<{
 }> = ({ id, handleToggle }) => {
   const [colorPhoto, setColorPhoto] = useState("black");
   const { likedItems, toggleLike } = useWishlist();
+  const { cartItems, setItems } = useCartlist();
   const initialCards: { [key: string]: CardBikeProps } = data;
   const item = initialCards[id];
 
   const handleColorChange = (el: string) => {
     setColorPhoto(el);
+  };
+
+  const heandleChangeBacket = (id: string) => {
+    setItems(id, 1);
   };
 
   return (
@@ -95,8 +101,16 @@ const CardBikeComponent: React.FC<{
             )}
           />
         </div>
-        <div className={s.card__wrapper_cart}>
-          <PiShoppingCartSimpleBold className={s.card__icon_cart} />
+        <div
+          className={s.card__wrapper_cart}
+          onClick={() => heandleChangeBacket(id)}
+        >
+          <PiShoppingCartSimpleBold
+            className={classNames(
+              s.card__icon_cart,
+              cartItems.hasOwnProperty(id) ? s.card__icon_liked : ""
+            )}
+          />
           <p className={s.card__text_cart}>Add to cart</p>
         </div>
       </div>

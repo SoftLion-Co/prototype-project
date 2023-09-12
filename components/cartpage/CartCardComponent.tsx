@@ -4,8 +4,6 @@ import s from "./CartCardComponent.module.scss";
 import Image from "next/image";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { GoTrash } from "react-icons/go";
-import { useState } from "react";
-import useCartlist from "@/hooks/useCartlist";
 
 import data from "../../data/cards-bike.json";
 
@@ -21,40 +19,46 @@ interface CardBikeProps {
   price: number;
   discount: number;
 }
-const CartCard = ({ id, delite }) => {
-  const [counter, setCounter] = useState(1);
 
+interface CartCardProps {
+  id: string;
+  quantity: number;
+  setItems: (itemId: string, num: number) => void;
+}
+
+const CartCard = ({ id, quantity, setItems }: CartCardProps) => {
   const initialCards: { [key: string]: CardBikeProps } = data;
-  const { cartItems, setItems } = useCartlist();
 
-  setItems("1", counter);
+  const item = initialCards[id];
 
-  const item = initialCards["1"];
+  const heandleDelite = (id: string) => {
+    setItems(id, 0);
+  };
 
   const handleDecrement = () => {
-    if (counter > 1) {
-      setCounter(counter - 1);
+    if (quantity > 1) {
+      setItems(id, quantity - 1);
     }
   };
 
   const handleIncrement = () => {
-    if (counter < 9) {
-      setCounter(counter + 1);
+    if (quantity < 9) {
+      setItems(id, quantity + 1);
     }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     const keyCode = e.keyCode;
 
-    if (keyCode === 8 && counter > 1) {
-      setCounter(counter - 1);
+    if (keyCode === 8 && quantity > 0) {
+      setItems(id, quantity - 1);
     }
 
     if (keyCode >= 48 && keyCode <= 57) {
       const newValue = parseInt(e.key);
 
-      if (newValue >= 1 && newValue <= 9) {
-        setCounter(newValue);
+      if (newValue >= 0 && newValue <= 9) {
+        setItems(id, newValue);
       }
     }
   };
@@ -63,57 +67,51 @@ const CartCard = ({ id, delite }) => {
 
   return (
     <div className={s.card}>
-      <div className={s.card__main}>
-        <div className={s.card__bloсk_first}>
-          <div className={s.card__wrapper_photo}>
-            <Image
-              src={item.colors.black}
-              alt="bike"
-              width={250}
-              height={150}
-            />
-          </div>
-          <div className={s.card__wrapper_info}>
-            <h4>
-              {item.series} {item.name}
-            </h4>
-            <div className={s.card__wrapper_price}>
-              {item.discount && <p className={s.card__price}>{calculation}$</p>}
-              <p
-                style={{
-                  textDecoration: item.discount ? "line-through" : "",
-                  color: item.discount ? "#8b8b8b" : "",
-                }}
-                className={s.card__price}
-              >
-                {item.price}$
-              </p>
-              {item.discount && (
-                <div className={s.card__discount}>{item.discount}%</div>
-              )}
-            </div>
+      <div className={s.card__bloсk_first}>
+        <div className={s.card__wrapper_photo}>
+          <Image src={item.colors.black} alt="bike" width={250} height={150} />
+        </div>
+        <div className={s.card__wrapper_info}>
+          <h4>
+            {item.series} {item.name}
+          </h4>
+          <div className={s.card__wrapper_price}>
+            {item.discount ? (
+              <p className={s.card__price}>{calculation}$</p>
+            ) : (
+              ""
+            )}
+            <p
+              style={{
+                textDecoration: item.discount ? "line-through" : "",
+                color: item.discount ? "#8b8b8b" : "",
+              }}
+              className={s.card__price}
+            >
+              {item.price}$
+            </p>
+            {item.discount ? (
+              <div className={s.card__discount}>{item.discount}%</div>
+            ) : (
+              ""
+            )}
           </div>
         </div>
-        <div className={s.card__bloсk_second}>
-          <div className={s.card__container_counter}>
-            <AiOutlineMinus
-              className={s.card__minus}
-              onClick={handleDecrement}
-            />
-            <input
-              type="number"
-              min={1}
-              max={9}
-              className={s.card__counter}
-              value={counter}
-              onKeyDown={handleKeyDown}
-            />
-            <AiOutlinePlus className={s.card__plus} onClick={handleIncrement} />
-          </div>
-          <p className={s.card__price}>{item.price * counter}$</p>
-          <div className={s.card__trash}>
-            <GoTrash className={s.card__trash_item} />
-          </div>
+      </div>
+      <div className={s.card__bloсk_second}>
+        <div className={s.card__container_counter}>
+          <AiOutlineMinus className={s.card__minus} onClick={handleDecrement} />
+          <input
+            type="number"
+            className={s.card__counter}
+            value={quantity}
+            onKeyDown={handleKeyDown}
+          />
+          <AiOutlinePlus className={s.card__plus} onClick={handleIncrement} />
+        </div>
+        <p className={s.card__price}>{calculation * quantity}$</p>
+        <div className={s.card__trash} onClick={() => heandleDelite(id)}>
+          <GoTrash className={s.card__trash_item} />
         </div>
       </div>
     </div>

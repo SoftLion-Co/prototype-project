@@ -1,3 +1,5 @@
+"use client";
+
 import s from "./CartInfoComponent.module.scss";
 
 import { BsTruck, BsCreditCard2Front } from "react-icons/bs";
@@ -8,6 +10,20 @@ interface Info {
   icon?: React.ReactNode;
   description: string;
 }
+
+interface CardBikeProps {
+  name: string;
+  colors: {
+    [color: string]: string;
+  };
+  series: string[];
+  sizes: number[];
+  equipment: string[];
+  category: string;
+  price: number;
+  discount: number;
+}
+
 const info: Info[] = [
   {
     title: "Fast delivery",
@@ -26,7 +42,20 @@ const info: Info[] = [
   },
 ];
 
-const CartInfo = () => {
+interface CartInfoProps {
+  cartItems: { [key: string]: number };
+  initialCards: { [key: string]: CardBikeProps };
+}
+
+const CartInfo = ({ cartItems, initialCards }: CartInfoProps) => {
+  // Вычисляем общую стоимость на основе данных в корзине
+  const totalPrice = Object.keys(cartItems).reduce((total, id) => {
+    const quantity = cartItems[id];
+    const item = initialCards[id];
+    const calculation = item.price - (item.price * item.discount) / 100;
+    return total + quantity * calculation;
+  }, 0);
+
   return (
     <div className={s.block}>
       <div className={s.block__first}>
@@ -41,7 +70,7 @@ const CartInfo = () => {
       <div className={s.block__second}>
         <div className={s.block__box_price}>
           <h4 className={s.block__total}>Total:</h4>
-          <p className={s.block__price}>1231$</p>
+          <p className={s.block__price}>{totalPrice}$</p>
         </div>
         <button className={s.block__btn}>Checkout</button>
       </div>
