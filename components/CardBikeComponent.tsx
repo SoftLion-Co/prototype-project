@@ -11,12 +11,12 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import data from "../data/cards-bike.json";
+import classNames from "classnames";
 
 interface CardBikeProps {
   name: string;
   colors: {
-    black: string;
-    red: string;
+    [color: string]: string;
   };
   series: string[];
   category: string;
@@ -28,35 +28,44 @@ const CardBikeComponent: React.FC<{
   id: string;
   handleToggle?: (id: string) => void;
 }> = ({ id, handleToggle }) => {
+  const [colorPhoto, setColorPhoto] = useState("black");
   const { likedItems, toggleLike } = useWishlist();
   const initialCards: { [key: string]: CardBikeProps } = data;
   const item = initialCards[id];
-  const [colorPhoto, setColorPhoto] = useState(false);
+
+  const handleColorChange = (el: string) => {
+    setColorPhoto(el);
+  };
+
   return (
     <div className={s.card}>
-      <Link href={`/catalog/${item.category}/${id}`}>
+      <Link
+        href={`/catalog/${item.category}/${id}`}
+        className={s.card__photo_bike}
+      >
         <Image
-          src={item.colors!["black"] || ""}
+          src={item.colors[colorPhoto]}
           alt="Bike"
           width={390}
           height={314}
         />
       </Link>
       <div className={s.card__wrapper_color}>
-        <div
-          className={s.card__color_dark}
-          style={{
-            border: !colorPhoto ? "3px solid rgba(255, 255, 255, 0.55)" : "",
-          }}
-          onClick={() => setColorPhoto(true)}
-        ></div>
-        <div
-          className={s.card__color_light}
-          style={{
-            border: colorPhoto ? "3px solid rgba(255, 255, 255, 0.55)" : "",
-          }}
-          onClick={() => setColorPhoto(false)}
-        ></div>
+        {Object.keys(item.colors).map((el) => {
+          return (
+            <div
+              className={s.card__color}
+              style={{
+                backgroundColor: el,
+                border:
+                  colorPhoto === el
+                    ? "3px solid rgba(255, 255, 255, 0.6)"
+                    : "none",
+              }}
+              onClick={() => handleColorChange(el)}
+            ></div>
+          );
+        })}
       </div>
       <Link href={`/catalog/${item.category}/${id}`} className={s.card__name}>
         <h4>
@@ -77,15 +86,12 @@ const CardBikeComponent: React.FC<{
           }
           className={s.card__wrapper_heard}
         >
-          {handleToggle ? (
-            <FaRegTrashAlt className={s.card__icon_heard} />
-          ) : (
-            <PiHeartBold
-              className={`${s.card__icon_heard} ${
-                likedItems.includes(id) ? s.card__icon_liked : ""
-              }`}
-            />
-          )}
+          <PiHeartBold
+            className={classNames(
+              s.card__icon_heard,
+              likedItems.includes(id) ? s.card__icon_liked : ""
+            )}
+          />
         </div>
         <div className={s.card__wrapper_cart}>
           <PiShoppingCartSimpleBold className={s.card__icon_cart} />
