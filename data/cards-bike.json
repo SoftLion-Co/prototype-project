@@ -407,7 +407,7 @@
     },
     "series": ["Cyclone", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["101", "102", "103", "104"],
+    "equipment": [],
     "category": "mountain",
     "price": 15,
     "discount": 10
@@ -415,11 +415,11 @@
   "102": {
     "name": "",
     "colors": {
-      "none": "https://velogo.com.ua/uploads/shop/products/main/b35c32f1118a016b40522bdaa29ad81e.jpg"
+      "none": "https://velogo.com.ua/uploads/shop/products/main/4f916df55324430c05a422b12c5df253.jpeg"
     },
     "series": ["Cyclone", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["101", "102", "103", "104"],
+    "equipment": [],
     "category": "mountain",
     "price": 15,
     "discount": 10
@@ -427,11 +427,11 @@
   "103": {
     "name": "",
     "colors": {
-      "none": "https://velogo.com.ua/uploads/shop/products/main/b35c32f1118a016b40522bdaa29ad81e.jpg"
+      "none": "https://velogo.com.ua/uploads/shop/products/main/02482b1954f27eba35be441f4e2530dd.jpg"
     },
     "series": ["Cyclone", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["101", "102", "103", "104"],
+    "equipment": [],
     "category": "mountain",
     "price": 15,
     "discount": 10
@@ -439,11 +439,11 @@
   "104": {
     "name": "",
     "colors": {
-      "none": "https://velogo.com.ua/uploads/shop/products/main/b35c32f1118a016b40522bdaa29ad81e.jpg"
+      "none": "https://velogo.com.ua/uploads/shop/products/main/5765a6db920884b81fc28b52d2e5cdd2.jpg"
     },
     "series": ["Cyclone", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["101", "102", "103", "104"],
+    "equipment": [],
     "category": "mountain",
     "price": 15,
     "discount": 10
