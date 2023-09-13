@@ -1,13 +1,12 @@
-"use client";
-
-import BreadcrumbsComponrnt from "@/components/BreadcrumbsComponent";
+import BreadcrumbsComponent from "@/components/BreadcrumbsComponent";
 import CartMain from "@/components/cartpage/CartMainComponent";
+
 const Cart = () => {
   const links = [{ title: "Cart", href: "" }];
 
   return (
     <div>
-      <Breadcrumbs links={links} />
+      <BreadcrumbsComponent links={links} />
       <CartMain />
     </div>
   );
