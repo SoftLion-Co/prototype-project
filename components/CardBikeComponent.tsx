@@ -6,8 +6,7 @@ import React from "react";
 import useWishlist from "@/hooks/useWishlist";
 import { PiHeartBold } from "react-icons/pi";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
-import { useState } from "react";
-import { FaRegTrashAlt } from "react-icons/fa";
+import { useState, useEffect } from "react";
 import useCartlist from "@/hooks/useCartlist";
 import Link from "next/link";
 import Image from "next/image";
@@ -31,11 +30,19 @@ const CardBikeComponent: React.FC<{
   id: string;
   handleToggle?: (id: string) => void;
 }> = ({ id, handleToggle }) => {
-  const [colorPhoto, setColorPhoto] = useState("black");
+  const [colorPhoto, setColorPhoto] = useState("");
   const { likedItems, toggleLike } = useWishlist();
   const { cartItems, setItems } = useCartlist();
   const initialCards: { [key: string]: CardBikeProps } = data;
   const item = initialCards[id];
+
+  useEffect(() => {
+    const colors = Object.keys(item.colors);
+
+    if (colors.length > 0) {
+      setColorPhoto(colors[0]);
+    }
+  }, []);
 
   const handleColorChange = (el: string) => {
     setColorPhoto(el);
