@@ -1,36 +1,36 @@
 import { useState, useEffect } from "react";
 
-function useCartlist(initialValue: Record<string, number> = {}) {
-  const [cartItems, setCartItems] =
-    useState<Record<string, number>>(initialValue);
+function useCartlist() {
+  const [cartItems, setCartItems] = useState<{ [key: string]: number }>(
+    JSON.parse(localStorage.getItem("cartItems") || "{}")
+  );
 
   useEffect(() => {
-    const savedCartItems = localStorage.getItem("CartItems");
-    if (savedCartItems) {
-      setCartItems(JSON.parse(savedCartItems));
+    const savedcartItems = localStorage.getItem("cartItems");
+    if (savedcartItems) {
+      setCartItems(JSON.parse(savedcartItems));
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("CartItems", JSON.stringify(cartItems));
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  const setCartList = (itemId: string, quantity: number) => {
-    if (quantity >= 1) {
-      setCartItems((prevCartItems) => ({
-        ...prevCartItems,
-        [itemId]: quantity,
-      }));
-    } else {
-      setCartItems((prevCartItems) => {
-        const updatedCartItems = { ...prevCartItems };
-        delete updatedCartItems[itemId];
-        return updatedCartItems;
-      });
+  const setItems = (itemId: string, num: number) => {
+    let savedcartItems = localStorage.getItem("cartItems");
+    let likeIds: { [key: string]: number } = {};
+    if (savedcartItems) {
+      likeIds = JSON.parse(savedcartItems);
     }
+    likeIds[itemId] = num;
+    if (num === 0) {
+      delete likeIds[itemId];
+    }
+
+    setCartItems(likeIds);
   };
 
-  return { cartItems, setCartList };
+  return { cartItems, setItems };
 }
 
 export default useCartlist;

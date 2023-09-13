@@ -10,7 +10,7 @@ interface BreadcrumbsProps {
   links: { title: string; href: string }[];
 }
 
-const Breadcrumbs = ({ links }: BreadcrumbsProps) => {
+const BreadcrumbsComponent = ({ links }: BreadcrumbsProps) => {
   const allLinks = [
     {
       title: <BsHouseDoor className={s.custom_breadcrumbs__home} />,
@@ -47,4 +47,4 @@ const Breadcrumbs = ({ links }: BreadcrumbsProps) => {
   );
 };
 
-export default Breadcrumbs;
+export default BreadcrumbsComponent;
