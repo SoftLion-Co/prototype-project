@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 
 function useOrderlist() {
-  const [orders, setorders] = useState<string[]>(
+  const [orders, setOrders] = useState<{ [key: string]: number }[]>(
     JSON.parse(localStorage.getItem("orders") || "[]")
   );
 
   useEffect(() => {
     const savedOrders = localStorage.getItem("orders");
     if (savedOrders) {
-      setorders(JSON.parse(savedOrders));
+      setOrders(JSON.parse(savedOrders));
     }
   }, []);
 
@@ -16,7 +16,7 @@ function useOrderlist() {
     localStorage.setItem("orders", JSON.stringify(orders));
   }, [orders]);
 
-  return { orders, setorders };
+  return { orders, setOrders };
 }
 
 export default useOrderlist;

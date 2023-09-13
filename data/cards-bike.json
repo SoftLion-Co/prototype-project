@@ -3,12 +3,11 @@
     "name": "Shiv Disc",
     "colors": {
       "red": "https://velogo.com.ua/uploads/shop/products/large/bda5c4a80b32d3d9925d03e11bd15b5e.jpg",
-      "black": "https://i.ibb.co/SRDYwLh/bike-Electric.png",
-      "none": "https://velogo.com.ua/uploads/shop/products/main/382490259b76719ffde1f308a66980b9.JPG"
+      "black": "https://i.ibb.co/SRDYwLh/bike-Electric.png"
     },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["1", "2", "3", "4"],
+    "equipment": ["101", "102", "103", "104"],
     "category": "electric",
     "price": 500,
     "discount": 0
@@ -16,13 +15,11 @@
   "2": {
     "name": "Turbo Levo",
     "colors": {
-      "red": "https://i.ibb.co/wL741Kz/bikeKids.png",
-      "black": "https://i.ibb.co/3C3V97y/bike-Active.png",
-      "none": "https://velogo.com.ua/uploads/shop/products/main/382490259b76719ffde1f308a66980b9.JPG"
+      "red": "https://i.ibb.co/wL741Kz/bikeKids.png"
     },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["1", "2", "3", "4"],
+    "equipment": ["101", "102", "103", "104"],
     "category": "kids",
     "price": 500,
     "discount": 0
@@ -31,12 +28,11 @@
     "name": "Turbo Levo",
     "colors": {
       "red": "https://velogo.com.ua/uploads/shop/products/large/bda5c4a80b32d3d9925d03e11bd15b5e.jpg",
-      "black": "https://i.ibb.co/3C3V97y/bike-Active.png",
-      "none": "https://velogo.com.ua/uploads/shop/products/main/382490259b76719ffde1f308a66980b9.JPG"
+      "black": "https://i.ibb.co/3C3V97y/bike-Active.png"
     },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["1", "2", "3", "4"],
+    "equipment": ["101", "102", "103", "104"],
     "category": "active",
     "price": 500,
     "discount": 0
@@ -45,12 +41,11 @@
     "name": "Shiv Disc",
     "colors": {
       "red": "https://velogo.com.ua/uploads/shop/products/large/bda5c4a80b32d3d9925d03e11bd15b5e.jpg",
-      "black": "https://i.ibb.co/tztQLtT/bikeRoad.png",
-      "none": "https://velogo.com.ua/uploads/shop/products/main/382490259b76719ffde1f308a66980b9.JPG"
+      "black": "https://i.ibb.co/tztQLtT/bikeRoad.png"
     },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["1", "2", "3", "4"],
+    "equipment": ["101", "102", "103", "104"],
     "category": "road",
     "price": 500,
     "discount": 0
@@ -59,12 +54,11 @@
     "name": "Tarmac SL7",
     "colors": {
       "red": "https://velogo.com.ua/uploads/shop/products/large/bda5c4a80b32d3d9925d03e11bd15b5e.jpg",
-      "black": "https://i.ibb.co/MfQvdS2/bike-Mountain.png",
-      "none": "https://velogo.com.ua/uploads/shop/products/main/382490259b76719ffde1f308a66980b9.JPG"
+      "black": "https://i.ibb.co/MfQvdS2/bike-Mountain.png"
     },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["1", "2", "3", "4"],
+    "equipment": ["101", "102", "103", "104"],
     "category": "mountain",
     "price": 500,
     "discount": 30
@@ -73,12 +67,11 @@
     "name": "Tarmac SL7",
     "colors": {
       "red": "https://velogo.com.ua/uploads/shop/products/large/bda5c4a80b32d3d9925d03e11bd15b5e.jpg",
-      "black": "https://i.ibb.co/MfQvdS2/bike-Mountain.png",
-      "none": "https://velogo.com.ua/uploads/shop/products/main/382490259b76719ffde1f308a66980b9.JPG"
+      "black": "https://i.ibb.co/MfQvdS2/bike-Mountain.png"
     },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["1", "2", "3", "4"],
+    "equipment": ["101", "102", "103", "104"],
     "category": "mountain",
     "price": 500,
     "discount": 30
@@ -87,14 +80,372 @@
     "name": "Tarmac SL7",
     "colors": {
       "red": "https://velogo.com.ua/uploads/shop/products/large/bda5c4a80b32d3d9925d03e11bd15b5e.jpg",
-      "black": "https://i.ibb.co/wL741Kz/bikeKids.png",
-      "none": "https://velogo.com.ua/uploads/shop/products/main/382490259b76719ffde1f308a66980b9.JPG"
+      "black": "https://i.ibb.co/wL741Kz/bikeKids.png"
     },
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
-    "equipment": ["1", "2", "3", "4"],
+    "equipment": ["101", "102", "103", "104"],
     "category": "active",
     "price": 500,
     "discount": 30
+  },
+  "11": {
+    "name": "Contend",
+    "colors": {
+      "rgb(179,247,154)": "https://velogo.com.ua/uploads/shop/products/main/ee8656f159d8cb47dc3c3f199f130753.jpg",
+      "rgb(117,217,242)": "https://velogo.com.ua/uploads/shop/products/main/bfcf773a21215d219e81bc255aaf0509.jpg"
+    },
+    "series": ["Momentum", ""],
+    "sizes": [12, 14],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "active",
+    "price": 738,
+    "discount": 20
+  },
+  "12": {
+    "name": "PakAway 2",
+    "colors": {
+      "rgb(179,247,154)": "https://velogo.com.ua/uploads/shop/products/main/ee8656f159d8cb47dc3c3f199f130753.jpg",
+      "rgb(117,217,242)": "https://velogo.com.ua/uploads/shop/products/main/bfcf773a21215d219e81bc255aaf0509.jpg"
+    },
+    "series": ["Momentum", ""],
+    "sizes": [12, 14],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "active",
+    "price": 608,
+    "discount": 20
+  },
+  "13": {
+    "name": "Merida",
+    "colors": {
+      "rgb(179,247,154)": "https://velogo.com.ua/uploads/shop/products/main/ee8656f159d8cb47dc3c3f199f130753.jpg",
+      "rgb(117,217,242)": "https://velogo.com.ua/uploads/shop/products/main/bfcf773a21215d219e81bc255aaf0509.jpg"
+    },
+    "series": ["Momentum", ""],
+    "sizes": [12, 14],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "active",
+    "price": 708,
+    "discount": 15
+  },
+  "14": {
+    "name": "Merida",
+    "colors": {
+      "rgb(179,247,154)": "https://velogo.com.ua/uploads/shop/products/main/ee8656f159d8cb47dc3c3f199f130753.jpg",
+      "rgb(117,217,242)": "https://velogo.com.ua/uploads/shop/products/main/bfcf773a21215d219e81bc255aaf0509.jpg"
+    },
+    "series": ["Momentum", ""],
+    "sizes": [12, 14],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "active",
+    "price": 720,
+    "discount": 20
+  },
+  "15": {
+    "name": "Merida",
+    "colors": {
+      "black": "https://velogo.com.ua/uploads/shop/products/main/5ee2d05cd4ac7233b68c979e96bcac1d.jpg",
+      "blue": "https://velogo.com.ua/uploads/shop/products/main/3665eaf4a593ebe7d2c6ef7902b8810f.jpg"
+    },
+    "series": ["Momentum", ""],
+    "sizes": [12, 14],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "active",
+    "price": 728,
+    "discount": 10
+  },
+  "16": {
+    "name": "Scott",
+    "colors": {
+      "black": "https://velogo.com.ua/uploads/shop/products/main/5ee2d05cd4ac7233b68c979e96bcac1d.jpg",
+      "blue": "https://velogo.com.ua/uploads/shop/products/main/3665eaf4a593ebe7d2c6ef7902b8810f.jpg"
+    },
+    "series": ["Momentum", ""],
+    "sizes": [12, 14],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "active",
+    "price": 720,
+    "discount": 20
+  },
+  "17": {
+    "name": "Scott",
+    "colors": {
+      "black": "https://velogo.com.ua/uploads/shop/products/main/5ee2d05cd4ac7233b68c979e96bcac1d.jpg",
+      "blue": "https://velogo.com.ua/uploads/shop/products/main/3665eaf4a593ebe7d2c6ef7902b8810f.jpg"
+    },
+    "series": ["Momentum", ""],
+    "sizes": [12, 14],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "active",
+    "price": 728,
+    "discount": 10
+  },
+  "21": {
+    "name": "Bliss",
+    "colors": {
+      "black": "https://velogo.com.ua/uploads/shop/products/main/05771119fe1203accc3d83d039f721ae.jpg",
+      "yellow": "https://velogo.com.ua/uploads/shop/products/main/aabb7b48c61726a709abe0d90a2038c4.jpg",
+      "pink": "https://velogo.com.ua/uploads/shop/products/main/7a793fc89bdaa5c267562502fa9bab0e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "road",
+    "price": 528,
+    "discount": 10
+  },
+  "22": {
+    "name": "Bliss",
+    "colors": {
+      "black": "https://velogo.com.ua/uploads/shop/products/main/05771119fe1203accc3d83d039f721ae.jpg",
+      "yellow": "https://velogo.com.ua/uploads/shop/products/main/aabb7b48c61726a709abe0d90a2038c4.jpg",
+      "pink": "https://velogo.com.ua/uploads/shop/products/main/7a793fc89bdaa5c267562502fa9bab0e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "road",
+    "price": 528,
+    "discount": 10
+  },
+  "23": {
+    "name": "Bliss",
+    "colors": {
+      "black": "https://velogo.com.ua/uploads/shop/products/main/05771119fe1203accc3d83d039f721ae.jpg",
+      "yellow": "https://velogo.com.ua/uploads/shop/products/main/aabb7b48c61726a709abe0d90a2038c4.jpg",
+      "pink": "https://velogo.com.ua/uploads/shop/products/main/7a793fc89bdaa5c267562502fa9bab0e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "road",
+    "price": 528,
+    "discount": 10
+  },
+  "24": {
+    "name": "Bliss",
+    "colors": {
+      "black": "https://velogo.com.ua/uploads/shop/products/main/05771119fe1203accc3d83d039f721ae.jpg",
+      "yellow": "https://velogo.com.ua/uploads/shop/products/main/aabb7b48c61726a709abe0d90a2038c4.jpg",
+      "pink": "https://velogo.com.ua/uploads/shop/products/main/7a793fc89bdaa5c267562502fa9bab0e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "road",
+    "price": 528,
+    "discount": 10
+  },
+  "25": {
+    "name": "LLX",
+    "colors": {
+      "black": "https://velogo.com.ua/uploads/shop/products/main/05771119fe1203accc3d83d039f721ae.jpg",
+      "yellow": "https://velogo.com.ua/uploads/shop/products/main/aabb7b48c61726a709abe0d90a2038c4.jpg",
+      "pink": "https://velogo.com.ua/uploads/shop/products/main/7a793fc89bdaa5c267562502fa9bab0e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "road",
+    "price": 428,
+    "discount": 0
+  },
+  "26": {
+    "name": "LLX",
+    "colors": {
+      "black": "https://velogo.com.ua/uploads/shop/products/main/05771119fe1203accc3d83d039f721ae.jpg",
+      "yellow": "https://velogo.com.ua/uploads/shop/products/main/aabb7b48c61726a709abe0d90a2038c4.jpg",
+      "pink": "https://velogo.com.ua/uploads/shop/products/main/7a793fc89bdaa5c267562502fa9bab0e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "road",
+    "price": 558,
+    "discount": 0
+  },
+  "27": {
+    "name": "Bliss",
+    "colors": {
+      "gray": "https://velogo.com.ua/uploads/shop/products/main/4227970f14cbee36f15f1bb6d9230adc.jpg",
+      "orange": "https://velogo.com.ua/uploads/shop/products/main/d4d33ede5da23bb58d3f99bdd751adb0.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "road",
+    "price": 528,
+    "discount": 0
+  },
+  "28": {
+    "name": "Bliss",
+    "colors": {
+      "gray": "https://velogo.com.ua/uploads/shop/products/main/4227970f14cbee36f15f1bb6d9230adc.jpg",
+      "orange": "https://velogo.com.ua/uploads/shop/products/main/d4d33ede5da23bb58d3f99bdd751adb0.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "road",
+    "price": 528,
+    "discount": 10
+  },
+  "31": {
+    "name": "Bliss",
+    "colors": {
+      "black": "https://velogo.com.ua/uploads/shop/products/main/05771119fe1203accc3d83d039f721ae.jpg",
+      "yellow": "https://velogo.com.ua/uploads/shop/products/main/aabb7b48c61726a709abe0d90a2038c4.jpg",
+      "pink": "https://velogo.com.ua/uploads/shop/products/main/7a793fc89bdaa5c267562502fa9bab0e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "mountain",
+    "price": 528,
+    "discount": 10
+  },
+  "32": {
+    "name": "Bliss",
+    "colors": {
+      "black": "https://velogo.com.ua/uploads/shop/products/main/05771119fe1203accc3d83d039f721ae.jpg",
+      "yellow": "https://velogo.com.ua/uploads/shop/products/main/aabb7b48c61726a709abe0d90a2038c4.jpg",
+      "pink": "https://velogo.com.ua/uploads/shop/products/main/7a793fc89bdaa5c267562502fa9bab0e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "mountain",
+    "price": 528,
+    "discount": 10
+  },
+  "33": {
+    "name": "Bliss",
+    "colors": {
+      "black": "https://velogo.com.ua/uploads/shop/products/main/05771119fe1203accc3d83d039f721ae.jpg",
+      "yellow": "https://velogo.com.ua/uploads/shop/products/main/aabb7b48c61726a709abe0d90a2038c4.jpg",
+      "pink": "https://velogo.com.ua/uploads/shop/products/main/7a793fc89bdaa5c267562502fa9bab0e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "mountain",
+    "price": 528,
+    "discount": 10
+  },
+  "34": {
+    "name": "Bliss",
+    "colors": {
+      "black": "https://velogo.com.ua/uploads/shop/products/main/05771119fe1203accc3d83d039f721ae.jpg",
+      "yellow": "https://velogo.com.ua/uploads/shop/products/main/aabb7b48c61726a709abe0d90a2038c4.jpg",
+      "pink": "https://velogo.com.ua/uploads/shop/products/main/7a793fc89bdaa5c267562502fa9bab0e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "mountain",
+    "price": 528,
+    "discount": 10
+  },
+  "35": {
+    "name": "LLX",
+    "colors": {
+      "black": "https://velogo.com.ua/uploads/shop/products/main/05771119fe1203accc3d83d039f721ae.jpg",
+      "yellow": "https://velogo.com.ua/uploads/shop/products/main/aabb7b48c61726a709abe0d90a2038c4.jpg",
+      "pink": "https://velogo.com.ua/uploads/shop/products/main/7a793fc89bdaa5c267562502fa9bab0e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "mountain",
+    "price": 428,
+    "discount": 0
+  },
+  "36": {
+    "name": "LLX",
+    "colors": {
+      "black": "https://velogo.com.ua/uploads/shop/products/main/05771119fe1203accc3d83d039f721ae.jpg",
+      "yellow": "https://velogo.com.ua/uploads/shop/products/main/aabb7b48c61726a709abe0d90a2038c4.jpg",
+      "pink": "https://velogo.com.ua/uploads/shop/products/main/7a793fc89bdaa5c267562502fa9bab0e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "mountain",
+    "price": 558,
+    "discount": 0
+  },
+  "37": {
+    "name": "Bliss",
+    "colors": {
+      "gray": "https://velogo.com.ua/uploads/shop/products/main/4227970f14cbee36f15f1bb6d9230adc.jpg",
+      "orange": "https://velogo.com.ua/uploads/shop/products/main/d4d33ede5da23bb58d3f99bdd751adb0.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "mountain",
+    "price": 528,
+    "discount": 0
+  },
+  "38": {
+    "name": "Bliss",
+    "colors": {
+      "gray": "https://velogo.com.ua/uploads/shop/products/main/4227970f14cbee36f15f1bb6d9230adc.jpg",
+      "orange": "https://velogo.com.ua/uploads/shop/products/main/d4d33ede5da23bb58d3f99bdd751adb0.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "mountain",
+    "price": 528,
+    "discount": 10
+  },
+  "101": {
+    "name": "",
+    "colors": {
+      "none": "https://velogo.com.ua/uploads/shop/products/main/b35c32f1118a016b40522bdaa29ad81e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "mountain",
+    "price": 15,
+    "discount": 10
+  },
+  "102": {
+    "name": "",
+    "colors": {
+      "none": "https://velogo.com.ua/uploads/shop/products/main/b35c32f1118a016b40522bdaa29ad81e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "mountain",
+    "price": 15,
+    "discount": 10
+  },
+  "103": {
+    "name": "",
+    "colors": {
+      "none": "https://velogo.com.ua/uploads/shop/products/main/b35c32f1118a016b40522bdaa29ad81e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "mountain",
+    "price": 15,
+    "discount": 10
+  },
+  "104": {
+    "name": "",
+    "colors": {
+      "none": "https://velogo.com.ua/uploads/shop/products/main/b35c32f1118a016b40522bdaa29ad81e.jpg"
+    },
+    "series": ["Cyclone", ""],
+    "sizes": [12, 14, 16],
+    "equipment": ["101", "102", "103", "104"],
+    "category": "mountain",
+    "price": 15,
+    "discount": 10
   }
 }
