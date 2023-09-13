@@ -56,6 +56,8 @@ const CartInfo = ({ cartItems, initialCards }: CartInfoProps) => {
     return total + quantity * calculation;
   }, 0);
 
+  const roundedCalculation = Math.round(totalPrice);
+
   return (
     <div className={s.block}>
       <div className={s.block__first}>
@@ -70,7 +72,7 @@ const CartInfo = ({ cartItems, initialCards }: CartInfoProps) => {
       <div className={s.block__second}>
         <div className={s.block__box_price}>
           <h4 className={s.block__total}>Total:</h4>
-          <p className={s.block__price}>{totalPrice}$</p>
+          <p className={s.block__price}>{roundedCalculation}$</p>
         </div>
         <button className={s.block__btn}>Checkout</button>
       </div>

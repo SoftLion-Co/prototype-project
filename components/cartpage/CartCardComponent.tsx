@@ -4,6 +4,7 @@ import s from "./CartCardComponent.module.scss";
 import Image from "next/image";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { GoTrash } from "react-icons/go";
+import { useEffect, useState } from "react";
 
 import data from "../../data/cards-bike.json";
 
@@ -27,9 +28,18 @@ interface CartCardProps {
 }
 
 const CartCard = ({ id, quantity, setItems }: CartCardProps) => {
+  const [colorPhoto, setColorPhoto] = useState("");
   const initialCards: { [key: string]: CardBikeProps } = data;
 
   const item = initialCards[id];
+
+  useEffect(() => {
+    const colors = Object.keys(item.colors);
+
+    if (colors.length > 0) {
+      setColorPhoto(colors[0]);
+    }
+  }, []);
 
   const heandleDelite = (id: string) => {
     setItems(id, 0);
@@ -64,12 +74,17 @@ const CartCard = ({ id, quantity, setItems }: CartCardProps) => {
   };
 
   const calculation = item.price - (item.price * item.discount) / 100;
-
+  const roundedCalculation = Math.round(calculation);
   return (
     <div className={s.card}>
       <div className={s.card__bloсk_first}>
         <div className={s.card__wrapper_photo}>
-          <Image src={item.colors.black} alt="bike" width={250} height={150} />
+          <Image
+            src={item.colors[colorPhoto]}
+            alt="bike"
+            width={250}
+            height={150}
+          />
         </div>
         <div className={s.card__wrapper_info}>
           <h4>
@@ -77,7 +92,7 @@ const CartCard = ({ id, quantity, setItems }: CartCardProps) => {
           </h4>
           <div className={s.card__wrapper_price}>
             {item.discount ? (
-              <p className={s.card__price}>{calculation}$</p>
+              <p className={s.card__price}>{roundedCalculation}$</p>
             ) : (
               ""
             )}
@@ -109,7 +124,7 @@ const CartCard = ({ id, quantity, setItems }: CartCardProps) => {
           />
           <AiOutlinePlus className={s.card__plus} onClick={handleIncrement} />
         </div>
-        <p className={s.card__price}>{calculation * quantity}$</p>
+        <p className={s.card__price}>{roundedCalculation * quantity}$</p>
         <div className={s.card__trash} onClick={() => heandleDelite(id)}>
           <GoTrash className={s.card__trash_item} />
         </div>

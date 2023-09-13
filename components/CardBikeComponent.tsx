@@ -6,6 +6,7 @@ import React from "react";
 import useWishlist from "@/hooks/useWishlist";
 import { PiHeartBold } from "react-icons/pi";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
+import { MdOutlineShoppingCartCheckout } from "react-icons/md";
 import { useState, useEffect } from "react";
 import useCartlist from "@/hooks/useCartlist";
 import Link from "next/link";
@@ -112,13 +113,18 @@ const CardBikeComponent: React.FC<{
           className={s.card__wrapper_cart}
           onClick={() => heandleChangeBacket(id)}
         >
-          <PiShoppingCartSimpleBold
-            className={classNames(
-              s.card__icon_cart,
-              cartItems.hasOwnProperty(id) ? s.card__icon_liked : ""
-            )}
-          />
-          <p className={s.card__text_cart}>Add to cart</p>
+          {cartItems.hasOwnProperty(id) ? (
+            <PiShoppingCartSimpleBold className={s.card__icon_cart} />
+          ) : (
+            <Link href={"/cart"} className={s.card__wrapper_heard}>
+              <MdOutlineShoppingCartCheckout
+                className={classNames(s.card__icon_cart, s.card__icon_liked)}
+              />
+            </Link>
+          )}
+          {cartItems.hasOwnProperty(id) ? (
+            <p className={s.card__text_cart}>Add to cart</p>
+          ) : null}
         </div>
       </div>
       {item.discount !== 0 && (
