@@ -6,8 +6,9 @@ import React from "react";
 import useWishlist from "@/hooks/useWishlist";
 import { PiHeartBold } from "react-icons/pi";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
-import { useState } from "react";
-import { FaRegTrashAlt } from "react-icons/fa";
+import { MdOutlineShoppingCartCheckout } from "react-icons/md";
+import { useState, useEffect } from "react";
+import useCartlist from "@/hooks/useCartlist";
 import Link from "next/link";
 import Image from "next/image";
 import data from "../data/cards-bike.json";
@@ -19,6 +20,8 @@ interface CardBikeProps {
     [color: string]: string;
   };
   series: string[];
+  sizes: number[];
+  equipment: string[];
   category: string;
   price: number;
   discount: number;
@@ -28,13 +31,26 @@ const CardBikeComponent: React.FC<{
   id: string;
   handleToggle?: (id: string) => void;
 }> = ({ id, handleToggle }) => {
-  const [colorPhoto, setColorPhoto] = useState("black");
+  const [colorPhoto, setColorPhoto] = useState("");
   const { likedItems, toggleLike } = useWishlist();
+  const { cartItems, setItems } = useCartlist();
   const initialCards: { [key: string]: CardBikeProps } = data;
   const item = initialCards[id];
 
+  useEffect(() => {
+    const colors = Object.keys(item.colors);
+
+    if (colors.length > 0) {
+      setColorPhoto(colors[0]);
+    }
+  }, []);
+
   const handleColorChange = (el: string) => {
     setColorPhoto(el);
+  };
+
+  const heandleChangeBacket = (id: string) => {
+    setItems(id, 1);
   };
 
   return (
@@ -93,9 +109,22 @@ const CardBikeComponent: React.FC<{
             )}
           />
         </div>
-        <div className={s.card__wrapper_cart}>
-          <PiShoppingCartSimpleBold className={s.card__icon_cart} />
-          <p className={s.card__text_cart}>Add to cart</p>
+        <div
+          className={s.card__wrapper_cart}
+          onClick={() => heandleChangeBacket(id)}
+        >
+          {!cartItems.hasOwnProperty(id) ? (
+            <PiShoppingCartSimpleBold className={s.card__icon_cart} />
+          ) : (
+            <Link href={"/cart"} className={s.card__wrapper_heard}>
+              <MdOutlineShoppingCartCheckout
+                className={classNames(s.card__icon_cart, s.card__icon_liked)}
+              />
+            </Link>
+          )}
+          {!cartItems.hasOwnProperty(id) ? (
+            <p className={s.card__text_cart}>Add to cart</p>
+          ) : null}
         </div>
       </div>
       {item.discount !== 0 && (
