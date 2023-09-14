@@ -5,6 +5,7 @@ import Image from "next/image";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { GoTrash } from "react-icons/go";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 import data from "../../data/cards-bike.json";
 
@@ -87,9 +88,11 @@ const CartCard = ({ id, quantity, setItems }: CartCardProps) => {
           />
         </div>
         <div className={s.card__wrapper_info}>
-          <h4>
-            {item.series} {item.name}
-          </h4>
+          <Link href={`/catalog/${item.category}/${id}`}>
+            <h4>
+              {item.series} {item.name}
+            </h4>
+          </Link>
           <div className={s.card__wrapper_price}>
             {item.discount ? (
               <p className={s.card__price}>{roundedCalculation}$</p>

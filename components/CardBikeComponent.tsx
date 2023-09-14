@@ -113,7 +113,7 @@ const CardBikeComponent: React.FC<{
           className={s.card__wrapper_cart}
           onClick={() => heandleChangeBacket(id)}
         >
-          {cartItems.hasOwnProperty(id) ? (
+          {!cartItems.hasOwnProperty(id) ? (
             <PiShoppingCartSimpleBold className={s.card__icon_cart} />
           ) : (
             <Link href={"/cart"} className={s.card__wrapper_heard}>
@@ -122,7 +122,7 @@ const CardBikeComponent: React.FC<{
               />
             </Link>
           )}
-          {cartItems.hasOwnProperty(id) ? (
+          {!cartItems.hasOwnProperty(id) ? (
             <p className={s.card__text_cart}>Add to cart</p>
           ) : null}
         </div>

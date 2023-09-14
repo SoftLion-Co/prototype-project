@@ -23,7 +23,11 @@ const CartMain = () => {
           />
         ))}
       </div>
-      <CartInfo cartItems={cartItems} initialCards={initialCards} />
+      <CartInfo
+        cartItems={cartItems}
+        initialCards={initialCards}
+        setItems={setItems}
+      />
     </section>
   );
 };

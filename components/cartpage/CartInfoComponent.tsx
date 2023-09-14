@@ -4,6 +4,7 @@ import s from "./CartInfoComponent.module.scss";
 
 import { BsTruck, BsCreditCard2Front } from "react-icons/bs";
 import { BiCog } from "react-icons/bi";
+import useOrderlist from "@/hooks/useOrderlist";
 
 interface Info {
   title: string;
@@ -45,10 +46,12 @@ const info: Info[] = [
 interface CartInfoProps {
   cartItems: { [key: string]: number };
   initialCards: { [key: string]: CardBikeProps };
+  setItems: (itemId: string, num: number) => void;
 }
 
-const CartInfo = ({ cartItems, initialCards }: CartInfoProps) => {
-  // Вычисляем общую стоимость на основе данных в корзине
+const CartInfo = ({ cartItems, initialCards, setItems }: CartInfoProps) => {
+  const { orders, setOrders } = useOrderlist();
+
   const totalPrice = Object.keys(cartItems).reduce((total, id) => {
     const quantity = cartItems[id];
     const item = initialCards[id];
@@ -57,6 +60,12 @@ const CartInfo = ({ cartItems, initialCards }: CartInfoProps) => {
   }, 0);
 
   const roundedCalculation = Math.round(totalPrice);
+
+  const heandleSendOrders = () => {
+    localStorage.setItem("cartItems", "{}");
+    setItems("1", 0);
+    setOrders([...orders, cartItems]);
+  };
 
   return (
     <div className={s.block}>
@@ -74,7 +83,9 @@ const CartInfo = ({ cartItems, initialCards }: CartInfoProps) => {
           <h4 className={s.block__total}>Total:</h4>
           <p className={s.block__price}>{roundedCalculation}$</p>
         </div>
-        <button className={s.block__btn}>Checkout</button>
+        <button className={s.block__btn} onClick={() => heandleSendOrders()}>
+          Checkout
+        </button>
       </div>
     </div>
   );
