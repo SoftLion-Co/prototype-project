@@ -1,18 +1,17 @@
 import React from "react";
 import data from "@/data/cards-bike.json";
 import Image from "next/image";
-import s from "./CardComponent.module.scss"
+import s from "./CardComponent.module.scss";
 
 interface CardProps {
   name: string;
   colors: {
-    black: string;
-    red: string;
+    [color: string]: string;
   };
   price: number;
 }
 
-const CardComponent: React.FC<{ id: string; count: number }> = ({
+const CardComponent: React.FC<{ id: number; count: number }> = ({
   id,
   count,
 }) => {
@@ -22,12 +21,7 @@ const CardComponent: React.FC<{ id: string; count: number }> = ({
   return (
     <div className={s.card}>
       <div className={s.card__image_container}>
-        <Image
-          src={item.colors!["black"] || ""}
-          alt="Bike"
-          width={73}
-          height={52}
-        />
+        <Image src={item.colors.black} alt="Bike" width={73} height={52} />
       </div>
       <div className={s.card__box}>
         <p className={s.card__box__title}>{item.name}</p>

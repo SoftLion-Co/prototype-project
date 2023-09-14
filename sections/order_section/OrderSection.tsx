@@ -1,37 +1,28 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./OrderSection.module.scss";
 import BreadcrumbsComponent from "@/components/BreadcrumbsComponent";
 import OrderComponent from "@/components/OrderComponent";
-
-interface OrderItem {
-  id: string;
-}
-
-interface Order {
-  id: string;
-  totalPrice: number;
-  item: OrderItem[];
-}
+import useOrderList from "@/hooks/useOrderlist";
 
 const OrderSection: React.FC = () => {
-  const [orders, setOrders] = useState([
-    {
-      id: "1",
-      totalPrice: 4000,
-      item: [{ id: "1" }, { id: "1" }, { id: "2" }, { id: "5" }, { id: "6" }],
-    },
-    {
-      id: "2",
-      totalPrice: 3500,
-      item: [{ id: "5" }, { id: "6" }],
-    },
-  ]);
+  const { orders, setOrders } = useOrderList();
+
+  localStorage.removeItem("orders");
+
+  useEffect(
+    () =>
+      setOrders([
+        { id: 1, num: 5, id2: 3, num2: 8, id3: 3, num3: 8 },
+        { id: 5, num: 1 },
+      ]),
+    []
+  );
 
   const links = [{ title: "Order", href: "/order" }];
 
   const handleCancelOrder = (orderId: string) => {
-    const updateOrder = orders.filter((order) => order.id !== orderId);
+    const updateOrder = orders.filter((order, index) => `${index}` !== orderId);
     setOrders(updateOrder);
   };
 
@@ -40,13 +31,16 @@ const OrderSection: React.FC = () => {
       <BreadcrumbsComponent links={links} />
       <div className={s.container}>
         {orders.length !== 0 ? (
-          orders.map((item) => (
+          orders.map((order, index) => (
             <OrderComponent
-              key={item.id}
-              id={`${item.id}`}
-              totalPrice={item.totalPrice}
-              cardItems={item.item}
+              key={index.toString()}
+              id={index.toString()}
+              idCount={
+                Object.keys(order).filter((key: any) => key.startsWith("id"))
+                  .length
+              }
               onCancelOrder={handleCancelOrder}
+              cardItems={[order]}
             />
           ))
         ) : (
