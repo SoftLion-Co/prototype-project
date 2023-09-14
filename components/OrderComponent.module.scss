@@ -23,11 +23,6 @@
     }
   }
 
-  &__time {
-    font-family: Helvetica;
-    color: #8b8b8b;
-  }
-
   &__icon {
     width: 29px;
     height: 29px;
@@ -69,7 +64,7 @@
 
     @include for-size(tablet) {
       height: 1px;
-    background: #e8e8e8;
+      background: #e8e8e8;
       width: 532px;
     }
     @include for-size(desktop) {
@@ -87,12 +82,17 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      
+
       &__item {
         display: flex;
         gap: 6px;
       }
     }
+
+    &__btn {
+      cursor: pointer;
+    }
+
   }
 
   &__card {

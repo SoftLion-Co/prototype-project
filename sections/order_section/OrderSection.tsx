@@ -8,22 +8,20 @@ import useOrderList from "@/hooks/useOrderlist";
 const OrderSection: React.FC = () => {
   const { orders, setOrders } = useOrderList();
 
-  localStorage.removeItem("orders");
-
-  useEffect(
-    () =>
-      setOrders([
-        { id: 1, num: 5, id2: 3, num2: 8, id3: 3, num3: 8 },
-        { id: 5, num: 1 },
-      ]),
-    []
-  );
+  useEffect(() => setOrders([{ "1": 5, "3": 3, "4": 3 }, { "1": 1 }]), []);
 
   const links = [{ title: "Order", href: "/order" }];
 
   const handleCancelOrder = (orderId: string) => {
-    const updateOrder = orders.filter((order, index) => `${index}` !== orderId);
-    setOrders(updateOrder);
+    const updatedOrders = orders.filter(
+      (order, index) => index.toString() !== orderId
+    );
+    setOrders(updatedOrders);
+  };
+
+  const generateOrderNumber = () => {
+    const number = Math.floor(Math.random() * (999999 - 100000 + 1)) + 100000;
+    return `#${number}`;
   };
 
   return (
@@ -35,10 +33,8 @@ const OrderSection: React.FC = () => {
             <OrderComponent
               key={index.toString()}
               id={index.toString()}
-              idCount={
-                Object.keys(order).filter((key: any) => key.startsWith("id"))
-                  .length
-              }
+              orderNumber={`${generateOrderNumber()}`}
+              idCount={Object.keys(order).length}
               onCancelOrder={handleCancelOrder}
               cardItems={[order]}
             />

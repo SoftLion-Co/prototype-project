@@ -11,7 +11,7 @@ interface CardProps {
   price: number;
 }
 
-const CardComponent: React.FC<{ id: number; count: number }> = ({
+const CardComponent: React.FC<{ id: string; count: number }> = ({
   id,
   count,
 }) => {
