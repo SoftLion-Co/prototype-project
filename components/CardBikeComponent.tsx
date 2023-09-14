@@ -2,12 +2,10 @@
 
 import s from "./CardBikeComponent.module.scss";
 
-import React, { useEffect } from "react";
 import useWishlist from "@/hooks/useWishlist";
 import { PiHeartBold } from "react-icons/pi";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
 import { useState } from "react";
-import { FaRegTrashAlt } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import data from "../data/cards-bike.json";
@@ -36,6 +34,7 @@ const CardBikeComponent: React.FC<{
   const handleColorChange = (el: string) => {
     setColorPhoto(el);
   };
+
   const calculation =
     item.discount !== 0
       ? item.price - (item.price * item.discount) / 100
