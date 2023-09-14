@@ -64,7 +64,10 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
             <h2>
               {item.series[0]} {item.name}
             </h2>
-            <Slider pictures={Object.values(item.colors)} changeColor={changeColor} />
+            <Slider
+              pictures={Object.values(item.colors)}
+              changeColor={changeColor}
+            />
           </div>
 
           <div className={s.info_and_buy_container}>
@@ -75,7 +78,7 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
             <div className={s.info_and_buy_container__info}>
               <h4 className={s.info_and_buy_container__title}>Color</h4>
               <ul className={s.info_and_buy_container__colors_list}>
-                {Object.keys(item.colors).map(el => {
+                {Object.keys(item.colors).map((el) => {
                   return (
                     <li
                       className={color === el ? s.active : ""}
@@ -87,7 +90,7 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
 
               <h4 className={s.info_and_buy_container__title}>Size</h4>
               <ul className={s.info_and_buy_container__size_list}>
-                {item.sizes.map(el => {
+                {item.sizes.map((el) => {
                   return (
                     <li>
                       <button
@@ -105,24 +108,42 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
               {item.discount !== 0 ? (
                 <div className={s.info_and_buy_container__discount_container}>
                   <div>
-                    <p className={s.info_and_buy_container__discount_container__price}>
+                    <p
+                      className={
+                        s.info_and_buy_container__discount_container__price
+                      }
+                    >
                       {item.price}$
                     </p>
-                    <p className={s.info_and_buy_container__discount_container__discount}>
+                    <p
+                      className={
+                        s.info_and_buy_container__discount_container__discount
+                      }
+                    >
                       -{item.discount}%
                     </p>
                   </div>
-                  <p className={s.info_and_buy_container__discount_container__calc_price}>
+                  <p
+                    className={
+                      s.info_and_buy_container__discount_container__calc_price
+                    }
+                  >
                     {item.price - (item.price / 100) * item.discount}$
                   </p>
                 </div>
               ) : (
-                <div className={s.info_and_buy_container__price}>{item.price}$</div>
+                <div className={s.info_and_buy_container__price}>
+                  {item.price}$
+                </div>
               )}
             </div>
             <div className={s.info_and_buy_container__buy}>
-              <button className={s.info_and_buy_container__buy__add_btn}>Add to cart</button>
-              <button className={s.info_and_buy_container__buy__order_btn}>Order in 1 click</button>
+              <button className={s.info_and_buy_container__buy__add_btn}>
+                Add to cart
+              </button>
+              <button className={s.info_and_buy_container__buy__order_btn}>
+                Order in 1 click
+              </button>
               <button className={s.info_and_buy_container__buy__favorite_btn}>
                 <AiOutlineHeart />
               </button>
@@ -159,7 +180,7 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
         <h2>Equipment</h2>
 
         <ul className={s.equipment_component__list}>
-          {item.equipment.map(id => {
+          {item.equipment.map((id) => {
             return <li>{/* <CardBikeComponent id={id} /> */}</li>;
           })}
         </ul>
@@ -170,7 +191,9 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
       </div>
 
       <div className={s.bikes_from_this_series}>
-        <h2 className={s.bikes_from_this_series__title}>Bikes from this series</h2>
+        <h2 className={s.bikes_from_this_series__title}>
+          Bikes from this series
+        </h2>
 
         <SliderComponent id={getBikesFromTheSameSeries()} />
       </div>

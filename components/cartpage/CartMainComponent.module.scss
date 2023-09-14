@@ -21,3 +21,10 @@
     margin-bottom: 57px;
   }
 }
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 32px;
+}
