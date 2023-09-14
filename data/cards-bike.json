@@ -59,7 +59,7 @@
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
     "equipment": ["101", "102", "103", "104"],
-    "category": "mountain",
+    "category": "electric",
     "price": 500,
     "discount": 30
   },
@@ -72,7 +72,7 @@
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
     "equipment": ["101", "102", "103", "104"],
-    "category": "mountain",
+    "category": "electric",
     "price": 500,
     "discount": 30
   },
@@ -85,7 +85,7 @@
     "series": ["S-Works", ""],
     "sizes": [12, 14, 16],
     "equipment": ["101", "102", "103", "104"],
-    "category": "active",
+    "category": "kids",
     "price": 500,
     "discount": 30
   },
@@ -111,7 +111,7 @@
     "series": ["Momentum", ""],
     "sizes": [12, 14],
     "equipment": ["101", "102", "103", "104"],
-    "category": "active",
+    "category": "kids",
     "price": 608,
     "discount": 20
   },
@@ -124,7 +124,7 @@
     "series": ["Momentum", ""],
     "sizes": [12, 14],
     "equipment": ["101", "102", "103", "104"],
-    "category": "active",
+    "category": "kids",
     "price": 708,
     "discount": 15
   },

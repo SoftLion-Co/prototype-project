@@ -6,7 +6,7 @@ import { FC } from "react";
 
 const SliderComponent: FC<{ id: string[] }> = ({ id }) => {
   return (
-    <div className={s.container}>
+    <div>
       <DesktopSliderComponent id={id} />
       <MobileSliderComponent id={id} />
       <TabletSliderComponent id={id} />

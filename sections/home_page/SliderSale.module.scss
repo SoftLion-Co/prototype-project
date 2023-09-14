@@ -1,0 +1,61 @@
+@import "@/style/viewports";
+@import "@/style/container";
+
+.sale {
+  &__wrapper_btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+
+    margin-bottom: 45px;
+    @include for-size(tablet) {
+      flex-wrap: nowrap;
+
+      margin-bottom: 78px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 130px;
+    height: 44px;
+
+    border-radius: 5px;
+    background-color: #e5e8d8;
+    border: 0;
+    @include for-size(tablet) {
+      width: 155px;
+    }
+    @include for-size(desktop) {
+      width: 179px;
+      height: 56px;
+    }
+
+    &_title {
+      text-transform: uppercase;
+      font-size: 13px;
+      @include for-size(desktop) {
+        font-size: 16px;
+      }
+    }
+    &_active {
+      color: #fff;
+      background-color: #5e7045;
+    }
+  }
+
+  &__name {
+    margin-bottom: 28px;
+
+    @include for-size(tablet) {
+      margin-bottom: 76px;
+    }
+
+    @include for-size(desktop) {
+      margin-bottom: 45px;
+    }
+  }
+}

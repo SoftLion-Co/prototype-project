@@ -2,7 +2,7 @@
 
 import s from "./CardBikeComponent.module.scss";
 
-import React from "react";
+import React, { useEffect } from "react";
 import useWishlist from "@/hooks/useWishlist";
 import { PiHeartBold } from "react-icons/pi";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
@@ -36,6 +36,12 @@ const CardBikeComponent: React.FC<{
   const handleColorChange = (el: string) => {
     setColorPhoto(el);
   };
+  const calculation =
+    item.discount !== 0
+      ? item.price - (item.price * item.discount) / 100
+      : item.price;
+
+  const roundCalculation = Math.round(calculation);
 
   return (
     <div className={s.card}>
@@ -72,7 +78,7 @@ const CardBikeComponent: React.FC<{
           {item.series} {item.name}
         </h4>
       </Link>
-      <p className={s.card__price}>{item.price}$</p>
+      <p className={s.card__price}>{roundCalculation}$</p>
       <div className={s.card__wrapper_icon}>
         <div
           onClick={
