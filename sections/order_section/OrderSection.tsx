@@ -10,8 +10,6 @@ const OrderSection: React.FC = () => {
 
   useEffect(() => setOrders([{ "1": 5, "3": 3, "4": 3 }, { "1": 1 }]), []);
 
-  const links = [{ title: "Order", href: "/order" }];
-
   const handleCancelOrder = (orderId: string) => {
     const updatedOrders = orders.filter(
       (order, index) => index.toString() !== orderId
@@ -25,8 +23,7 @@ const OrderSection: React.FC = () => {
   };
 
   return (
-    <section>
-      <BreadcrumbsComponent links={links} />
+    <div>
       <div className={s.container}>
         {orders.length !== 0 ? (
           orders.map((order, index) => (
@@ -43,7 +40,7 @@ const OrderSection: React.FC = () => {
           <h2 className={s.order_none}>There are no orders.</h2>
         )}
       </div>
-    </section>
+    </div>
   );
 };
 
