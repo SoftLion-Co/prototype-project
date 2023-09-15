@@ -92,8 +92,8 @@
   "11": {
     "name": "Contend",
     "colors": {
-      "rgb(179,247,154)": "https://velogo.com.ua/uploads/shop/products/main/ee8656f159d8cb47dc3c3f199f130753.jpg",
-      "rgb(117,217,242)": "https://velogo.com.ua/uploads/shop/products/main/bfcf773a21215d219e81bc255aaf0509.jpg"
+      "lightgreen": "https://velogo.com.ua/uploads/shop/products/main/ee8656f159d8cb47dc3c3f199f130753.jpg",
+      "lightskyblue": "https://velogo.com.ua/uploads/shop/products/main/bfcf773a21215d219e81bc255aaf0509.jpg"
     },
     "series": ["Momentum", ""],
     "sizes": [12, 14],
@@ -105,8 +105,8 @@
   "12": {
     "name": "PakAway 2",
     "colors": {
-      "rgb(179,247,154)": "https://velogo.com.ua/uploads/shop/products/main/ee8656f159d8cb47dc3c3f199f130753.jpg",
-      "rgb(117,217,242)": "https://velogo.com.ua/uploads/shop/products/main/bfcf773a21215d219e81bc255aaf0509.jpg"
+      "lightgreen": "https://velogo.com.ua/uploads/shop/products/main/ee8656f159d8cb47dc3c3f199f130753.jpg",
+      "lightskyblue": "https://velogo.com.ua/uploads/shop/products/main/bfcf773a21215d219e81bc255aaf0509.jpg"
     },
     "series": ["Momentum", ""],
     "sizes": [12, 14],
@@ -118,8 +118,8 @@
   "13": {
     "name": "Merida",
     "colors": {
-      "rgb(179,247,154)": "https://velogo.com.ua/uploads/shop/products/main/ee8656f159d8cb47dc3c3f199f130753.jpg",
-      "rgb(117,217,242)": "https://velogo.com.ua/uploads/shop/products/main/bfcf773a21215d219e81bc255aaf0509.jpg"
+      "lightgreen": "https://velogo.com.ua/uploads/shop/products/main/ee8656f159d8cb47dc3c3f199f130753.jpg",
+      "lightskyblue": "https://velogo.com.ua/uploads/shop/products/main/bfcf773a21215d219e81bc255aaf0509.jpg"
     },
     "series": ["Momentum", ""],
     "sizes": [12, 14],
@@ -131,8 +131,8 @@
   "14": {
     "name": "Merida",
     "colors": {
-      "rgb(179,247,154)": "https://velogo.com.ua/uploads/shop/products/main/ee8656f159d8cb47dc3c3f199f130753.jpg",
-      "rgb(117,217,242)": "https://velogo.com.ua/uploads/shop/products/main/bfcf773a21215d219e81bc255aaf0509.jpg"
+      "lightgreen": "https://velogo.com.ua/uploads/shop/products/main/ee8656f159d8cb47dc3c3f199f130753.jpg",
+      "lightskyblue": "https://velogo.com.ua/uploads/shop/products/main/bfcf773a21215d219e81bc255aaf0509.jpg"
     },
     "series": ["Momentum", ""],
     "sizes": [12, 14],
