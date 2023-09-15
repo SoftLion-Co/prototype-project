@@ -1,0 +1,11 @@
+@import "@/style/viewports";
+@import "@/style/container";
+
+.order_none {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+  text-transform: none;
+  font-weight: 400;
+}
