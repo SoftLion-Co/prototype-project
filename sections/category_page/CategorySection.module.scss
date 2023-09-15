@@ -48,6 +48,10 @@
       &__value {
         flex: 1;
         font-weight: 700;
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
       }
 
       &__cancel {
@@ -281,8 +285,9 @@
     &__content {
       &__cards_list {
         display: flex;
+        gap: 30px;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
       }
     }
   }

@@ -1,4 +1,4 @@
-import { FC, MouseEvent, useEffect, useState } from "react";
+import { FC, MouseEvent, useEffect, useRef, useState } from "react";
 import s from "./CategorySection.module.scss";
 import cards from "../../data/cards-bike.json";
 import { usePathname } from "next/navigation";
@@ -7,35 +7,66 @@ import { CgClose } from "react-icons/cg";
 import { PiArrowsDownUpFill } from "react-icons/pi";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import CardBikeComponent from "@/components/CardBikeComponent";
-
-const collections = ["S-Works"];
-const sizes = ["12", "14", "16", "20", "24", "44"];
-const colors = [
-  "black",
-  "gray",
-  "red",
-  "blue",
-  "lightblue",
-  "orange",
-  "green",
-  "lightgreen",
-  "yellow",
-  "purple",
-];
+import { Pagination } from "@mantine/core";
 
 export const CategorySection: FC = () => {
   const category = usePathname().split("/").reverse()[0];
+
   const [showFilters, setShowFilters] = useState(window.innerWidth > 1599 ? true : false);
   const [showCollectionFilter, setShowCollectionFilter] = useState(false);
   const [showSizeFilter, setShowSizeFilter] = useState(false);
   const [showColorFilter, setShowColorFilter] = useState(false);
 
   const [collectionFilter, setCollectionFilter] = useState<null | string>(null);
-  const [sizeFilter, setSizeFilter] = useState<null | string>(null);
+  const [sizeFilter, setSizeFilter] = useState<null | number>(null);
   const [colorFilter, setColorFilter] = useState<null | string>(null);
 
   const [showSortDropdown, setShowSortDropdown] = useState(false);
   const [sortDropdown, setSortDropdown] = useState("lower");
+
+  const [activePage, setActivePage] = useState(1);
+  const pages = useRef({ totalPages: 0 });
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [activePage]);
+
+  const getCollections = () => {
+    const collections: Set<string> = new Set();
+    for (const card of Object.values(cards)) {
+      collections.add(card.series[0]);
+    }
+    const collectionsArr: string[] = Array.from(collections).filter(el => el !== "");
+
+    return collectionsArr;
+  };
+
+  const getSizes = () => {
+    const sizes: Set<number> = new Set();
+    for (const card of Object.values(cards)) {
+      card.sizes.map(size => {
+        sizes.add(size);
+      });
+    }
+    const sizeArr: number[] = Array.from(sizes);
+
+    return sizeArr;
+  };
+
+  const getColors = () => {
+    const colors: Set<string> = new Set();
+    for (const card of Object.values(cards)) {
+      for (const color in card.colors) {
+        colors.add(color);
+      }
+    }
+    const colorsArr: string[] = Array.from(colors).filter(el => el !== "none");
+
+    return colorsArr;
+  };
 
   const handleShowDropdown = () => {
     setShowSortDropdown(!showSortDropdown);
@@ -97,23 +128,46 @@ export const CategorySection: FC = () => {
     if (e.currentTarget.id === "collection") setCollectionFilter(null);
     if (e.currentTarget.id === "size") setSizeFilter(null);
     if (e.currentTarget.id === "color") setColorFilter(null);
+    setActivePage(1);
   };
 
   const handleResetFilters = () => {
     setCollectionFilter(null);
     setSizeFilter(null);
     setColorFilter(null);
+    setActivePage(1);
   };
 
   const handleCollection = (e: MouseEvent<HTMLButtonElement>) => {
+    setActivePage(1);
+
+    if (e.currentTarget.id === collectionFilter) {
+      setCollectionFilter(null);
+      return;
+    }
+
     setCollectionFilter(e.currentTarget.id);
   };
 
   const handleSize = (e: MouseEvent<HTMLButtonElement>) => {
-    setSizeFilter(e.currentTarget.id);
+    setActivePage(1);
+
+    if (Number(e.currentTarget.id) === sizeFilter) {
+      setSizeFilter(null);
+      return;
+    }
+
+    setSizeFilter(Number(e.currentTarget.id));
   };
 
   const handleColor = (e: MouseEvent<HTMLButtonElement>) => {
+    setActivePage(1);
+
+    if (e.currentTarget.id === colorFilter) {
+      setColorFilter(null);
+      return;
+    }
+
     setColorFilter(e.currentTarget.id);
   };
 
@@ -124,7 +178,7 @@ export const CategorySection: FC = () => {
     filterColor: string | null,
     filterCollection: string | null
   ) => {
-    let filteredData = Object.keys(cards) as string[];
+    let filteredData = Object.keys(cards).filter(id => Number(id) < 101) as string[];
 
     filteredData = filteredData.filter(id => cards[id].category.includes(category));
 
@@ -145,6 +199,10 @@ export const CategorySection: FC = () => {
     if (filterCollection) {
       filteredData = filteredData.filter(id => cards[id].series[0] === filterCollection);
     }
+
+    pages.current.totalPages = Math.ceil(filteredData.length / 6);
+
+    filteredData = filteredData.slice((activePage - 1) * 6, activePage * 6);
 
     return filteredData;
   };
@@ -230,7 +288,7 @@ export const CategorySection: FC = () => {
 
                 {showCollectionFilter && (
                   <ul className={s.category_section__filter_box__list}>
-                    {collections.map(collection => {
+                    {getCollections().map(collection => {
                       return (
                         <li>
                           <button
@@ -262,12 +320,12 @@ export const CategorySection: FC = () => {
 
                 {showSizeFilter && (
                   <ul className={s.category_section__filter_box__list}>
-                    {sizes.map(size => {
+                    {getSizes().map(size => {
                       return (
                         <li>
                           <button
                             className={size === sizeFilter ? s.active : ""}
-                            id={size}
+                            id={`${size}`}
                             onClick={handleSize}
                           >
                             {size}
@@ -294,7 +352,7 @@ export const CategorySection: FC = () => {
 
                 {showColorFilter && (
                   <ul className={classNames(s.category_section__filter_box__list, s.color)}>
-                    {colors.map(color => {
+                    {getColors().map(color => {
                       return (
                         <li>
                           <button
@@ -352,7 +410,6 @@ export const CategorySection: FC = () => {
                 )}
               </div>
             </div>
-
             <ul className={s.category_section__content__cards_list}>
               {sortAndFilterData(
                 cards,
@@ -368,6 +425,16 @@ export const CategorySection: FC = () => {
                 );
               })}
             </ul>
+
+            {pages.current.totalPages > 1 && (
+              <Pagination
+                position={"center"}
+                value={activePage}
+                onChange={setActivePage}
+                total={pages.current.totalPages}
+                style={{ marginTop: 20 }}
+              />
+            )}
           </div>
         </div>
       </div>
