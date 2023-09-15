@@ -10,7 +10,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "electric",
     "price": 500,
-    "discount": 0
+    "discount": 0,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "2": {
     "name": "Turbo Levo",
@@ -22,7 +24,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "kids",
     "price": 500,
-    "discount": 0
+    "discount": 0,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "3": {
     "name": "Turbo Levo",
@@ -35,7 +39,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "active",
     "price": 500,
-    "discount": 0
+    "discount": 0,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "4": {
     "name": "Shiv Disc",
@@ -48,7 +54,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "road",
     "price": 500,
-    "discount": 0
+    "discount": 0,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "5": {
     "name": "Tarmac SL7",
@@ -61,7 +69,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "mountain",
     "price": 500,
-    "discount": 30
+    "discount": 30,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "6": {
     "name": "Tarmac SL7",
@@ -74,7 +84,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "mountain",
     "price": 500,
-    "discount": 30
+    "discount": 30,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "7": {
     "name": "Tarmac SL7",
@@ -87,7 +99,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "active",
     "price": 500,
-    "discount": 30
+    "discount": 30,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "11": {
     "name": "Contend",
@@ -100,7 +114,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "active",
     "price": 738,
-    "discount": 20
+    "discount": 20,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "12": {
     "name": "PakAway 2",
@@ -113,7 +129,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "active",
     "price": 608,
-    "discount": 20
+    "discount": 20,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "13": {
     "name": "Merida",
@@ -126,7 +144,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "active",
     "price": 708,
-    "discount": 15
+    "discount": 15,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "14": {
     "name": "Merida",
@@ -139,7 +159,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "active",
     "price": 720,
-    "discount": 20
+    "discount": 20,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "15": {
     "name": "Merida",
@@ -152,7 +174,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "active",
     "price": 728,
-    "discount": 10
+    "discount": 10,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "16": {
     "name": "Scott",
@@ -165,7 +189,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "active",
     "price": 720,
-    "discount": 20
+    "discount": 20,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "17": {
     "name": "Scott",
@@ -178,7 +204,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "active",
     "price": 728,
-    "discount": 10
+    "discount": 10,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "21": {
     "name": "Bliss",
@@ -192,7 +220,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "road",
     "price": 528,
-    "discount": 10
+    "discount": 10,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "22": {
     "name": "Bliss",
@@ -206,7 +236,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "road",
     "price": 528,
-    "discount": 10
+    "discount": 10,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "23": {
     "name": "Bliss",
@@ -220,7 +252,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "road",
     "price": 528,
-    "discount": 10
+    "discount": 10,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "24": {
     "name": "Bliss",
@@ -234,7 +268,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "road",
     "price": 528,
-    "discount": 10
+    "discount": 10,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "25": {
     "name": "LLX",
@@ -248,7 +284,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "road",
     "price": 428,
-    "discount": 0
+    "discount": 0,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "26": {
     "name": "LLX",
@@ -262,7 +300,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "road",
     "price": 558,
-    "discount": 0
+    "discount": 0,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "27": {
     "name": "Bliss",
@@ -275,7 +315,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "road",
     "price": 528,
-    "discount": 0
+    "discount": 0,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "28": {
     "name": "Bliss",
@@ -288,7 +330,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "road",
     "price": 528,
-    "discount": 10
+    "discount": 10,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "31": {
     "name": "Bliss",
@@ -302,7 +346,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "mountain",
     "price": 528,
-    "discount": 10
+    "discount": 10,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "32": {
     "name": "Bliss",
@@ -316,7 +362,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "mountain",
     "price": 528,
-    "discount": 10
+    "discount": 10,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "33": {
     "name": "Bliss",
@@ -330,7 +378,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "mountain",
     "price": 528,
-    "discount": 10
+    "discount": 10,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "34": {
     "name": "Bliss",
@@ -344,7 +394,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "mountain",
     "price": 528,
-    "discount": 10
+    "discount": 10,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "35": {
     "name": "LLX",
@@ -358,7 +410,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "mountain",
     "price": 428,
-    "discount": 0
+    "discount": 0,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "36": {
     "name": "LLX",
@@ -372,7 +426,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "mountain",
     "price": 558,
-    "discount": 0
+    "discount": 0,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "37": {
     "name": "Bliss",
@@ -385,7 +441,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "mountain",
     "price": 528,
-    "discount": 0
+    "discount": 0,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "38": {
     "name": "Bliss",
@@ -398,7 +456,9 @@
     "equipment": ["101", "102", "103", "104"],
     "category": "mountain",
     "price": 528,
-    "discount": 10
+    "discount": 10,
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?",
+    "characteristics": "ipsum dolor sit amet consectetur adipisicing elit. Iure impedit, magnam molestiae recusandae laudantium animi fugiat aperiam quia ipsam fugit odit consequuntur facere ipsum? Recusandae eum voluptates repellat officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eum facere sequi. Quae alias fugiat, adipisci eius minus rerum autem quo quas delectus iusto odio illum modi voluptatem possimus reiciendis?"
   },
   "101": {
     "name": "",
@@ -410,7 +470,9 @@
     "equipment": [],
     "category": "mountain",
     "price": 15,
-    "discount": 10
+    "discount": 10,
+    "description": "",
+    "characteristics": ""
   },
   "102": {
     "name": "",
@@ -422,7 +484,9 @@
     "equipment": [],
     "category": "mountain",
     "price": 15,
-    "discount": 10
+    "discount": 10,
+    "description": "",
+    "characteristics": ""
   },
   "103": {
     "name": "",
@@ -434,7 +498,9 @@
     "equipment": [],
     "category": "mountain",
     "price": 15,
-    "discount": 10
+    "discount": 10,
+    "description": "",
+    "characteristics": ""
   },
   "104": {
     "name": "",
@@ -446,6 +512,8 @@
     "equipment": [],
     "category": "mountain",
     "price": 15,
-    "discount": 10
+    "discount": 10,
+    "description": "",
+    "characteristics": ""
   }
 }
