@@ -70,40 +70,6 @@
     position: relative;
   }
 
-  &__input {
-    display: none;
-
-    @include for-size(tablet) {
-      height: 34px;
-      width: 234px;
-      padding: 0 15px;
-      border-radius: 50px;
-      border: 1px solid #5e7045;
-      background: #fff;
-      display: flex;
-      align-items: center;
-    }
-    @include for-size(desktop) {
-      height: 44px;
-      width: 334px;
-    }
-
-    &__icon {
-      width: 23px;
-      height: 24px;
-      color: #000;
-    }
-
-    &__search {
-      border: none;
-      width: 100%;
-      font-size: 18px;
-      background-color: transparent;
-      height: 100%;
-      outline: none;
-    }
-  }
-
   &__btn_burger {
     background-color: transparent;
     border: none;
