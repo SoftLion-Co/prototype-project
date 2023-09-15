@@ -8,8 +8,6 @@ import useOrderList from "@/hooks/useOrderlist";
 const OrderSection: React.FC = () => {
   const { orders, setOrders } = useOrderList();
 
-  useEffect(() => setOrders([{ "1": 5, "3": 3, "4": 3 }, { "1": 1 }]), []);
-
   const handleCancelOrder = (orderId: string) => {
     const updatedOrders = orders.filter(
       (order, index) => index.toString() !== orderId

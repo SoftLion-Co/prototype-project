@@ -21,13 +21,18 @@ const CardComponent: React.FC<{ id: string; count: number }> = ({
   return (
     <div className={s.card}>
       <div className={s.card__image_container}>
-        <Image src={item.colors.black} alt="Bike" width={73} height={52} />
+        <Image
+          src={item.colors[Object.keys(item.colors)[0]]}
+          alt="Bike"
+          width={73}
+          height={52}
+        />
       </div>
       <div className={s.card__box}>
         <p className={s.card__box__title}>{item.name}</p>
         <div className={s.card__box__info}>
           <div className={s.card__box__text}>{item.price} $</div>
-          <div className={s.card__box__text}>{count} шт.</div>
+          <div className={s.card__box__text}>{count}</div>
         </div>
       </div>
     </div>
