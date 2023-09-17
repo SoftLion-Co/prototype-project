@@ -1,0 +1,30 @@
+@import "@/style/viewports";
+@import "@/style/container";
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  gap: 45px;
+  @include for-size(tablet) {
+    gap: 76px;
+  }
+
+  &__btn {
+    cursor: pointer;
+    font-family: "Helvetica";
+    border-radius: 5px;
+    padding: 18px 40px 18px 40px;
+    background: none;
+    font-size: 16px;
+    border: 1px solid #373a24;
+    width: fit-content;
+
+    @include for-size(tablet) {
+      font-size: 20px;
+    }
+    @include for-size(desktop) {
+      font-size: 22px;
+    }
+  }
+}
