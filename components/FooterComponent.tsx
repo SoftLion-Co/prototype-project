@@ -13,6 +13,7 @@ const FooterComponent = () => {
     { path: "/catalog", label: "Catalog" },
     { path: "/wishlist", label: "Wishlist" },
     { path: "/cart", label: "Cart" },
+    { path: "/orders", label: "Orders"},
     { path: "/about-us", label: "About Us" },
   ];
 
@@ -54,7 +55,7 @@ const FooterComponent = () => {
               </Link>
             ))}
             <div className={s.footer__social}>
-              <p className={s.footer__link}>Contact Us</p>
+              {/* <p className={s.footer__link}>Contact Us</p> */}
               <div className={s.footer__social__container}>
                 {social.map((link, index) => (
                     <Link className={s.footer__social__link} key={index} href={link.url}>

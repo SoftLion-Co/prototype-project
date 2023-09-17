@@ -5,6 +5,9 @@ import data from "@/data/cards-bike.json";
 import { AiOutlineHeart } from "react-icons/ai";
 import CardBikeComponent from "@/components/CardBikeComponent";
 import SliderComponent from "@/components/SliderComponent";
+import useCartlist from "@/hooks/useCartlist";
+import useWishlist from "@/hooks/useWishlist";
+import classNames from "classnames";
 
 interface BikeI {
   name: string;
@@ -24,6 +27,8 @@ interface BikeI {
 export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
   const bike: { [key: string]: BikeI } = data;
   const item = bike[id];
+  const { cartItems, setItems } = useCartlist();
+  const { likedItems, toggleLike } = useWishlist();
 
   const [size, setSize] = useState(item.sizes[0]);
   const [description, setDescription] = useState("description");
@@ -40,8 +45,8 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
     for (const id in data) {
       const item = bike[id];
 
-      if (item.series.includes(seria)) {
-        matchingIds.push(Number(id));
+      if (item.series[0] === seria) {
+        matchingIds.push(id);
       }
     }
 
@@ -54,6 +59,14 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
 
   const handleDescriptionBtn = (e: MouseEvent) => {
     setDescription(e.currentTarget.id);
+  };
+
+  const handleAddToCartBtn = () => {
+    if (Object.keys(cartItems).includes(id)) {
+      setItems(id, 0);
+    } else {
+      setItems(id, 1);
+    }
   };
 
   return (
@@ -121,9 +134,20 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
               )}
             </div>
             <div className={s.info_and_buy_container__buy}>
-              <button className={s.info_and_buy_container__buy__add_btn}>Add to cart</button>
+              <button
+                onClick={handleAddToCartBtn}
+                className={s.info_and_buy_container__buy__add_btn}
+              >
+                {Object.keys(cartItems).includes(id) ? "Added to cart" : "Add to cart"}
+              </button>
               <button className={s.info_and_buy_container__buy__order_btn}>Order in 1 click</button>
-              <button className={s.info_and_buy_container__buy__favorite_btn}>
+              <button
+                onClick={() => toggleLike(id)}
+                className={classNames(
+                  s.info_and_buy_container__buy__favorite_btn,
+                  likedItems.includes(id) ? s.active : ""
+                )}
+              >
                 <AiOutlineHeart />
               </button>
             </div>
@@ -160,7 +184,7 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
 
         <ul className={s.equipment_component__list}>
           {item.equipment.map(id => {
-            return <li>{/* <CardBikeComponent id={id} /> */}</li>;
+            return <li>{<CardBikeComponent id={id} />}</li>;
           })}
         </ul>
       </div>

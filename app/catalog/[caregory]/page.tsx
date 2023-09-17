@@ -2,6 +2,7 @@
 
 import { usePathname, redirect } from "next/navigation";
 import data from "@/data/categories.json";
+import { CategorySection } from "@/sections/category_page/CategorySection";
 
 const Category = () => {
   const category = usePathname().split("/").reverse()[0];
@@ -9,9 +10,10 @@ const Category = () => {
   if (!Object.keys(data).includes(category)) {
     redirect(`/catalog/${Object.keys(data)[0]}`);
   }
+
   return (
     <div>
-      <h1>{category}</h1>
+      <CategorySection />
     </div>
   );
 };

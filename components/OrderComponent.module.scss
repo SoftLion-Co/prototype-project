@@ -1,0 +1,104 @@
+@import "@/style/viewports";
+@import "@/style/container";
+
+.order {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  margin-bottom: 80px;
+
+  &__placeholder {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__number_container {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    &__item {
+      text-transform: uppercase;
+    }
+  }
+
+  &__icon {
+    width: 29px;
+    height: 29px;
+    position: relative;
+  }
+
+  &__box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    padding: 30px;
+    font-family: Helvetica;
+    gap: 40px;
+
+    @include for-size(tablet) {
+      width: max-content;
+    }
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__btn {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid #849339;
+    color: #849339;
+  }
+
+  &__line {
+    display: none;
+
+    @include for-size(tablet) {
+      height: 1px;
+      background: #e8e8e8;
+      width: 532px;
+    }
+    @include for-size(desktop) {
+      width: 932px;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &__items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__item {
+        display: flex;
+        gap: 6px;
+      }
+    }
+
+    &__btn {
+      cursor: pointer;
+    }
+
+  }
+
+  &__card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+}

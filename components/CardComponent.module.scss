@@ -1,0 +1,49 @@
+@import "@/style/viewports";
+@import "@/style/container";
+
+.card {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  display: flex;
+  gap: 30px;
+  padding: 20px 30px;
+
+  @include for-size(tablet) {
+    width: 48%;
+  }
+
+  @include for-size(desktop) {
+    width: 49%;
+  }
+
+  &__image_container {
+    width: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #cecece;
+    padding: 10px 8px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &__info {
+      display: flex;
+      gap: 10px;
+    }
+
+    &__title {
+      font-family: Helvetica;
+      font-weight: 600;
+    }
+
+    &__text {
+      font-size: 15px;
+      color: #4c5225;
+    }
+  }
+}

@@ -26,16 +26,9 @@ const HeaderComponent = () => {
             <Link href="/">
               <Image className={s.header__logo} src={Logo} alt="Specialized" />
             </Link>
-            <div className={s.header__input}>
-              <AiOutlineSearch className={s.header__input__icon} />
-              <input className={s.header__input__search} />
-            </div>
           </div>
           <div className={s.header__items_container}>
-            <div className={s.header__items_container__item}>
-              <HiOutlineLocationMarker className={s.header__icon_menu} />
-              <p className={s.header__items_container__link}>Kyiv</p>
-            </div>
+            <Link href="/orders" className={s.navigation__link}>View orders</Link>
             <Link
               href="/wishlist"
               className={classNames(s.header__items_container__mobile)}
