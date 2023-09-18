@@ -28,7 +28,7 @@ const HeaderComponent = () => {
             </Link>
           </div>
           <div className={s.header__items_container}>
-            <Link href="/orders" className={s.navigation__link}>View orders</Link>
+            <Link href="/orders" className={s.navigation_mobile__items__link}>View orders</Link>
             <Link
               href="/wishlist"
               className={classNames(s.header__items_container__mobile)}
