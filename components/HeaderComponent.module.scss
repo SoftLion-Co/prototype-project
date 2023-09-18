@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 7px;
   padding: 24px 0;
   @include for-size(tablet) {
     padding: 12px 0;
@@ -170,5 +171,19 @@
 
   &__link:hover {
     opacity: 75%;
+  }
+
+  &__link_order {
+    color: #fff;
+    font-size: 10px;
+    font-family: Oxanium;
+    font-weight: 400;
+    text-transform: uppercase;
+    @include for-size(tablet) {
+      font-size: 14px;
+    }
+    @include for-size(desktop) {
+      font-size: 16px;
+    }
   }
 }
