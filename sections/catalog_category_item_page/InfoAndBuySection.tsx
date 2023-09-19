@@ -157,11 +157,8 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
             </div>
             <div className={s.info_and_buy_container__buy}>
               {Object.keys(cartItems).includes(id) ? (
-                <Link href="/cart">
-                  <button
-                    style={{ width: "100%" }}
-                    className={s.info_and_buy_container__buy__add_btn}
-                  >
+                <Link style={{ width: "100%" }} href="/cart">
+                  <button className={s.info_and_buy_container__buy__add_btn}>
                     Already in cart
                   </button>
                 </Link>
@@ -173,7 +170,7 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
                   Add to cart
                 </button>
               )}
-              <Link href="/cart">
+              <Link style={{ width: "calc(100% - 56px - 18px)" }} href="/cart">
                 <button className={s.info_and_buy_container__buy__order_btn}>
                   Order in 1 click
                 </button>

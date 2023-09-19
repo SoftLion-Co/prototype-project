@@ -30,11 +30,10 @@ export const Slider: FC<Props> = ({ pictures, changeColor }) => {
         previousControlIcon={<MdKeyboardArrowLeft />}
         className={s.slider}
         mx="auto"
-        initialSlide={slide}
         onSlideChange={handleSlideChange}
         loop={true}
       >
-        {pictures.map(img => {
+        {pictures.map((img) => {
           return (
             <Carousel.Slide className={s.slider__item}>
               <Image
@@ -55,6 +54,7 @@ export const Slider: FC<Props> = ({ pictures, changeColor }) => {
         align="center"
         withControls={false}
         slideGap={15}
+        draggable={false}
         initialSlide={slide}
         styles={{ container: { alignItems: "center" } }}
       >
