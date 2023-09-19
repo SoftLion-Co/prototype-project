@@ -8,6 +8,7 @@ import SliderComponent from "@/components/SliderComponent";
 import useCartlist from "@/hooks/useCartlist";
 import useWishlist from "@/hooks/useWishlist";
 import classNames from "classnames";
+import Link from "next/link";
 
 interface BikeI {
   name: string;
@@ -77,7 +78,10 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
             <h2>
               {item.series[0]} {item.name}
             </h2>
-            <Slider pictures={Object.values(item.colors)} changeColor={changeColor} />
+            <Slider
+              pictures={Object.values(item.colors)}
+              changeColor={changeColor}
+            />
           </div>
 
           <div className={s.info_and_buy_container}>
@@ -86,21 +90,25 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
             </h2>
 
             <div className={s.info_and_buy_container__info}>
-              <h4 className={s.info_and_buy_container__title}>Color</h4>
-              <ul className={s.info_and_buy_container__colors_list}>
-                {Object.keys(item.colors).map(el => {
-                  return (
-                    <li
-                      className={color === el ? s.active : ""}
-                      style={{ backgroundColor: el }}
-                    ></li>
-                  );
-                })}
-              </ul>
+              {Object.keys(item.colors)[0] !== "none" ? (
+                <>
+                  <h4 className={s.info_and_buy_container__title}>Color</h4>
+                  <ul className={s.info_and_buy_container__colors_list}>
+                    {Object.keys(item.colors).map((el) => {
+                      return (
+                        <li
+                          className={color === el ? s.active : ""}
+                          style={{ backgroundColor: el }}
+                        ></li>
+                      );
+                    })}
+                  </ul>
+                </>
+              ) : null}
 
               <h4 className={s.info_and_buy_container__title}>Size</h4>
               <ul className={s.info_and_buy_container__size_list}>
-                {item.sizes.map(el => {
+                {item.sizes.map((el) => {
                   return (
                     <li>
                       <button
@@ -118,29 +126,59 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
               {item.discount !== 0 ? (
                 <div className={s.info_and_buy_container__discount_container}>
                   <div>
-                    <p className={s.info_and_buy_container__discount_container__price}>
+                    <p
+                      className={
+                        s.info_and_buy_container__discount_container__price
+                      }
+                    >
                       {item.price}$
                     </p>
-                    <p className={s.info_and_buy_container__discount_container__discount}>
+                    <p
+                      className={
+                        s.info_and_buy_container__discount_container__discount
+                      }
+                    >
                       -{item.discount}%
                     </p>
                   </div>
-                  <p className={s.info_and_buy_container__discount_container__calc_price}>
+                  <p
+                    className={
+                      s.info_and_buy_container__discount_container__calc_price
+                    }
+                  >
                     {item.price - (item.price / 100) * item.discount}$
                   </p>
                 </div>
               ) : (
-                <div className={s.info_and_buy_container__price}>{item.price}$</div>
+                <div className={s.info_and_buy_container__price}>
+                  {item.price}$
+                </div>
               )}
             </div>
             <div className={s.info_and_buy_container__buy}>
-              <button
-                onClick={handleAddToCartBtn}
-                className={s.info_and_buy_container__buy__add_btn}
-              >
-                {Object.keys(cartItems).includes(id) ? "Added to cart" : "Add to cart"}
-              </button>
-              <button className={s.info_and_buy_container__buy__order_btn}>Order in 1 click</button>
+              {Object.keys(cartItems).includes(id) ? (
+                <Link href="/cart">
+                  <button
+                    style={{ width: "100%" }}
+                    className={s.info_and_buy_container__buy__add_btn}
+                  >
+                    Already in cart
+                  </button>
+                </Link>
+              ) : (
+                <button
+                  onClick={handleAddToCartBtn}
+                  className={s.info_and_buy_container__buy__add_btn}
+                >
+                  Add to cart
+                </button>
+              )}
+              <Link href="/cart">
+                <button className={s.info_and_buy_container__buy__order_btn}>
+                  Order in 1 click
+                </button>
+              </Link>
+
               <button
                 onClick={() => toggleLike(id)}
                 className={classNames(
@@ -179,22 +217,26 @@ export const InfoAndBuySection: FC<{ id: string }> = ({ id }) => {
         </div>
       </div>
 
-      <div className={s.equipment_component}>
-        <h2>Equipment</h2>
+      {item.equipment.length !== 0 ? (
+        <div className={s.equipment_component}>
+          <h2>Equipment</h2>
 
-        <ul className={s.equipment_component__list}>
-          {item.equipment.map(id => {
-            return <li>{<CardBikeComponent id={id} />}</li>;
-          })}
-        </ul>
-      </div>
+          <ul className={s.equipment_component__list}>
+            {item.equipment.map((id) => {
+              return <li>{<CardBikeComponent id={id} />}</li>;
+            })}
+          </ul>
+        </div>
+      ) : null}
 
       <div className={s.picture_component}>
         <p>A new level of fit, ventilation and confidence</p>
       </div>
 
       <div className={s.bikes_from_this_series}>
-        <h2 className={s.bikes_from_this_series__title}>Bikes from this series</h2>
+        <h2 className={s.bikes_from_this_series__title}>
+          Bikes from this series
+        </h2>
 
         <SliderComponent id={getBikesFromTheSameSeries()} />
       </div>
