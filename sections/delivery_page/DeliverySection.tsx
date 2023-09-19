@@ -12,41 +12,49 @@ const DeliverySection = () => {
       <div className={s.container}>
         <div className={s.delivery_container}>
           <div className={s.delivery_container__box_container}>
-            <div className={classNames(s.delivery_container__box)}>
-              <h2 className={classNames(s.delivery_container__white, s.delivery_container__title) }>What is important to know?</h2>
-              <span className={s.delivery_container__white}>
+            <div className={s.delivery_container__box}>
+              <h2 className={s.delivery_container__box__title}>
+                What is important to know?
+              </h2>
+              <p className={s.delivery_container__box__text}>
                 At Specialized, our guiding principle is “The Rider is the
                 Boss.” Our main goal is to provide riders with the most
                 innovative cycling products in the world and be responsible for
                 their quality. That's why we're excited to introduce one of the
                 most generous and rider-friendly warranty policies in the
                 industry. Plus, it's pretty simple:
-              </span>
+              </p>
             </div>
-            <div
-              className={classNames(
-                s.delivery_container__box,
-                s.delivery_container__box__image_second
-              )}
-            ></div>
+            <div className={s.delivery_container__box__images}>
+              <div className={s.delivery_container__box__image_second}></div>
+            </div>
           </div>
           <div className={s.delivery_container__box_second}>
             <div className={s.delivery_container__box_second__title}>
               <h2 className={s.delivery_container__title}>Fast.</h2>
-              <h2 className={classNames(s.delivery_container__title, s.delivery_container__box_second__red)}>Reliably.</h2>
+              <h2
+                className={classNames(
+                  s.delivery_container__title,
+                  s.delivery_container__box_second__red
+                )}
+              >
+                Reliably.
+              </h2>
               <h2 className={s.delivery_container__title}>Professionally.</h2>
             </div>
-            <span>
+            <p>
               A full description of our policy with all terms and conditions can
               be found below. Please read all points, the policy applies to all
               Specialized products sold after July 1, 2018. Compare for yourself
               - it is one of the best on the market
-            </span>
+            </p>
           </div>
           <div className={s.delivery_container__box_three}>
             <div className={s.delivery_container__box_three__container}>
-              <h2 className={s.delivery_container__title}>Location doesn't matter.</h2>
-              <span>Only you add only your bike.</span>
+              <h2 className={s.delivery_container__title}>
+                Location doesn't matter.
+              </h2>
+              <p>Only you add only your bike.</p>
             </div>
             <div
               className={classNames(

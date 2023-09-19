@@ -11,6 +11,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 24px 0;
+  gap: 7px;
+
   @include for-size(tablet) {
     padding: 12px 0;
   }
@@ -22,7 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 8px;
     @include for-size(tablet) {
       display: flex;
       align-items: center;
@@ -159,6 +161,20 @@
     flex-direction: column;
     gap: 27px;
     text-align: center;
+
+    &__link {
+      color: #fff;
+      font-size: 12px;
+      font-family: Oxanium;
+      font-weight: 400;
+      text-transform: uppercase;
+      @include for-size(tablet) {
+        font-size: 14px;
+      }
+      @include for-size(desktop) {
+        font-size: 16px;
+      }
+    }
   }
 
   &__link {
