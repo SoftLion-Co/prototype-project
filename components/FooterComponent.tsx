@@ -55,7 +55,7 @@ const FooterComponent = () => {
               </Link>
             ))}
             <div className={s.footer__social}>
-              {/* <p className={s.footer__link}>Contact Us</p> */}
+              <Link href="/info" className={s.footer__link}>Contact Us</Link>
               <div className={s.footer__social__container}>
                 {social.map((link, index) => (
                     <Link className={s.footer__social__link} key={index} href={link.url}>

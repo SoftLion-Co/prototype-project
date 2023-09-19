@@ -26,7 +26,6 @@
   padding-top: 40px;
 
   @include for-size(tablet) {
-    gap: 20px;
     padding-top: 60px;
   }
   @include for-size(desktop) {
