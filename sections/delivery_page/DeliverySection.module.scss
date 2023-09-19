@@ -21,18 +21,14 @@
     text-transform: none;
   }
 
-  &__white {
-    color: #fff;
-  }
-
   &__box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 280px;
+    height: auto;
     width: 100%;
-    padding: 40px;
+    padding: 30px;
     border-radius: 50px;
     gap: 30px;
     background: linear-gradient(
@@ -42,22 +38,52 @@
     );
     box-shadow: 0px 4px 80px 0px rgba(0, 0, 0, 0.32);
     @include for-size(tablet) {
+      padding: 40px;
       flex-wrap: nowrap;
       align-items: start;
-      height: 340px;
+      height: 440px;
       width: 490px;
     }
     @include for-size(desktop) {
-      height: 324px;
+      height: 364px;
       width: 590px;
       padding: 60px;
     }
 
+    &__images {
+      width: 100%;
+      height: 280px;
+
+      @include for-size(tablet) {
+        height: 440px;
+        width: 490px;
+      }
+      @include for-size(desktop) {
+        height: 364px;
+        width: 590px;
+      }
+    }
+
     &__image_second {
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
       background-image: url("../../images/bacgroundForDeliveryFirst.jpg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+    }
+
+    &__text {
+      color: #fff;
+      width: 100%;
+      height: auto;
+    }
+
+    &__title {
+      width: 100%;
+      text-transform: none;
+      color: #fff;
     }
   }
   &__box_second {
