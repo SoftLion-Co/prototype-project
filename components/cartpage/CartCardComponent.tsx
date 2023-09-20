@@ -80,12 +80,14 @@ const CartCard = ({ id, quantity, setItems }: CartCardProps) => {
     <div className={s.card}>
       <div className={s.card__bloсk_first}>
         <div className={s.card__wrapper_photo}>
-          <Image
-            src={item.colors[colorPhoto]}
-            alt="bike"
-            width={250}
-            height={150}
-          />
+          <Link href={`/catalog/${item.category}/${id}`}>
+            <Image
+              src={item.colors[colorPhoto]}
+              alt="bike"
+              width={250}
+              height={150}
+            />
+          </Link>
         </div>
         <div className={s.card__wrapper_info}>
           <Link href={`/catalog/${item.category}/${id}`}>

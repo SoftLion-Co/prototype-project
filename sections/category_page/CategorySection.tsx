@@ -12,7 +12,9 @@ import { Pagination } from "@mantine/core";
 export const CategorySection: FC = () => {
   const category = usePathname().split("/").reverse()[0];
 
-  const [showFilters, setShowFilters] = useState(window.innerWidth > 1599 ? true : false);
+  const [showFilters, setShowFilters] = useState(
+    window.innerWidth > 1599 ? true : false
+  );
   const [showCollectionFilter, setShowCollectionFilter] = useState(false);
   const [showSizeFilter, setShowSizeFilter] = useState(false);
   const [showColorFilter, setShowColorFilter] = useState(false);
@@ -39,7 +41,9 @@ export const CategorySection: FC = () => {
     for (const card of Object.values(cards)) {
       collections.add(card.series[0]);
     }
-    const collectionsArr: string[] = Array.from(collections).filter(el => el !== "");
+    const collectionsArr: string[] = Array.from(collections).filter(
+      (el) => el !== ""
+    );
 
     return collectionsArr;
   };
@@ -47,7 +51,7 @@ export const CategorySection: FC = () => {
   const getSizes = () => {
     const sizes: Set<number> = new Set();
     for (const card of Object.values(cards)) {
-      card.sizes.map(size => {
+      card.sizes.map((size) => {
         sizes.add(size);
       });
     }
@@ -63,7 +67,9 @@ export const CategorySection: FC = () => {
         colors.add(color);
       }
     }
-    const colorsArr: string[] = Array.from(colors).filter(el => el !== "none");
+    const colorsArr: string[] = Array.from(colors).filter(
+      (el) => el !== "none"
+    );
 
     return colorsArr;
   };
@@ -119,7 +125,8 @@ export const CategorySection: FC = () => {
   };
 
   const handleShowFilterBtn = (e: MouseEvent<HTMLButtonElement>) => {
-    if (e.currentTarget.id === "collection") setShowCollectionFilter(!showCollectionFilter);
+    if (e.currentTarget.id === "collection")
+      setShowCollectionFilter(!showCollectionFilter);
     if (e.currentTarget.id === "size") setShowSizeFilter(!showSizeFilter);
     if (e.currentTarget.id === "color") setShowColorFilter(!showColorFilter);
   };
@@ -178,26 +185,38 @@ export const CategorySection: FC = () => {
     filterColor: string | null,
     filterCollection: string | null
   ) => {
-    let filteredData = Object.keys(cards).filter(id => Number(id) < 101) as string[];
+    let filteredData = Object.keys(cards).filter(
+      (id) => Number(id) < 101
+    ) as string[];
 
-    filteredData = filteredData.filter(id => cards[id].category.includes(category));
+    filteredData = filteredData.filter((id) =>
+      cards[id].category.includes(category)
+    );
 
     if (sortByPriceDescending === "lower") {
-      filteredData = filteredData.sort((a, b) => cards[a].price - cards[b].price);
+      filteredData = filteredData.sort(
+        (a, b) => cards[a].price - cards[b].price
+      );
     } else {
-      filteredData = filteredData.sort((a, b) => cards[b].price - cards[a].price);
+      filteredData = filteredData.sort(
+        (a, b) => cards[b].price - cards[a].price
+      );
     }
 
     if (filterSize) {
-      filteredData = filteredData.filter(id => cards[id].sizes.includes(filterSize));
+      filteredData = filteredData.filter((id) =>
+        cards[id].sizes.includes(filterSize)
+      );
     }
 
     if (filterColor) {
-      filteredData = filteredData.filter(id => cards[id].colors[filterColor]);
+      filteredData = filteredData.filter((id) => cards[id].colors[filterColor]);
     }
 
     if (filterCollection) {
-      filteredData = filteredData.filter(id => cards[id].series[0] === filterCollection);
+      filteredData = filteredData.filter(
+        (id) => cards[id].series[0] === filterCollection
+      );
     }
 
     pages.current.totalPages = Math.ceil(filteredData.length / 6);
@@ -213,7 +232,10 @@ export const CategorySection: FC = () => {
         <h2 className={s.category_section__title}>{category}</h2>
 
         <div className={s.category_section__wrap}>
-          <button onClick={handleShowFilters} className={s.category_section__show_filters_btn}>
+          <button
+            onClick={handleShowFilters}
+            className={s.category_section__show_filters_btn}
+          >
             {showFilters ? "Hide filters" : "Show filters"}
           </button>
 
@@ -225,7 +247,9 @@ export const CategorySection: FC = () => {
 
                   {collectionFilter && (
                     <div className={s.category_section__filters__row}>
-                      <div className={s.category_section__filters__row__label}>Collection:</div>
+                      <div className={s.category_section__filters__row__label}>
+                        Collection:
+                      </div>
                       <div className={s.category_section__filters__row__value}>
                         {collectionFilter}
                       </div>
@@ -239,8 +263,12 @@ export const CategorySection: FC = () => {
 
                   {sizeFilter && (
                     <div className={s.category_section__filters__row}>
-                      <div className={s.category_section__filters__row__label}>Size:</div>
-                      <div className={s.category_section__filters__row__value}>{sizeFilter}</div>
+                      <div className={s.category_section__filters__row__label}>
+                        Size:
+                      </div>
+                      <div className={s.category_section__filters__row__value}>
+                        {sizeFilter}
+                      </div>
                       <div className={s.category_section__filters__row__cancel}>
                         <button onClick={handleCancelFilter} id="size">
                           <CgClose />
@@ -251,8 +279,12 @@ export const CategorySection: FC = () => {
 
                   {colorFilter && (
                     <div className={s.category_section__filters__row}>
-                      <div className={s.category_section__filters__row__label}>Color:</div>
-                      <div className={s.category_section__filters__row__value}>{colorFilter}</div>
+                      <div className={s.category_section__filters__row__label}>
+                        Color:
+                      </div>
+                      <div className={s.category_section__filters__row__value}>
+                        {colorFilter}
+                      </div>
                       <div className={s.category_section__filters__row__cancel}>
                         <button onClick={handleCancelFilter} id="color">
                           <CgClose />
@@ -262,8 +294,12 @@ export const CategorySection: FC = () => {
                   )}
 
                   <div className={s.category_section__filters__info}>
-                    <div className={s.category_section__filters__info__label}>Results: {}</div>
-                    <div className={s.category_section__filters__info__value}>Reset</div>
+                    <div className={s.category_section__filters__info__label}>
+                      Results: {}
+                    </div>
+                    <div className={s.category_section__filters__info__value}>
+                      Reset
+                    </div>
                     <div className={s.category_section__filters__row__cancel}>
                       <button onClick={handleResetFilters}>
                         <CgClose />
@@ -288,11 +324,13 @@ export const CategorySection: FC = () => {
 
                 {showCollectionFilter && (
                   <ul className={s.category_section__filter_box__list}>
-                    {getCollections().map(collection => {
+                    {getCollections().map((collection) => {
                       return (
                         <li>
                           <button
-                            className={collection === collectionFilter ? s.active : ""}
+                            className={
+                              collection === collectionFilter ? s.active : ""
+                            }
                             id={collection}
                             onClick={handleCollection}
                           >
@@ -320,7 +358,7 @@ export const CategorySection: FC = () => {
 
                 {showSizeFilter && (
                   <ul className={s.category_section__filter_box__list}>
-                    {getSizes().map(size => {
+                    {getSizes().map((size) => {
                       return (
                         <li>
                           <button
@@ -351,8 +389,13 @@ export const CategorySection: FC = () => {
                 </div>
 
                 {showColorFilter && (
-                  <ul className={classNames(s.category_section__filter_box__list, s.color)}>
-                    {getColors().map(color => {
+                  <ul
+                    className={classNames(
+                      s.category_section__filter_box__list,
+                      s.color
+                    )}
+                  >
+                    {getColors().map((color) => {
                       return (
                         <li>
                           <button
@@ -374,7 +417,9 @@ export const CategorySection: FC = () => {
 
           <div className={s.category_section__content}>
             <div className={s.category_section__content__sort}>
-              <PiArrowsDownUpFill className={s.category_section__content__sort__icon} />
+              <PiArrowsDownUpFill
+                className={s.category_section__content__sort__icon}
+              />
               <p className={s.category_section__content__sort__title}>Sort</p>
 
               <div className={s.category_section__content__sort__box}>
@@ -417,7 +462,7 @@ export const CategorySection: FC = () => {
                 Number(sizeFilter),
                 colorFilter,
                 collectionFilter
-              ).map(el => {
+              ).map((el) => {
                 return (
                   <li>
                     <CardBikeComponent id={el} />
@@ -433,6 +478,17 @@ export const CategorySection: FC = () => {
                 onChange={setActivePage}
                 total={pages.current.totalPages}
                 style={{ marginTop: 20 }}
+                styles={(theme) => ({
+                  control: {
+                    "&[data-active]": {
+                      backgroundImage: theme.fn.gradient({
+                        from: "#6D6B4A",
+                        to: "#6D6B4A",
+                      }),
+                      border: 0,
+                    },
+                  },
+                })}
               />
             )}
           </div>

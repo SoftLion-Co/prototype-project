@@ -2,6 +2,7 @@ import React from "react";
 import data from "@/data/cards-bike.json";
 import Image from "next/image";
 import s from "./CardComponent.module.scss";
+import Link from "next/link";
 
 interface CardProps {
   name: string;
@@ -19,7 +20,7 @@ const CardComponent: React.FC<{ id: string; count: number }> = ({
   const item = cards[id];
 
   return (
-    <div className={s.card}>
+    <Link className={s.card} href={`/catalog/a/${id}`}>
       <div className={s.card__image_container}>
         <Image
           src={item.colors[Object.keys(item.colors)[0]]}
@@ -35,7 +36,7 @@ const CardComponent: React.FC<{ id: string; count: number }> = ({
           <div className={s.card__box__text}>{count}</div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

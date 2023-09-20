@@ -7,14 +7,13 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { FiLinkedin, FiFacebook } from "react-icons/fi";
 import { PiTelegramLogoDuotone } from "react-icons/pi";
 
-
 const FooterComponent = () => {
   const routes: { path: string; label: string }[] = [
     { path: "/catalog", label: "Catalog" },
     { path: "/wishlist", label: "Wishlist" },
     { path: "/cart", label: "Cart" },
-    { path: "/orders", label: "Orders"},
-    { path: "/about-us", label: "About Us" },
+    { path: "/orders", label: "Orders" },
+    { path: "/info", label: "About Us" },
   ];
 
   const social: { url: string; icon: JSX.Element }[] = [
@@ -55,14 +54,16 @@ const FooterComponent = () => {
               </Link>
             ))}
             <div className={s.footer__social}>
-              <Link href="/info" className={s.footer__link}>Contact Us</Link>
               <div className={s.footer__social__container}>
                 {social.map((link, index) => (
-                    <Link className={s.footer__social__link} key={index} href={link.url}>
-                      {link.icon}
-                    </Link>
-                  
-                  ))}
+                  <Link
+                    className={s.footer__social__link}
+                    key={index}
+                    href={link.url}
+                  >
+                    {link.icon}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>

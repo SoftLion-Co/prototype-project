@@ -5,6 +5,7 @@ import s from "./CartInfoComponent.module.scss";
 import { BsTruck, BsCreditCard2Front } from "react-icons/bs";
 import { BiCog } from "react-icons/bi";
 import useOrderlist from "@/hooks/useOrderlist";
+import Link from "next/link";
 
 interface Info {
   title: string;
@@ -83,9 +84,11 @@ const CartInfo = ({ cartItems, initialCards, setItems }: CartInfoProps) => {
           <h4 className={s.block__total}>Total:</h4>
           <p className={s.block__price}>{roundedCalculation}$</p>
         </div>
-        <button className={s.block__btn} onClick={() => heandleSendOrders()}>
-          Checkout
-        </button>
+        <Link href="/orders">
+          <button className={s.block__btn} onClick={() => heandleSendOrders()}>
+            Checkout
+          </button>
+        </Link>
       </div>
     </div>
   );
