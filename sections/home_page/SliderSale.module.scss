@@ -2,6 +2,18 @@
 @import "@/style/container";
 
 .sale {
+  margin-top: 38px;
+  margin-bottom: 58px;
+
+  @include for-size(tablet) {
+    margin-bottom: 94px;
+    margin-top: 81px;
+  }
+  @include for-size(desktop) {
+    margin-top: 139px;
+    margin-bottom: 139px;
+  }
+
   &__wrapper_btn {
     display: flex;
     flex-wrap: wrap;

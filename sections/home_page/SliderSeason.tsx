@@ -12,9 +12,6 @@ const SliderSeason = () => {
     <section className={classNames(s.container, s.main)}>
       <h1>Preparing for the season</h1>
       <SliderComponent id={items} />
-      <Link className={s.main__btn} href={"/catalog"}>
-        To catalog
-      </Link>
     </section>
   );
 };

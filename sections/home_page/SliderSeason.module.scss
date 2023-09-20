@@ -6,10 +6,16 @@
   flex-direction: column;
 
   gap: 45px;
+  margin-bottom: 33px;
+
   @include for-size(tablet) {
     gap: 76px;
+    margin-bottom: 92px;
   }
 
+  @include for-size(desktop) {
+    margin-bottom: 175px;
+  }
   &__btn {
     cursor: pointer;
     font-family: "Helvetica";
