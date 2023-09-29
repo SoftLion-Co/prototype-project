@@ -28,6 +28,7 @@ const SliderSale = () => {
   useEffect(() => {
     const filteredCards = Object.keys(cards).filter((key) => {
       const card = cards[key];
+
       return (
         (currentCategory === "" || card.category === currentCategory) &&
         card.discount > 0
@@ -39,12 +40,13 @@ const SliderSale = () => {
   const handleCategoryFilter = (category: string) => {
     if (currentCategory === category) {
       setCurrentCategory("");
+    } else {
+      setCurrentCategory(category);
     }
-    setCurrentCategory(category);
   };
 
   return (
-    <section className={s.container}>
+    <section className={classNames(s.container, s.sale)}>
       <h2 className={s.sale__name}>Sale of the month</h2>
       <div className={s.sale__wrapper_btn}>
         {Object.keys(categories).map((category) => (
