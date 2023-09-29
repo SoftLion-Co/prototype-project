@@ -6,7 +6,9 @@ import { InfoAndBuySection } from "@/sections/catalog_category_item_page/InfoAnd
 import BreadcrumbsComponent from "@/components/BreadcrumbsComponent";
 
 const Category = () => {
-  const items: { [key: string]: { category: string } } = data;
+  const items: {
+    [key: string]: { category: string; name: string; series: string[] };
+  } = data;
   const path = usePathname().split("/").reverse();
   const id = path[0];
   const category = path[1];
@@ -28,7 +30,7 @@ const Category = () => {
   const links = [
     { title: "Catalog", href: "/catalog" },
     { title: `${category}`, href: "" },
-    { title: `${id}`, href: "" },
+    { title: `${items[id].series[0]} ${items[id].name}`, href: "" },
   ];
 
   return (

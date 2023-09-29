@@ -1,50 +1,32 @@
 "use client";
 
-import { ChangeEvent, FC, FormEvent, useState } from "react";
+import { FC } from "react";
 import s from "./FindLocation.module.scss";
 import Image from "next/image";
-import map from "@/images/map.png";
-import { AiOutlineSearch } from "react-icons/ai";
 
 export const FindLocation: FC = () => {
-  const [locationInput, setLocationInput] = useState("");
-
-  const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
-    setLocationInput(e.target.value);
-  };
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  };
-
   return (
-    <div className={s.find_location}>
-      <div className={s.find_location__wrap}>
-        <h2 className={s.find_location__title}>location</h2>
-
-        <div className={s.find_location__my_location_wrap}>
-          <button className={s.find_location__my_location_btn} type="button">
-            Use my location
-          </button>
-          <span>Or</span>
-        </div>
-
-        <form onSubmit={handleSubmit} className={s.find_location__form}>
-          <div className={s.find_location__form__input_container}>
-            <input
-              onChange={handleInput}
-              value={locationInput}
-              placeholder="Enter address"
-              type="text"
-            />
-            <AiOutlineSearch className={s.find_location__form__search_icon} />
-          </div>
-
-          <button type="submit">Search</button>
-        </form>
+    <div className={s.container}>
+      <div className={s.text}>
+        <h2 className={s.find_location__title}>Location doesn't matter.</h2>
+        <p>
+          At Specialized, our guiding principle is “The Rider is the Boss.” Our
+          main goal is to provide riders with the most innovative cycling
+          products in the world and be responsible for their quality. That's why
+          we're excited to introduce one of the most generous and rider-friendly
+          warranty policies in the industry.
+        </p>
       </div>
 
-      <Image className={s.find_location__map_img} src={map} width={270} height={366} alt="Map" />
+      <Image
+        className={s.image}
+        src={
+          "https://static.vecteezy.com/system/resources/previews/012/986/891/original/doodle-freehand-drawing-of-europe-map-free-png.png"
+        }
+        width={270}
+        height={366}
+        alt="Map"
+      />
     </div>
   );
 };

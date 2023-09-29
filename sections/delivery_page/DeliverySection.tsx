@@ -5,7 +5,7 @@ import classNames from "classnames";
 import Link from "next/link";
 
 const DeliverySection = () => {
-  const links = [{ title: "Wishlist", href: "" }];
+  const links = [{ title: "Info", href: "" }];
   return (
     <section>
       <BreadcrumbsComponent links={links} />
