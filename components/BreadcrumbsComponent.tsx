@@ -5,6 +5,7 @@ import { Anchor } from "@mantine/core";
 import s from "./BreadcrumbsComponent.module.scss";
 import { BsHouseDoor } from "react-icons/bs";
 import classNames from "classnames";
+import Link from "next/link";
 
 interface BreadcrumbsProps {
   links: { title: string; href: string }[];
@@ -20,7 +21,7 @@ const BreadcrumbsComponent = ({ links }: BreadcrumbsProps) => {
   ];
 
   const items = allLinks.map((item, index) => (
-    <Anchor
+    <Link
       href={item.href}
       key={index}
       className={
@@ -30,7 +31,7 @@ const BreadcrumbsComponent = ({ links }: BreadcrumbsProps) => {
       }
     >
       {item.title}
-    </Anchor>
+    </Link>
   ));
 
   return (

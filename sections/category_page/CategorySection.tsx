@@ -195,11 +195,15 @@ export const CategorySection: FC = () => {
 
     if (sortByPriceDescending === "lower") {
       filteredData = filteredData.sort(
-        (a, b) => cards[a].price - cards[b].price
+        (a, b) =>
+          cards[a].price * (1 - cards[a].discount * 0.01) -
+          cards[b].price * (1 - cards[b].discount * 0.01)
       );
     } else {
       filteredData = filteredData.sort(
-        (a, b) => cards[b].price - cards[a].price
+        (a, b) =>
+          cards[b].price * (1 - cards[b].discount * 0.01) -
+          cards[a].price * (1 - cards[a].discount * 0.01)
       );
     }
 
@@ -464,7 +468,7 @@ export const CategorySection: FC = () => {
                 collectionFilter
               ).map((el) => {
                 return (
-                  <li>
+                  <li key={el}>
                     <CardBikeComponent id={el} />
                   </li>
                 );
